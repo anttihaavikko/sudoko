@@ -22,6 +22,7 @@ public class Character : MonoBehaviour
     
     private static readonly int Walking = Animator.StringToHash("walking");
     private static readonly int AttackAnim = Animator.StringToHash("attack");
+    private static readonly int Hurt = Animator.StringToHash("hurt");
 
     private void Start()
     {
@@ -65,6 +66,7 @@ public class Character : MonoBehaviour
 
     public void Damage(int amount)
     {
+        anim.SetTrigger(Hurt);
         cam.BaseEffect(0.2f);
         flasher.Flash();
         health.TakeDamage(amount);
