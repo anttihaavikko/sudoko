@@ -27,6 +27,7 @@ public class Tile : MonoBehaviour
 
     public void Fill()
     {
+        if (IsRevealed) return;
         board.TryFill(this, index);
     }
 

@@ -9,7 +9,12 @@ public class NumberPicker : MonoBehaviour
     [SerializeField] private Transform marker;
 
     public int Number { get; private set; }
-    
+
+    private void Start()
+    {
+        Number = 1;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -61,7 +66,6 @@ public class NumberPicker : MonoBehaviour
     public void SelectNumber(int number)
     {
         Tweener.MoveToBounceOut(marker, buttons[number - 1].position, 0.2f);
-        Debug.Log($"Picked {number}");
         Number = number;
     }
 }
