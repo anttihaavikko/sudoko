@@ -27,6 +27,12 @@ namespace AnttiStarterKit.Game
             UpdateDisplays();
         }
 
+        public void Init(int hp)
+        {
+            cur = hp;
+            UpdateDisplays();
+        }
+
         public void TakeDamage(int amount, GameObject source = null)
         {
             cur = Mathf.Max(cur - amount, 0);

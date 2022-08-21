@@ -22,6 +22,9 @@ public class Board : MonoBehaviour
     {
         CreateGrid();
         Generate();
+
+        player.SetHealth(StateManager.Instance.Health);
+        enemy.Board = this;
     }
 
     private void CreateGrid()
@@ -44,7 +47,7 @@ public class Board : MonoBehaviour
         sudoku.Clear();
         sudoku.Solver.SolveThePuzzle();
 
-        var toRemove = 10;
+        var toRemove = Mathf.Min(10 + 3 * StateManager.Instance.Level, 50);
         var tries = 0;
 
         while (toRemove > 0 && tries < 100)
@@ -90,11 +93,7 @@ public class Board : MonoBehaviour
             Attack(player, enemy, value);
             cell.Value = value;
 
-            if (!enemy.IsAlive())
-            {
-                Invoke(nameof(Win), 1f);
-                return;
-            }
+            Invoke(nameof(CheckWin), 1f);
 
             if (sudoku.IsBoardFilled())
             {
@@ -112,8 +111,19 @@ public class Board : MonoBehaviour
         }
     }
 
+    private void CheckWin()
+    {
+        if (!enemy.IsAlive())
+        {
+            player.WalkTo(7);
+            Invoke(nameof(Win), 1f);
+        }
+    }
+
     private void Win()
     {
+        StateManager.Instance.Health = player.CurrentHealth;
+        StateManager.Instance.NextLevel();
     }
 
     private void Lose()
@@ -123,6 +133,11 @@ public class Board : MonoBehaviour
     private void Attack(Character attacker, Character target, int damage)
     {
         attacker.Attack(target, damage);
+    }
+
+    public void EnemyAttack(int damage)
+    {
+        enemy.Attack(player, damage);
     }
 
     private static float GetGap(int pos)

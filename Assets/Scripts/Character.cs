@@ -5,20 +5,29 @@ using UnityEngine;
 using AnttiStarterKit.Extensions;
 using AnttiStarterKit.Game;
 using AnttiStarterKit.Visuals;
+using UnityEngine.Rendering.UI;
 
 public class Character : MonoBehaviour
 {
     [SerializeField] private Flasher flasher;
     [SerializeField] private Health health;
     [SerializeField] private List<Transform> mirrorables;
-    [SerializeField] private Transform healthDisplay;
+    [SerializeField] private Transform healthDisplay, moveDisplay;
     [SerializeField] private GameObject root, shadow;
     [SerializeField] private bool isPlayer;
+    [SerializeField] private Transform moveBar;
+    [SerializeField] private float moveDelay = 1f;
 
     private Animator anim;
 
     private Vector3 origin;
     private EffectCamera cam;
+
+    private float moveTimer;
+
+    public int CurrentHealth => health.Current;
+    
+    public Board Board { get; set; }
     
     private static readonly int Walking = Animator.StringToHash("walking");
     private static readonly int AttackAnim = Animator.StringToHash("attack");
@@ -38,22 +47,55 @@ public class Character : MonoBehaviour
         }
 
         healthDisplay.SetParent(null, true);
+        moveDisplay.SetParent(null, true);
 
+        Stagger();
 
         if (isPlayer)
         {
             healthDisplay.gameObject.SetActive(false);
-            anim.SetBool(Walking, true);
-            var t = transform;
-            var walkTime = 1.75f;
-            t.position += Vector3.left * 7;
-            Tweener.MoveToQuad(t, origin, walkTime);
-            this.StartCoroutine(() =>
-            {
-                anim.SetBool(Walking, false);
-                healthDisplay.gameObject.SetActive(true);
-            }, walkTime - 0.1f);
+
+            transform.position += Vector3.left * 7;
+            WalkTo(origin.x);
         }
+    }
+
+    private void Update()
+    {
+        if (!isPlayer && IsAlive())
+        {
+            moveTimer -= Time.deltaTime;
+
+            var amount = 1f - moveTimer / moveDelay;
+            moveBar.localScale = moveBar.localScale.WhereY(amount);
+
+            if (moveTimer <= 0)
+            {
+                moveTimer = moveDelay;
+                Board.EnemyAttack(1);
+            }
+        }
+    }
+
+    private void Stagger()
+    {
+        moveTimer = moveDelay;
+        moveBar.localScale = moveBar.localScale.WhereY(0);
+    }
+
+    public void WalkTo(float pos)
+    {
+        anim.SetBool(Walking, true);
+        var t = transform;
+        var p = origin.WhereX(pos);
+        var walkTime = 12f / Vector3.Distance(p, t.position);
+
+        Tweener.MoveToQuad(t, p, walkTime);
+        this.StartCoroutine(() =>
+        {
+            anim.SetBool(Walking, false);
+            healthDisplay.gameObject.SetActive(true);
+        }, walkTime - 0.1f);
     }
 
     public void Die()
@@ -61,7 +103,11 @@ public class Character : MonoBehaviour
         cam.BaseEffect(0.4f);
         root.SetActive(false);
         shadow.SetActive(false);
-        this.StartCoroutine(() => healthDisplay.gameObject.SetActive(false), 0.3f);
+        this.StartCoroutine(() =>
+        {
+            healthDisplay.gameObject.SetActive(false);
+            moveDisplay.gameObject.SetActive(false);
+        }, 0.3f);
     }
 
     public void Damage(int amount)
@@ -70,6 +116,7 @@ public class Character : MonoBehaviour
         cam.BaseEffect(0.2f);
         flasher.Flash();
         health.TakeDamage(amount);
+        Stagger();
     }
 
     public void Attack(Character target, int amount)
@@ -84,5 +131,10 @@ public class Character : MonoBehaviour
     public bool IsAlive()
     {
         return health.Current > 0;
+    }
+
+    public void SetHealth(int hp)
+    {
+        health.Init(hp);
     }
 }
