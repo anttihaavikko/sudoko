@@ -50,10 +50,8 @@ public class Character : MonoBehaviour
 
         if (isPlayer)
         {
-            healthDisplay.gameObject.SetActive(false);
-
             transform.position += Vector3.left * 7;
-            WalkTo(origin.x);
+            WalkTo(origin.x, true);
         }
 
         transform.localScale *= scale;
@@ -88,8 +86,10 @@ public class Character : MonoBehaviour
         moveBar.localScale = moveBar.localScale.WhereY(0);
     }
 
-    public void WalkTo(float pos)
+    public void WalkTo(float pos, bool showHpAfter)
     {
+        healthDisplay.gameObject.SetActive(false);
+        
         anim.SetBool(Walking, true);
         var t = transform;
         var p = origin.WhereX(pos);
@@ -99,7 +99,7 @@ public class Character : MonoBehaviour
         this.StartCoroutine(() =>
         {
             anim.SetBool(Walking, false);
-            healthDisplay.gameObject.SetActive(true);
+            healthDisplay.gameObject.SetActive(showHpAfter);
         }, walkTime - 0.1f);
     }
 

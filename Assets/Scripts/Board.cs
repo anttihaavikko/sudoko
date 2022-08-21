@@ -127,7 +127,7 @@ public class Board : MonoBehaviour
     {
         if (!enemy.IsAlive())
         {
-            player.WalkTo(7);
+            player.WalkTo(8, false);
             Invoke(nameof(Win), 1f);
         }
     }
