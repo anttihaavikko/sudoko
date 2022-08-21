@@ -17,6 +17,8 @@ public class Character : MonoBehaviour
     [SerializeField] private bool isPlayer;
     [SerializeField] private Transform moveBar;
     [SerializeField] private float moveDelay = 1f;
+    [SerializeField] private float scale = 1f;
+    
 
     private Animator anim;
 
@@ -40,11 +42,6 @@ public class Character : MonoBehaviour
         origin = transform.position;
         
         health.Init();
-        
-        if (transform.localScale.x < 0f)
-        {
-            mirrorables.ForEach(m => m.Mirror());   
-        }
 
         healthDisplay.SetParent(null, true);
         moveDisplay.SetParent(null, true);
@@ -58,6 +55,14 @@ public class Character : MonoBehaviour
             transform.position += Vector3.left * 7;
             WalkTo(origin.x);
         }
+
+        transform.localScale *= scale;
+    }
+
+    public void Mirror()
+    {
+        transform.Mirror();
+        mirrorables.ForEach(m => m.Mirror());
     }
 
     private void Update()

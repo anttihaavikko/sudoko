@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using AnttiStarterKit.Animations;
 using AnttiStarterKit.Extensions;
@@ -11,9 +12,11 @@ public class Board : MonoBehaviour
 {
     [SerializeField] private Tile tilePrefab;
     [SerializeField] private NumberPicker numberPicker;
+    [SerializeField] private Character player;
+    [SerializeField] private Transform enemyPos;
+    [SerializeField] private List<Character> enemies;
 
-    [SerializeField] private Character player, enemy;
-
+    private Character enemy;
     private readonly TileGrid<Tile> grid = new(9, 9);
 
     private SudokuBoard sudoku;
@@ -24,7 +27,16 @@ public class Board : MonoBehaviour
         Generate();
 
         player.SetHealth(StateManager.Instance.Health);
+
+        SpawnEnemy();
+    }
+
+    private void SpawnEnemy()
+    {
+        enemy = Instantiate(enemies.Random(), enemyPos);
+        enemy.transform.localPosition = Vector3.zero;
         enemy.Board = this;
+        enemy.Mirror();
     }
 
     private void CreateGrid()

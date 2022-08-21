@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 1008812078998171795}
   - component: {fileID: 3421301954140381447}
   m_Layer: 0
-  m_Name: Eye (2)
+  m_Name: Blush Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 1574582434756350370}
   - component: {fileID: 1302340877639608374}
   m_Layer: 0
-  m_Name: Eye (1)
+  m_Name: Eye Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 4582919681391081670}
   - component: {fileID: 1131941160878101220}
   m_Layer: 0
-  m_Name: Eye (3)
+  m_Name: Blush Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 900929932501525254}
   - component: {fileID: 46316880136921859}
   m_Layer: 0
-  m_Name: Eye
+  m_Name: Eye Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1451,7 +1451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.19999978
+  m_Length: 0.19999993
   m_ChildTransform: {fileID: 8973993409893706435}
   m_AttachedIK: {fileID: 8973993410577995428}
 --- !u!120 &8973993409122323775
@@ -1496,9 +1496,9 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -2.6605284, y: 6.071035, z: 0}
-  - {x: -2.5582683, y: 5.7678146, z: 0}
-  - {x: -2.6852107, y: 5.47407, z: 0}
+  - {x: -2.6664553, y: 6.084026, z: 0}
+  - {x: -2.5618687, y: 5.773907, z: 0}
+  - {x: -2.6916993, y: 5.47348, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1837,7 +1837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.43000007
+  m_Length: 0.42999983
   m_ChildTransform: {fileID: 8973993409628006388}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &8973993409628006391
@@ -2035,6 +2035,7 @@ GameObject:
   - component: {fileID: 6201060544813273784}
   - component: {fileID: 4576660106929105836}
   - component: {fileID: 1045587445051442415}
+  - component: {fileID: 8646306808466274670}
   m_Layer: 0
   m_Name: Human
   m_TagString: Untagged
@@ -2051,7 +2052,7 @@ Transform:
   m_GameObject: {fileID: 8973993410123798356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.4, y: 5.5, z: 0}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1}
+  m_LocalScale: {x: 1.6364, y: 1.6364, z: 1.6364}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8973993409623817047}
@@ -2142,6 +2143,7 @@ MonoBehaviour:
   isPlayer: 0
   moveBar: {fileID: 6705755204635142864}
   moveDelay: 1
+  scale: 1
 --- !u!114 &1045587445051442415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2170,6 +2172,17 @@ MonoBehaviour:
   spritesNeedingShader: []
   whiteMaterial: {fileID: 0}
   duration: 0.1
+--- !u!210 &8646306808466274670
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8973993410123798356}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &8973993410285326932
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,7 +2316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.19999984
+  m_Length: 0.20000003
   m_ChildTransform: {fileID: 8973993409188597016}
   m_AttachedIK: {fileID: 8973993410701628089}
 --- !u!120 &8973993410366041122
@@ -2348,9 +2361,9 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -2.1642177, y: 6.0786886, z: 0}
-  - {x: -2.0231962, y: 5.7914386, z: 0}
-  - {x: -2.0495222, y: 5.472523, z: 0}
+  - {x: -2.1588538, y: 6.091854, z: 0}
+  - {x: -2.0146239, y: 5.7980685, z: 0}
+  - {x: -2.041549, y: 5.471898, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
