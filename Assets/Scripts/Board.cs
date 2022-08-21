@@ -79,6 +79,8 @@ public class Board : MonoBehaviour
 
     public void TryFill(Tile tile, int index)
     {
+        if (!enemy.IsAlive()) return;
+        
         var value = numberPicker.Number;
         var cell = sudoku.GetCell(index);
         
