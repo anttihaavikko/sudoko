@@ -5,6 +5,7 @@ using AnttiStarterKit.Animations;
 using UnityEngine;
 using AnttiStarterKit.Extensions;
 using AnttiStarterKit.Game;
+using AnttiStarterKit.Managers;
 using AnttiStarterKit.Visuals;
 using Equipment;
 using UnityEngine.Rendering.UI;
@@ -23,6 +24,7 @@ public class Character : MonoBehaviour
     [SerializeField] private float scale = 1f;
     [SerializeField] private List<EquipmentVisuals> equipmentVisuals;
     [SerializeField] private EquipmentList equipmentList;
+    [SerializeField] private Transform hitPos;
 
     private Animator anim;
 
@@ -133,6 +135,8 @@ public class Character : MonoBehaviour
 
     public void Add(Equip e)
     {
+        EffectManager.AddTextPopup(e.sprite.name.ToUpper(), transform.position + Vector3.up * 3);
+        
         var slot = equipmentVisuals.FirstOrDefault(v => v.Slot == e.slot && v.IsFree);
         if (slot)
         {
@@ -179,6 +183,10 @@ public class Character : MonoBehaviour
         flasher.Flash();
         health.TakeDamage(amount);
         Stagger();
+
+        var p = hitPos.position;
+        EffectManager.AddTextPopup(amount.ToString(), p.RandomOffset(0.2f));
+        EffectManager.AddEffect(0, p.RandomOffset(0.2f));
     }
 
     public void Attack(Character target, int amount)
