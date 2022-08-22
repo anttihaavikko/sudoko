@@ -5,7 +5,9 @@ using UnityEngine;
 using AnttiStarterKit.Extensions;
 using AnttiStarterKit.Game;
 using AnttiStarterKit.Visuals;
+using Equipment;
 using UnityEngine.Rendering.UI;
+using Random = UnityEngine.Random;
 
 public class Character : MonoBehaviour
 {
@@ -18,7 +20,8 @@ public class Character : MonoBehaviour
     [SerializeField] private Transform moveBar;
     [SerializeField] private float moveDelay = 1f;
     [SerializeField] private float scale = 1f;
-    
+    [SerializeField] private List<EquipmentVisuals> equipmentVisuals;
+    [SerializeField] private EquipmentList equipmentList;
 
     private Animator anim;
 
@@ -55,6 +58,17 @@ public class Character : MonoBehaviour
         }
 
         transform.localScale *= scale;
+
+        equipmentVisuals.ForEach(v =>
+        {
+            v.Hide();
+            
+            if (Random.value < 0.5f)
+            {
+                var e = equipmentList.Random(v.Slot);
+                v.Show(e);
+            }
+        });
     }
 
     public void Mirror()

@@ -219,6 +219,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1447451640533695571, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1447451640533695571, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.368
+      objectReference: {fileID: 0}
     - target: {fileID: 1574582434756350370, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28662974
@@ -270,6 +278,30 @@ PrefabInstance:
     - target: {fileID: 5155774360808405337, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.83206
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596882170127260344, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: m_Solver.targetPosition.x
+      value: 2.7584515
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596882170127260344, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: m_Solver.targetPosition.y
+      value: 5.4718976
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596882170127260344, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: m_Solver.m_SolverPoses.Array.data[0].solverRotation.w
+      value: 0.22620845
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596882170127260344, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: m_Solver.m_SolverPoses.Array.data[0].solverRotation.z
+      value: -0.9740789
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596882170127260344, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: m_Solver.m_SolverPoses.Array.data[1].solverRotation.w
+      value: 0.9639406
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596882170127260344, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: m_Solver.m_SolverPoses.Array.data[1].solverRotation.z
+      value: -0.26611742
       objectReference: {fileID: 0}
     - target: {fileID: 8222002263833666403, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: mouthSad
@@ -513,7 +545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8973993410577995428, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Solver.targetPosition.x
-      value: 2.6916997
+      value: 2.1083004
       objectReference: {fileID: 0}
     - target: {fileID: 8973993410577995428, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Solver.targetPosition.y
