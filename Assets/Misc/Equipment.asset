@@ -120,7 +120,7 @@ MonoBehaviour:
     groundAngle: 0
   - sprite: {fileID: 21300000, guid: 278a61b71ad254ac2b3de2f53c255540, type: 3}
     trim: {fileID: 21300000, guid: 8071e3fa41059491db59a1fb176f2d9b, type: 3}
-    grounded: {fileID: 0}
+    grounded: {fileID: 21300000, guid: db3c5e2a93db2453e8e1b2f43d81e359, type: 3}
     colors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 5

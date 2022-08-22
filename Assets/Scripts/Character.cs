@@ -61,16 +61,39 @@ public class Character : MonoBehaviour
 
         transform.localScale *= scale;
 
+        Gear();
+    }
+
+    private void Gear()
+    {
+        var gear = StateManager.Instance.Gear;
+        
+        if (isPlayer)
+        {
+            equipmentVisuals.ForEach(v =>
+            {
+                v.Hide();
+                var match = gear.FirstOrDefault(g => g.slot == v.Slot);
+                if (match == default) return;
+                v.Show(match);
+                gear.Remove(match);
+            });
+            
+            return;
+        }
+
+        GearEnemy();
+    }
+
+    private void GearEnemy()
+    {
         equipmentVisuals.ForEach(v =>
         {
             v.Hide();
-            
-            if (Random.value < 0.5f)
-            {
-                var e = equipmentList.Random(v.Slot);
-                v.Show(e);
-                drops.Add(e);
-            }
+            if (!(Random.value < 0.5f)) return;
+            var e = equipmentList.Random(v.Slot);
+            v.Show(e);
+            drops.Add(e);
         });
     }
 
@@ -114,6 +137,7 @@ public class Character : MonoBehaviour
         if (slot)
         {
             slot.Show(e);
+            StateManager.Instance.AddGear(e);
         }
     }
 
