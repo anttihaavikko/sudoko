@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using AnttiStarterKit.Extensions;
 
 public class Tile : MonoBehaviour
 {
@@ -34,6 +35,14 @@ public class Tile : MonoBehaviour
     public void Reveal(int value)
     {
         IsRevealed = true;
+        label.color = Color.black;
         label.text = value.ToString();
+    }
+
+    public void IndicateWrong(int value)
+    {
+        label.color = Color.red;
+        label.text = value.ToString();
+        this.StartCoroutine(() => label.text = "", 0.5f);
     }
 }

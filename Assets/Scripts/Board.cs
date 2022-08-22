@@ -36,7 +36,7 @@ public class Board : MonoBehaviour
 
     private void Update()
     {
-        if (DevKey.Down(KeyCode.Q))
+        if (DevKey.Down(KeyCode.Space))
         {
             Attack(player, enemy, 5);
         }
@@ -123,6 +123,8 @@ public class Board : MonoBehaviour
             
             return;
         }
+
+        tile.IndicateWrong(value);
         
         Attack(enemy, player, value);
     }
