@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.37367703"
-     inkscape:cx="9785.5839"
-     inkscape:cy="2232.6387"
+     inkscape:zoom="0.1226201"
+     inkscape:cx="10105.839"
+     inkscape:cy="2009.3267"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -554,11 +554,12 @@
        inkscape:export-ydpi="25" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-       d="m 2011.5774,489.81693 19.8126,5.82083 24.3896,18.88266 19.3249,-17.07598 22.4507,-6.87916 -0.2645,6.71184 c 0,0 -9.0555,3.67688 -9.3201,14.12792 1.0583,12.96458 8.8097,15.95344 8.8097,15.95344 l 0.1096,26.15159 -85.3125,0.74835 -0.3742,-32.84459 c 0,0 7.0484,-5.56661 7.0484,-11.51974 0.1323,-7.40833 -6.5081,-12.96779 -6.5081,-12.96779 z"
+       d="m 2020.7821,457.95452 30.4334,5.11278 24.3896,18.88266 19.3249,-17.07598 11.8299,-6.17111 -0.2645,6.71184 c 0,0 -9.0555,3.67688 -9.3201,14.12792 1.0583,12.96458 8.8097,15.95344 8.8097,15.95344 l 0.1096,26.15159 -85.3125,0.74835 -0.3742,-32.84459 c 0,0 7.0484,-5.56661 7.0484,-11.51974 0.1323,-7.40833 -6.5081,-12.96779 -6.5081,-12.96779 z"
        id="path954"
        sodipodi:nodetypes="cccccccccccccc"
        inkscape:export-xdpi="25"
-       inkscape:export-ydpi="25" />
+       inkscape:export-ydpi="25"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/shirt.png" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 2187.0468,383.64577 -10.0541,11.64167 -7.4083,57.67916 46.5887,18.22696 -0.6012,-55.46163 z"
@@ -577,7 +578,7 @@
        inkscape:export-filename="/Users/anttih/vest.png" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 2018.3154,592.31737 83.8157,-0.37417 -1.1225,12.34784 -28.5018,17.58635 h -26.1924 l -27.999,-17.96053 z"
+       d="m 2018.3154,592.31737 83.8157,-0.37417 -1.1225,12.34784 -15.7568,16.8783 -38.9374,0.70805 -27.999,-17.96053 z"
        id="path979"
        sodipodi:nodetypes="ccccccc"
        inkscape:export-xdpi="25"
@@ -917,7 +918,7 @@
        id="path6257"
        cx="2366.929"
        cy="571.09125"
-       rx="4.6023479"
+       rx="87.142899"
        ry="4.5138412"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
@@ -926,7 +927,7 @@
        id="path6261"
        cx="2376.2222"
        cy="572.94983"
-       rx="4.6908545"
+       rx="87.142899"
        ry="4.7793608"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
@@ -935,7 +936,7 @@
        id="path6263"
        cx="2385.3384"
        cy="572.15332"
-       rx="4.0713077"
+       rx="87.142899"
        ry="4.3368273"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
@@ -944,7 +945,7 @@
        id="path6265"
        cx="2394.2773"
        cy="573.4809"
-       rx="5.0448809"
+       rx="87.142899"
        ry="4.0713077"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
@@ -953,7 +954,7 @@
        id="path6267"
        cx="2403.9246"
        cy="573.12689"
-       rx="4.6023479"
+       rx="87.142899"
        ry="4.0713077"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
@@ -962,7 +963,7 @@
        id="path6269"
        cx="2413.3948"
        cy="572.86133"
-       rx="3.8057876"
+       rx="87.142899"
        ry="3.982801"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
@@ -971,7 +972,7 @@
        id="path6271"
        cx="2421.3606"
        cy="571.71075"
-       rx="4.3368273"
+       rx="87.142899"
        ry="4.7793608"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
@@ -1351,6 +1352,40 @@
        height="8.316412"
        x="2600.0603"
        y="588.00653"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <circle
+       style="fill:none;stroke:#ffffff;stroke-width:50;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path1093"
+       cx="1747.476"
+       cy="1569.0466"
+       r="181.2617"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/marker.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       id="path1095"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:type="inkscape:offset"
+       inkscape:radius="0"
+       inkscape:original="M 2784.5742 561.01367 C 2776.8818 584.5496 2761.9313 600.87165 2784.7734 632.00977 C 2807.4536 610.41276 2791.2185 585.27653 2784.5742 561.01367 z M 2784.7734 632.00977 C 2784.7002 632.0795 2784.6483 632.15104 2784.5742 632.2207 L 2784.9551 632.27539 C 2784.8877 632.18423 2784.8401 632.10067 2784.7734 632.00977 z "
+       d="m 2784.5742,561.01367 c -7.6924,23.53593 -22.6429,39.85798 0.1992,70.9961 22.6802,-21.59701 6.4451,-46.73324 -0.1992,-70.9961 z m 0.1992,70.9961 c -0.073,0.0697 -0.1251,0.14127 -0.1992,0.21093 l 0.3809,0.0547 c -0.067,-0.0912 -0.115,-0.17472 -0.1817,-0.26562 z"
+       transform="translate(-66.370497,5.3401549)" />
+    <path
+       id="path1098"
+       style="fill:#ffffff;stroke:#000000;stroke-width:15.11811043;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 10542.871,2296.5664 c -18.061,24.4268 -27.517,47.2895 -30.596,68.9922 -14.511,-16.8869 -21.931,-31.1698 -50.976,-41.9121 0.979,74.5477 22.16,119.0861 79.957,144.8672 0.538,0.8314 1.067,1.6645 1.615,2.4941 0.599,-0.9085 1.167,-1.8203 1.748,-2.7305 57.832,-25.7771 79.037,-68.2809 80.016,-142.8537 -31.207,11.5421 -39.497,25.132 -54.115,43.6877 -2.723,-23.2619 -11.623,-47.3604 -27.649,-72.5449 z"
+       transform="scale(0.26458333)"
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/hair.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 2860.635,649.75199 c -20.9404,-3.99795 -15.9251,-40.54881 -8.3613,-58.79866 10.5811,14.2675 42.6232,44.14057 8.3613,58.79866 z"
+       id="path1141"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/hair-single.png"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
   </g>

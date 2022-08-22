@@ -142,7 +142,14 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: e67ab5ce45205444ba64ed638a2a04c6, type: 3}
     trim: {fileID: 0}
     grounded: {fileID: 0}
-    colors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
+    trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    slot: 6
+    groundAngle: 90
+  - sprite: {fileID: 21300000, guid: a43ff8adf95a146efaffbba63a130a9c, type: 3}
+    trim: {fileID: 0}
+    grounded: {fileID: 0}
+    colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 6
     groundAngle: 90

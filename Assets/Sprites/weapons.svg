@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1149"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
+   sodipodi:docname="weapons.svg">
+  <defs
+     id="defs1143" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#b8b8b8"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="1161.6737"
+     inkscape:cy="471.78412"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="784"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1146">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#deaa87;stroke:#000000;stroke-width:2.64583;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect1087"
+       width="7.721137"
+       height="17.647177"
+       x="249.38354"
+       y="66.978394"
+       ry="0"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:2.64583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 249.3533,63.327361 h 7.7799 c 1.8049,-18.47005 -2.2639,-37.7792 -4.8289,-56.87352 -1.7037,19.07784 -4.9534,38.41335 -2.951,56.87352 z"
+       id="path1091"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <rect
+       style="fill:#999999;stroke:#000000;stroke-width:2.64583;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect1089"
+       width="26.02232"
+       height="8.316412"
+       x="240.23291"
+       y="59.303284"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <rect
+       style="fill:#deaa87;stroke:#000000;stroke-width:4;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;fill-opacity:1"
+       id="rect1758"
+       width="7.4835467"
+       height="225.57547"
+       x="306.82541"
+       y="-75.904549"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/bo.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+       id="rect1760"
+       width="11.492589"
+       height="50.781212"
+       x="304.41998"
+       y="14.699823"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/bo.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 304.83781,21.166666 9.82736,1.511905"
+       id="path1764"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/bo.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 315.42114,27.970239 -9.6384,1.511903"
+       id="path1766"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/bo.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 305.78274,29.482142 9.6384,4.535715"
+       id="path1768"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/bo.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 316.74405,40.254465 H 305.97173"
+       id="path1770"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/bo.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 305.59375,49.703868 9.26041,-3.779761"
+       id="path1772"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/bo.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 305.40475,56.696427 9.44941,2.834822"
+       id="path1774"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/bo.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 315.6101,53.294642 303.89285,53.105655"
+       id="path1776"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/bo.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+  </g>
+</svg>
