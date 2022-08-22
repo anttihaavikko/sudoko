@@ -45,4 +45,9 @@ public class Tile : MonoBehaviour
         label.text = value.ToString();
         this.StartCoroutine(() => label.text = "", 0.5f);
     }
+
+    public void Clear()
+    {
+        label.text = "";
+    }
 }

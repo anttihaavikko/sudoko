@@ -160,17 +160,49 @@ PrefabInstance:
       value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: title
+      value: Orc
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: moveDelay
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: health.cur
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: health.max
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: stats.speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: stats.attack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: stats.defence
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: skills.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: skills.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9180ac6075f0b4132897f30e05c24122, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9180ac6075f0b4132897f30e05c24122, type: 2}
     - target: {fileID: 6330063952600784115, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Length
       value: 0.19999985

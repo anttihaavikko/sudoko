@@ -7,6 +7,7 @@ using AnttiStarterKit.Extensions;
 using AnttiStarterKit.Utils;
 using Sudoku;
 using Sudoku.Model;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -18,6 +19,8 @@ public class Board : MonoBehaviour
     [SerializeField] private Transform enemyPos;
     [SerializeField] private List<Character> enemies;
     [SerializeField] private Drop dropPrefab;
+    [SerializeField] private TMP_Text enemyDescription;
+    [SerializeField] private GameObject enemyTooltip;
 
     private Character enemy;
     private readonly TileGrid<Tile> grid = new(9, 9);
@@ -48,6 +51,12 @@ public class Board : MonoBehaviour
         enemy.transform.localPosition = Vector3.zero;
         enemy.Board = this;
         enemy.Mirror();
+        enemy.showDescription = ShowDescription;
+    }
+
+    private void ShowDescription(string desc)
+    {
+        enemyDescription.text = desc;
     }
 
     private void CreateGrid()
@@ -61,6 +70,11 @@ public class Board : MonoBehaviour
                 grid.Set(tile, x, y);
             }
         }
+    }
+
+    private void Clear()
+    {
+        grid.All().ToList().ForEach(tile => tile.Clear());
     }
 
     private void Generate()
@@ -113,13 +127,21 @@ public class Board : MonoBehaviour
         if (sudoku.Solver.IsValidValueForTheCell(value, cell))
         {
             tile.Reveal(value);
-            Attack(player, enemy, value);
+
             cell.Value = value;
 
             if (sudoku.IsBoardFilled())
             {
-                Generate();
+                Invoke(nameof(Clear), 0.75f);
+                Invoke(nameof(Generate), 1.5f);
             }
+            
+            if (enemy.Interrupts(value))
+            {
+                return;
+            }
+            
+            Attack(player, enemy, value);
             
             return;
         }
@@ -133,6 +155,7 @@ public class Board : MonoBehaviour
     {
         if (!enemy.IsAlive())
         {
+            enemyTooltip.SetActive(false);
             StartCoroutine(EndWalk());
         }
 

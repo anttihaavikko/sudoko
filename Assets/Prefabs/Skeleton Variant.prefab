@@ -264,6 +264,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: title
+      value: Skeleton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: moveDelay
       value: 10
       objectReference: {fileID: 0}
@@ -274,6 +278,14 @@ PrefabInstance:
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: health.max
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: stats.speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: stats.attack
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5155774360808405337, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_LocalScale.x
