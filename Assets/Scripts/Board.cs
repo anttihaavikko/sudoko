@@ -123,8 +123,8 @@ public class Board : MonoBehaviour
 
     public void TryFill(Tile tile, int index)
     {
-        if (!enemy.IsAlive()) return;
-        
+        if (!enemy.IsAlive() || !player.IsAlive()) return;
+
         var value = numberPicker.Number;
         var cell = sudoku.GetCell(index);
         
@@ -245,6 +245,7 @@ public class Board : MonoBehaviour
 
     public void EnemyAttack(int damage)
     {
+        if (!player.IsAlive()) return;
         enemy.Attack(player, damage);
     }
 

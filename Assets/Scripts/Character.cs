@@ -112,7 +112,7 @@ public class Character : MonoBehaviour
         return sb.ToString();
     }
 
-    private void SkillEffect()
+    public void SkillEffect()
     {
         anim.SetTrigger(SkillTrigger);
     }
@@ -296,6 +296,7 @@ public class Character : MonoBehaviour
 
     public void Heal(int amount)
     {
+        EffectManager.AddEffect(3, center.position);
         SkillEffect();
         health.Heal(amount);
         EffectManager.AddTextPopup(amount.ToString(), hitPos.position.RandomOffset(0.2f));
