@@ -67,7 +67,7 @@ Shader "CustomSprites/WavySprite"
 
                 float2 d = diff(v.uv, world);
 
-                o.position = UnityObjectToClipPos(v.vertex) + float4(d.x, d.y , 0, 0);
+                o.position = UnityObjectToClipPos(v.vertex + float4(d.x, d.y , 0, 0));
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 o.color = v.color;
                 return o;

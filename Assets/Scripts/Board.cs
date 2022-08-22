@@ -162,6 +162,8 @@ public class Board : MonoBehaviour
         
         yield return new WaitForSeconds(1f);
         
+        if (!player.IsAlive()) yield break;
+        
         offset = 0;
         var start = p.x;
         foreach (var d in dropItems)

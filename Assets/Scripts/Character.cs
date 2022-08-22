@@ -26,6 +26,7 @@ public class Character : MonoBehaviour
     [SerializeField] private EquipmentList equipmentList;
     [SerializeField] private Transform hitPos;
 
+
     private Animator anim;
 
     private Vector3 origin;

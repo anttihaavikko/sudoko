@@ -1138,6 +1138,7 @@ MonoBehaviour:
   sprite: {fileID: 2411381098314374833}
   trim: {fileID: 3924636556452892849}
   slot: 6
+  hair: {fileID: 0}
 --- !u!1 &2902685615756158756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,6 +1728,7 @@ MonoBehaviour:
   sprite: {fileID: 3951822859618684611}
   trim: {fileID: 4220856209357825181}
   slot: 1
+  hair: {fileID: 5372893891116219655}
 --- !u!1 &4467209386966628310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,6 +1879,90 @@ MonoBehaviour:
     m_RestoreDefaultPose: 1
     targetPosition: {x: -1.7722776, y: 6.017858, z: 0}
     flip: 0
+--- !u!1 &5372893891116219655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1648894085974002845}
+  - component: {fileID: 1312000112456503138}
+  m_Layer: 0
+  m_Name: Hair
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1648894085974002845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5372893891116219655}
+  m_LocalRotation: {x: -0, y: -0, z: -0.24702784, w: 0.9690084}
+  m_LocalPosition: {x: 0.195, y: 0.586, z: 0}
+  m_LocalScale: {x: 0.7663587, y: 0.7663587, z: 0.76635885}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8973993409633980970}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -28.603}
+--- !u!212 &1312000112456503138
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5372893891116219655}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 08e504fe6bc18499196b2c2392ca4e0e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 7ebbd1cd71a4844ebb0325d4b03e9b47, type: 3}
+  m_Color: {r: 1, g: 0.9476305, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.47, y: 0.52}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &5400686799289687368
 GameObject:
   m_ObjectHideFlags: 0
@@ -2210,6 +2296,7 @@ MonoBehaviour:
   sprite: {fileID: 7033586359615108831}
   trim: {fileID: 692924025083541788}
   slot: 2
+  hair: {fileID: 0}
 --- !u!1 &6682688474494947353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2866,6 +2953,7 @@ MonoBehaviour:
   sprite: {fileID: 2631669087608318512}
   trim: {fileID: 3102122322100993706}
   slot: 5
+  hair: {fileID: 0}
 --- !u!1 &8973993409122323768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3387,6 +3475,7 @@ Transform:
   m_Children:
   - {fileID: 5155774360808405337}
   - {fileID: 1447451640533695571}
+  - {fileID: 1648894085974002845}
   m_Father: {fileID: 8973993410285326933}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4177,6 +4266,7 @@ MonoBehaviour:
   sprite: {fileID: 3687951302801245281}
   trim: {fileID: 6933395510765261997}
   slot: 6
+  hair: {fileID: 0}
 --- !u!1 &9160422214891004432
 GameObject:
   m_ObjectHideFlags: 0
