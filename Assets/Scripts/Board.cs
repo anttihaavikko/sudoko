@@ -21,12 +21,16 @@ public class Board : MonoBehaviour
     [SerializeField] private Drop dropPrefab;
     [SerializeField] private TMP_Text enemyDescription;
     [SerializeField] private GameObject enemyTooltip;
+    [SerializeField] private GameObject inventoryPanel;
+    [SerializeField] private Inventory inventory;
+    [SerializeField] private Appearer continueButton;
 
     private Character enemy;
     private readonly TileGrid<Tile> grid = new(9, 9);
 
     private SudokuBoard sudoku;
-    
+    private bool ending;
+
     private void Start()
     {
         CreateGrid();
@@ -153,14 +157,18 @@ public class Board : MonoBehaviour
 
     private void CheckEnd()
     {
+        if (ending) return;
+        
         if (!enemy.IsAlive())
         {
+            ending = true;
             enemyTooltip.SetActive(false);
             StartCoroutine(EndWalk());
         }
 
         if (!player.IsAlive())
         {
+            ending = true;
             CancelInvoke(nameof(Win));
             Invoke(nameof(Lose), 1f);
         }
@@ -187,6 +195,8 @@ public class Board : MonoBehaviour
         
         if (!player.IsAlive()) yield break;
         
+        inventoryPanel.SetActive(true);
+        
         offset = 0;
         var start = p.x;
         foreach (var d in dropItems)
@@ -196,15 +206,24 @@ public class Board : MonoBehaviour
             yield return new WaitForSeconds(duration);
             
             d.gameObject.SetActive(false);
-            player.Add(d.Equipment);
+            inventory.Add(d.Equipment, true);
             
             yield return new WaitForSeconds(0.6f);
         }
         
-        player.WalkTo(start + offset + 10, false);
-        
-        yield return new WaitForSeconds(1f);
-        
+        continueButton.Show();
+    }
+
+    public void Continue()
+    {
+        continueButton.Hide();
+        StartCoroutine(ChangeScene());
+    }
+
+    private IEnumerator ChangeScene()
+    {
+        player.WalkTo(20, false);
+        yield return new WaitForSeconds(1.5f);
         Win();
     }
 

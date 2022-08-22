@@ -24,19 +24,19 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.1226201"
-     inkscape:cx="10105.839"
-     inkscape:cy="2009.3267"
+     inkscape:zoom="0.9809608"
+     inkscape:cx="10476.662"
+     inkscape:cy="2618.9931"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:snap-global="false"
-     inkscape:window-width="1440"
-     inkscape:window-height="784"
+     inkscape:window-width="1920"
+     inkscape:window-height="964"
      inkscape:window-x="0"
      inkscape:window-y="25"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -1386,6 +1386,22 @@
        id="path1141"
        sodipodi:nodetypes="ccc"
        inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/hair-single.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 2757.0456,690.40575 c 26.5318,-5.08741 54.0727,-13.20217 74.7623,-0.76287 -25.9363,16.66318 -49.033,46.10479 -78.5765,46.53563"
+       id="path2612"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/orc-ear.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 2758.4117,724.73377 c 22.0623,-13.71415 5.7052,-17.04468 3.7761,-24.27467 17.3437,-8.39294 35.0715,-11.02567 53.1344,-8.631"
+       id="path2614"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/orc-ear.png"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
   </g>

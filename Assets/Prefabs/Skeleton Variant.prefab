@@ -201,20 +201,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: spritesNeedingShader.Array.size
-      value: 3
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
-      propertyPath: spritesNeedingShader.Array.data[0]
+      propertyPath: spritesNeedingShader.Array.data[10]
       value: 
-      objectReference: {fileID: 417865419770078877}
+      objectReference: {fileID: 1631438432041225462}
     - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
-      propertyPath: spritesNeedingShader.Array.data[1]
+      propertyPath: spritesNeedingShader.Array.data[11]
       value: 
       objectReference: {fileID: 7010711767665733708}
     - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
-      propertyPath: spritesNeedingShader.Array.data[2]
+      propertyPath: spritesNeedingShader.Array.data[12]
       value: 
-      objectReference: {fileID: 1631438432041225462}
+      objectReference: {fileID: 417865419770078877}
+    - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: spritesNeedingShader.Array.data[13]
+      value: 
+      objectReference: {fileID: 417865419770078877}
     - target: {fileID: 1312000112456503138, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Color.a
       value: 0

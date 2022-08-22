@@ -30,7 +30,7 @@ public class Character : MonoBehaviour
     [SerializeField] private float scale = 1f;
     [SerializeField] private List<EquipmentVisuals> equipmentVisuals;
     [SerializeField] private EquipmentList equipmentList;
-    [SerializeField] private Transform hitPos;
+    [SerializeField] private Transform hitPos, center;
     [SerializeField] private Transform groundMask;
 
     private Animator anim;
@@ -52,6 +52,7 @@ public class Character : MonoBehaviour
     private static readonly int AttackAnim = Animator.StringToHash("attack");
     private static readonly int Hurt = Animator.StringToHash("hurt");
     private static readonly int SkillTrigger = Animator.StringToHash("skill");
+    private readonly List<Equip> inventory = new();
 
     private void Start()
     {
@@ -122,13 +123,16 @@ public class Character : MonoBehaviour
         
         if (isPlayer)
         {
+            inventory.Clear();
+            inventory.AddRange(StateManager.Instance.Inventory);
+            
             equipmentVisuals.ForEach(v =>
             {
                 v.Hide();
-                var match = gear.FirstOrDefault(g => g.slot == v.Slot);
+                var match = gear.FirstOrDefault(g => g != null && g.slot == v.Slot);
                 if (match == default) return;
-                v.Show(match);
                 gear.Remove(match);
+                v.Show(match);
             });
             
             return;
@@ -183,16 +187,66 @@ public class Character : MonoBehaviour
         moveBar.localScale = moveBar.localScale.WhereY(0);
     }
 
-    public void Add(Equip e)
+    public void Remove(Equip e)
     {
+        var equippedSlot = equipmentVisuals.FirstOrDefault(v => v.Has(e));
+        if (equippedSlot)
+        {
+            Remove(equippedSlot);
+        }
+    }
+
+    public Equip Remove(int slotIndex)
+    {
+        if (equipmentVisuals[slotIndex].IsFree) return null;
+        var e = equipmentVisuals[slotIndex].GetEquip();
+        Remove(equipmentVisuals[slotIndex]);
+        return e;
+    }
+
+    private void Remove(EquipmentVisuals slot)
+    {
+        inventory.Add(slot.GetEquip());
+        slot.Hide();
+        UpdateState();
+    }
+
+    public int Add(Equip e, int inSlot = -1)
+    {
+        inventory.Remove(e);
+        
+        if (inSlot < 0)
+        {
+            var equippedSlot = equipmentVisuals.FirstOrDefault(v => v.Has(e));
+            if (equippedSlot)
+            {
+                return equipmentVisuals.IndexOf(equippedSlot);
+            }   
+        }
+
         EffectManager.AddTextPopup(e.sprite.name.ToUpper(), transform.position + Vector3.up * 3);
         
-        var slot = equipmentVisuals.FirstOrDefault(v => v.Slot == e.slot && v.IsFree);
+        var slot = inSlot >= 0 ? 
+            equipmentVisuals[inSlot] : 
+            equipmentVisuals.FirstOrDefault(v => v.Slot == e.slot && v.IsFree);
+        
         if (slot)
         {
             slot.Show(e);
-            StateManager.Instance.AddGear(e);
+            UpdateState();
+            return equipmentVisuals.IndexOf(slot);
         }
+
+        UpdateState();
+        inventory.Add(e);
+
+        return -1;
+    }
+
+    private void UpdateState()
+    {
+        var equips = equipmentVisuals.Select(v => v.GetEquip()).Where(e => e != default);
+        StateManager.Instance.UpdateEquips(equips, inventory);
     }
 
     public float WalkTo(float pos, bool showHpAfter)
@@ -216,6 +270,8 @@ public class Character : MonoBehaviour
 
     public void Die()
     {
+        EffectManager.AddEffects(new []{ 1, 2 }, center.position);
+        
         cam.BaseEffect(0.4f);
         root.SetActive(false);
         shadow.SetActive(false);
@@ -285,5 +341,20 @@ public class Character : MonoBehaviour
     public void SetHealth(int hp)
     {
         health.Init(hp);
+    }
+
+    public List<Equip> GetEquips()
+    {
+        return equipmentVisuals.Select(v => v.GetEquip()).Where(e => e != null).ToList();
+    }
+
+    public List<Equip> GetInventory()
+    {
+        return inventory.ToList();
+    }
+
+    public bool CanSlot(Equip e, int slotIndex)
+    {
+        return equipmentVisuals[slotIndex].Slot == e.slot && !equipmentVisuals[slotIndex].Has(e); 
     }
 }
