@@ -1,8 +1,10 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using AnttiStarterKit.Animations;
 using AnttiStarterKit.Extensions;
+using AnttiStarterKit.Utils;
 using Sudoku;
 using Sudoku.Model;
 using UnityEngine;
@@ -15,6 +17,7 @@ public class Board : MonoBehaviour
     [SerializeField] private Character player;
     [SerializeField] private Transform enemyPos;
     [SerializeField] private List<Character> enemies;
+    [SerializeField] private Drop dropPrefab;
 
     private Character enemy;
     private readonly TileGrid<Tile> grid = new(9, 9);
@@ -29,6 +32,14 @@ public class Board : MonoBehaviour
         player.SetHealth(StateManager.Instance.Health);
 
         SpawnEnemy();
+    }
+
+    private void Update()
+    {
+        if (DevKey.Down(KeyCode.Q))
+        {
+            Attack(player, enemy, 5);
+        }
     }
 
     private void SpawnEnemy()
@@ -105,8 +116,6 @@ public class Board : MonoBehaviour
             Attack(player, enemy, value);
             cell.Value = value;
 
-            Invoke(nameof(CheckWin), 1f);
-
             if (sudoku.IsBoardFilled())
             {
                 Generate();
@@ -116,20 +125,60 @@ public class Board : MonoBehaviour
         }
         
         Attack(enemy, player, value);
+    }
+
+    private void CheckEnd()
+    {
+        if (!enemy.IsAlive())
+        {
+            StartCoroutine(EndWalk());
+        }
 
         if (!player.IsAlive())
         {
+            CancelInvoke(nameof(Win));
             Invoke(nameof(Lose), 1f);
         }
     }
 
-    private void CheckWin()
+    private IEnumerator EndWalk()
     {
-        if (!enemy.IsAlive())
+        var drops = enemy.GetDrops();
+        var p = enemy.transform.position;
+        var dropItems = new List<Drop>();
+        
+        var offset = 0;
+        
+        drops.ForEach(d =>
         {
-            player.WalkTo(8, false);
-            Invoke(nameof(Win), 1f);
+            var drop = Instantiate(dropPrefab, p, Quaternion.identity);
+            drop.Setup(d);
+            dropItems.Add(drop);
+            Tweener.MoveToQuad(drop.transform, p + 2f * offset * Vector3.right, 0.2f);
+            offset++;
+        });
+        
+        yield return new WaitForSeconds(1f);
+        
+        offset = 0;
+        var start = p.x;
+        foreach (var d in dropItems)
+        {
+            var duration = player.WalkTo(start + offset * 2f, false);
+            offset++;
+            yield return new WaitForSeconds(duration);
+            
+            d.gameObject.SetActive(false);
+            player.Add(d.Equipment);
+            
+            yield return new WaitForSeconds(0.6f);
         }
+        
+        player.WalkTo(start + offset + 10, false);
+        
+        yield return new WaitForSeconds(1f);
+        
+        Win();
     }
 
     private void Win()
@@ -145,6 +194,7 @@ public class Board : MonoBehaviour
     private void Attack(Character attacker, Character target, int damage)
     {
         attacker.Attack(target, damage);
+        Invoke(nameof(CheckEnd), 0.2f);
     }
 
     public void EnemyAttack(int damage)

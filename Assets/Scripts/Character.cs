@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using AnttiStarterKit.Animations;
 using UnityEngine;
 using AnttiStarterKit.Extensions;
@@ -27,6 +28,7 @@ public class Character : MonoBehaviour
 
     private Vector3 origin;
     private EffectCamera cam;
+    private readonly List<Equip> drops = new();
 
     private float moveTimer;
 
@@ -67,8 +69,14 @@ public class Character : MonoBehaviour
             {
                 var e = equipmentList.Random(v.Slot);
                 v.Show(e);
+                drops.Add(e);
             }
         });
+    }
+
+    public List<Equip> GetDrops()
+    {
+        return drops;
     }
 
     public void Mirror()
@@ -100,14 +108,23 @@ public class Character : MonoBehaviour
         moveBar.localScale = moveBar.localScale.WhereY(0);
     }
 
-    public void WalkTo(float pos, bool showHpAfter)
+    public void Add(Equip e)
+    {
+        var slot = equipmentVisuals.FirstOrDefault(v => v.Slot == e.slot && v.IsFree);
+        if (slot)
+        {
+            slot.Show(e);
+        }
+    }
+
+    public float WalkTo(float pos, bool showHpAfter)
     {
         healthDisplay.gameObject.SetActive(false);
         
         anim.SetBool(Walking, true);
         var t = transform;
         var p = origin.WhereX(pos);
-        var walkTime = 12f / Vector3.Distance(p, t.position);
+        var walkTime = Mathf.Max(Mathf.Abs(p.x - t.position.x) * 0.25f, 0.2f);
 
         Tweener.MoveToQuad(t, p, walkTime);
         this.StartCoroutine(() =>
@@ -115,6 +132,8 @@ public class Character : MonoBehaviour
             anim.SetBool(Walking, false);
             healthDisplay.gameObject.SetActive(showHpAfter);
         }, walkTime - 0.1f);
+
+        return walkTime;
     }
 
     public void Die()

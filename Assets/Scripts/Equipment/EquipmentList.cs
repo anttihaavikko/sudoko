@@ -10,14 +10,14 @@ namespace Equipment
     {
         [SerializeField] private List<Blueprint> hats;
     
-        public Equipment Random()
+        public Equip Random()
         {
-            return new Equipment(hats.Random());
+            return new Equip(hats.Random());
         }
 
-        public Equipment Random(EquipmentSlot slot)
+        public Equip Random(EquipmentSlot slot)
         {
-            return new Equipment(hats.Where(h => h.slot == slot).ToList().Random());
+            return new Equip(hats.Where(h => h.slot == slot).ToList().Random());
         }
     }
 }
