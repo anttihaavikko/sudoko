@@ -335,7 +335,7 @@ public class Character : MonoBehaviour
         EffectManager.AddTextPopup(amount.ToString(), hitPos.position.RandomOffset(0.2f));
     }
 
-    public void Damage(int amount, bool critical = false)
+    public void Damage(int amount, int madeWith, bool critical = false)
     {
         var reduced = critical ? amount : Mathf.Max(0, amount - stats.defence);
         
@@ -353,7 +353,7 @@ public class Character : MonoBehaviour
         cam.BaseEffect(0.2f);
         health.TakeDamage(reduced);
 
-        if (!HasSkill(SkillType.NoStagger) && !HasSkill(SkillType.StaggerOnlyOnX, amount))
+        if (!HasSkill(SkillType.NoStagger) && !HasSkill(SkillType.StaggerOnlyOnX, madeWith))
         {
             Stagger();   
         }
@@ -370,7 +370,7 @@ public class Character : MonoBehaviour
         Tweener.MoveToBounceOut(t, origin + Vector3.right * 1.5f * t.localScale.x, 0.2f);
         this.StartCoroutine(() =>
         {
-            target.Damage(boosted ? amount + stats.attack : amount, critical);
+            target.Damage(boosted ? amount + stats.attack : amount, amount, critical);
             AttackTriggers();
         }, 0.15f);
         this.StartCoroutine(() => Tweener.MoveToQuad(t, origin, 0.2f), 0.25f);
