@@ -15,7 +15,7 @@ MonoBehaviour:
   description: Do an (extra hit) when attacking with [1].
   prefix: Swift
   suffix: 
-  type: 0
+  type: 15
   stats:
     attack: 0
     defence: 0

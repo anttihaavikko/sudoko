@@ -309,16 +309,22 @@ public class Character : MonoBehaviour
         }, 0.3f);
     }
 
-    public bool Interrupts(int value)
+    public bool Interrupts(int value, Character target)
     {
-        var heals = skills.Where(s => s.Matches(SkillType.HealInsteadOnX, value)).ToList();
+        var heals = GetSkillCount(SkillType.HealInsteadOnX, value);
+        var counters = GetSkillCount(SkillType.AttackInsteadOnX, value);
 
-        if (heals.Any())
+        if (heals > 0)
         {
-            Heal(heals.Count * value);
+            Heal(heals * value);
         }
         
-        return heals.Any();
+        if (counters > 0)
+        {
+            Attack(target, counters * value);
+        }
+        
+        return heals + counters > 0;
     }
 
     public void Heal(int amount)
@@ -329,9 +335,9 @@ public class Character : MonoBehaviour
         EffectManager.AddTextPopup(amount.ToString(), hitPos.position.RandomOffset(0.2f));
     }
 
-    public void Damage(int amount)
+    public void Damage(int amount, bool critical = false)
     {
-        var reduced = Mathf.Max(0, amount - stats.defence);
+        var reduced = critical ? amount : Mathf.Max(0, amount - stats.defence);
         
         var p = hitPos.position;
         anim.SetTrigger(Hurt);
@@ -352,13 +358,50 @@ public class Character : MonoBehaviour
         EffectManager.AddEffect(0, p.RandomOffset(0.2f));
     }
 
-    public void Attack(Character target, int amount)
+    public void Attack(Character target, int amount, bool boosted = true)
     {
+        var critical = HasSkill(SkillType.IgnoresDefence);
         var t = transform;
         anim.SetTrigger(AttackAnim);
         Tweener.MoveToBounceOut(t, origin + Vector3.right * 1.5f * t.localScale.x, 0.2f);
-        this.StartCoroutine(() => target.Damage(amount + stats.attack), 0.15f);
+        this.StartCoroutine(() =>
+        {
+            target.Damage(boosted ? amount + stats.attack : amount, critical);
+            AttackTriggers();
+        }, 0.15f);
         this.StartCoroutine(() => Tweener.MoveToQuad(t, origin, 0.2f), 0.25f);
+
+        var thorns = target.GetSkillCount(SkillType.Thorns);
+        
+        if (thorns > 0)
+        {
+            this.StartCoroutine(() => target.Attack(this, thorns, false), 0.4f);
+        }
+    }
+
+    public bool HasSkill(SkillType skill)
+    {
+        return skills.Any(s => s.Matches(skill));
+    }
+
+    public List<Skill> GetSkills(SkillType skill)
+    {
+        return skills.Where(s => s.Matches(skill)).ToList();
+    }
+    
+    public List<Skill> GetSkills(SkillType skill, int number)
+    {
+        return skills.Where(s => s.Matches(skill, number)).ToList();
+    }
+
+    public int GetSkillCount(SkillType skill)
+    {
+        return skills.Count(s => s.Matches(skill));
+    }
+    
+    public int GetSkillCount(SkillType skill, int number)
+    {
+        return skills.Count(s => s.Matches(skill, number));
     }
 
     public bool IsAlive()
@@ -409,5 +452,16 @@ public class Character : MonoBehaviour
         target.Slot(e);
         UpdateState();
         Inventory.Instance.UpdateSlotsFor(target);
+    }
+
+    public void AttackTriggers()
+    {
+        GetSkills(SkillType.ClearCellOnAttack).ForEach(s => Board.ClearRandomCell());
+        GetSkills(SkillType.ClearRowOnAttack).ForEach(s => Board.ClearRandomRow());
+        GetSkills(SkillType.ClearColOnAttack).ForEach(s => Board.ClearRandomColumn());
+        GetSkills(SkillType.ClearSectionOnAttack).ForEach(s => Board.ClearRandomSection());
+        
+        GetSkills(SkillType.DisableCellOnAttack).ForEach(s => Board.DisableRandomCell());
+        GetSkills(SkillType.HideSolvedCellOnAttack).ForEach(s => Board.HideSolvedCell());
     }
 }

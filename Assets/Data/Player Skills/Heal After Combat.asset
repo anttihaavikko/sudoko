@@ -15,7 +15,7 @@ MonoBehaviour:
   description: Fully (heal) after each (combat).
   prefix: Alchemist's
   suffix: 
-  type: 0
+  type: 17
   stats:
     attack: 0
     defence: 0

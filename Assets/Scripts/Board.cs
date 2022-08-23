@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using AnttiStarterKit.Animations;
 using AnttiStarterKit.Extensions;
 using AnttiStarterKit.Utils;
@@ -151,7 +152,7 @@ public class Board : MonoBehaviour
                 Invoke(nameof(Generate), 1.5f);
             }
             
-            if (enemy.Interrupts(value))
+            if (enemy.Interrupts(value, player))
             {
                 return;
             }
@@ -286,5 +287,73 @@ public class Board : MonoBehaviour
     public int GetCurrentNumber()
     {
         return numberPicker.Number;
+    }
+
+    public void ClearSolutionCell(int index)
+    {
+        sudoku.GetCell(index).Value = -1;
+    }
+
+    public void ClearRandomCell()
+    {
+        grid.All().Where(c => c.IsRevealed).ToList().Random().Clear(true);
+    }
+
+    public void ClearRandomRow()
+    {
+        var row = Random.Range(0, 9);
+        var cells = Enumerable.Range(0, 9).Select(i => grid.Get(i, row));
+        StartCoroutine(ClearCells(cells, enemy.transform.position));
+    }
+    
+    public void ClearRandomColumn()
+    {
+        var column = Random.Range(0, 9);
+        var cells = Enumerable.Range(0, 9).Select(i => grid.Get(column, i));
+        StartCoroutine(ClearCells(cells, enemy.transform.position));
+    }
+
+    public void ClearRandomSection()
+    {
+        var cells = new List<Tile>();
+        
+        var x = Random.Range(0, 3) * 3;
+        var y = Random.Range(0, 3) * 3;
+
+        for (var ix = 0; ix < 3; ix++)
+        {
+            for (var iy = 0; iy < 3; iy++)
+            {
+                cells.Add(grid.Get(x + ix, y + iy));
+            }   
+        }
+        
+        StartCoroutine(ClearCells(cells, enemy.transform.position));
+    }
+
+    private IEnumerator ClearCells(IEnumerable<Tile> cells, Vector3 origin)
+    {
+        var ordered = cells.OrderBy(c => Vector3.Distance(c.transform.position, origin)).ToList();
+        foreach (var cell in ordered)
+        {
+            cell.Clear(true);
+            yield return new WaitForSeconds(0.03f);
+        }
+    }
+
+    public void FillCell(int index)
+    {
+        var cell = sudoku.GetCell(index);
+        cell.Value = Enumerable.Range(0, 9).First(i => sudoku.Solver.IsValidValueForTheCell(i, cell));
+    }
+
+    public void DisableRandomCell()
+    {
+        grid.All().Where(c => !c.IsRevealed).ToList().Random().DisableTile("X");
+    }
+
+    public void HideSolvedCell()
+    {
+        grid.All().Where(c => c.IsRevealed).ToList().Random().DisableTile("?");
     }
 }

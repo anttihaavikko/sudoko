@@ -15,7 +15,7 @@ MonoBehaviour:
   description: Start (each puzzle) with a random (cell) already filled.
   prefix: 
   suffix: of Boon
-  type: 0
+  type: 21
   stats:
     attack: 0
     defence: 0

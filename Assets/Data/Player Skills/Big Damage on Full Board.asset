@@ -15,7 +15,7 @@ MonoBehaviour:
   description: Deal (20x damage) when fully filling a puzzle.
   prefix: Crushing
   suffix: 
-  type: 0
+  type: 13
   stats:
     attack: 0
     defence: 0

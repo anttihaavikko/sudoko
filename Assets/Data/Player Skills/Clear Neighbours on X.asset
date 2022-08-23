@@ -15,7 +15,7 @@ MonoBehaviour:
   description: (Clear) all (surrounding cells) when placing [1].
   prefix: Miner's
   suffix: 
-  type: 0
+  type: 14
   stats:
     attack: 0
     defence: 0

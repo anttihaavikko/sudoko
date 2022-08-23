@@ -15,7 +15,7 @@ MonoBehaviour:
   description: (Heal) when placing any [1].
   prefix: Cleric's
   suffix: 
-  type: 0
+  type: 18
   stats:
     attack: 0
     defence: 0

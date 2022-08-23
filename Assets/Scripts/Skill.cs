@@ -86,5 +86,14 @@ public enum SkillType
     DisableCellOnAttack,
     HideSolvedCellOnAttack,
     NoStagger,
-    StaggerOnlyOnX
+    StaggerOnlyOnX,
+    BigDamageOnClear,
+    ClearNeighboursOnX,
+    ExtraHitOnX,
+    FillNeighboursOnX,
+    HealAfterCombat,
+    HealOnX,
+    MoreDamageOnX,
+    SlowEnemies,
+    StartWithFill
 }

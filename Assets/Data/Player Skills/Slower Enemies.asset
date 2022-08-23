@@ -15,7 +15,7 @@ MonoBehaviour:
   description: Slow all enemies down by (25%).
   prefix: Nimble
   suffix: 
-  type: 0
+  type: 20
   stats:
     attack: 0
     defence: 0

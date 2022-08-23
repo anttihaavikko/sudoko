@@ -15,7 +15,7 @@ MonoBehaviour:
   description: 'Deal (50%) more (damage) when attacking with [1]. '
   prefix: 
   suffix: of Destruction
-  type: 0
+  type: 19
   stats:
     attack: 0
     defence: 0
