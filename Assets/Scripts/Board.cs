@@ -24,7 +24,7 @@ public class Board : MonoBehaviour
     [SerializeField] private GameObject enemyTooltip;
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private Inventory inventory;
-    [SerializeField] private Appearer continueButton, startButton;
+    [SerializeField] private Appearer continueButton, startButton, uiHider;
     [SerializeField] private SkillSet weaponSkills, armorSkills, soulSkills;
 
     private Character enemy;
@@ -210,11 +210,16 @@ public class Board : MonoBehaviour
             offset++;
         });
         
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
+        
+        // uiHider.Show();
+        
+        yield return new WaitForSeconds(0.5f);
         
         if (!player.IsAlive()) yield break;
         
         inventoryPanel.SetActive(true);
+        // uiHider.HideWithDelay();
         
         offset = 0;
         var start = p.x;

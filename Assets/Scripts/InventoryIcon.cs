@@ -3,9 +3,10 @@ using AnttiStarterKit.Animations;
 using AnttiStarterKit.Extensions;
 using Equipment;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class InventoryIcon : MonoBehaviour
+public class InventoryIcon : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] private LayerMask dropMask;
     [SerializeField] private Image image, trim;
@@ -107,5 +108,25 @@ public class InventoryIcon : MonoBehaviour
         // Tweener.MoveToBounceOut(t, start, 0.1f);
         t.position = start;
         t.SetParent(parent, true);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Hover();
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        HoverOut();
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        MouseDown();
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        MouseUp();
     }
 }
