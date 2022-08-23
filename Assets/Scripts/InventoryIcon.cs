@@ -10,6 +10,7 @@ public class InventoryIcon : MonoBehaviour
     [SerializeField] private LayerMask dropMask;
     [SerializeField] private Image image, trim;
     [SerializeField] private GameObject newIndicator;
+    [SerializeField] private SlotDisplay slotDisplay;
 
     private bool dragging;
     private Transform parent;
@@ -29,6 +30,8 @@ public class InventoryIcon : MonoBehaviour
         equip = e;
         
         newIndicator.SetActive(isNew);
+        
+        slotDisplay.Show(e);
     }
 
     private void Update()
@@ -43,7 +46,7 @@ public class InventoryIcon : MonoBehaviour
     {
         if (dragging) return;
         newIndicator.SetActive(false);
-        ItemTooltip.Instance.Show(transform.position, equip.GetDescription());
+        ItemTooltip.Instance.Show(transform.position, equip);
     }
 
     public void HoverOut()

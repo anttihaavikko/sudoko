@@ -54,6 +54,7 @@ public class Board : MonoBehaviour
     {
         if (DevKey.Down(KeyCode.Space))
         {
+            if(!fightStarted) StartFight();
             Attack(player, enemy, 5);
         }
     }

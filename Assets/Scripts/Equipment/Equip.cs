@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Equipment
 {
@@ -16,6 +17,9 @@ namespace Equipment
         public float groundAngle;
 
         private List<Skill> skills = new();
+        private int slotCount;
+
+        public int SlotCount => slotCount;
 
         public Equip(Blueprint blueprint)
         {
@@ -26,6 +30,8 @@ namespace Equipment
             trimColor = blueprint.trimColors.Random();
             slot = blueprint.slot;
             groundAngle = blueprint.groundAngle;
+
+            slotCount = GetRandomSlotCount();
         }
 
         public void AddSkill(Skill s)
@@ -50,6 +56,17 @@ namespace Equipment
         public IEnumerable<Skill> GetSkills()
         {
             return skills;
+        }
+
+        private int GetRandomSlotCount()
+        {
+            return Random.value switch
+            {
+                < 0.1f => 3,
+                < 0.25f => 2,
+                < 0.5f => 1,
+                _ => 0
+            };
         }
     }
 }
