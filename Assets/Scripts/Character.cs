@@ -69,7 +69,7 @@ public class Character : MonoBehaviour
         healthDisplay.SetParent(null, true);
         moveDisplay.SetParent(null, true);
 
-        Stagger(true);
+        Stagger();
 
         if (isPlayer)
         {
@@ -208,7 +208,7 @@ public class Character : MonoBehaviour
         }
     }
 
-    private void Stagger(bool forced = false)
+    private void Stagger()
     {
         moveTimer = stats.speed;
         moveBar.localScale = moveBar.localScale.WhereY(0);
@@ -352,8 +352,12 @@ public class Character : MonoBehaviour
         
         cam.BaseEffect(0.2f);
         health.TakeDamage(reduced);
-        Stagger();
-        
+
+        if (!HasSkill(SkillType.NoStagger) && !HasSkill(SkillType.StaggerOnlyOnX, amount))
+        {
+            Stagger();   
+        }
+
         EffectManager.AddTextPopup(reduced.ToString(), p.RandomOffset(0.2f));
         EffectManager.AddEffect(0, p.RandomOffset(0.2f));
     }
@@ -382,6 +386,11 @@ public class Character : MonoBehaviour
     public bool HasSkill(SkillType skill)
     {
         return skills.Any(s => s.Matches(skill));
+    }
+    
+    public bool HasSkill(SkillType skill, int number)
+    {
+        return skills.Any(s => s.Matches(skill, number));
     }
 
     public List<Skill> GetSkills(SkillType skill)
