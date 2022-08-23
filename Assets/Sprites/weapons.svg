@@ -24,15 +24,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.41921921"
-     inkscape:cx="1505.5285"
-     inkscape:cy="386.22065"
+     inkscape:zoom="0.56812732"
+     inkscape:cx="1498.3563"
+     inkscape:cy="628.00783"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="964"
+     inkscape:window-width="1440"
+     inkscape:window-height="784"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
@@ -717,6 +717,22 @@ AADAMAoXAACAYRQuAAAAwyhcAAAAhlG4AAAADKNwAQAAGPb/ZWLiA4Uwf9cAAAAASUVORK5CYII=
        d="M 451.18792,84.346702 V 5.3553463"
        id="path2709"
        inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/longsword.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <circle
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path2711"
+       cx="418.2207"
+       cy="206.14659"
+       r="34.906609"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path2713"
+       cx="418.2207"
+       cy="201.04431"
+       r="22.888887"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
   </g>

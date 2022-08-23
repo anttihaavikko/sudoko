@@ -8,6 +8,7 @@ namespace Equipment
         Shirt,
         Pants,
         Jacket,
-        Weapon
+        Weapon,
+        Soul
     }
 }

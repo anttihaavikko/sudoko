@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using AnttiStarterKit.Animations;
 using UnityEngine;
@@ -175,6 +176,8 @@ public class Character : MonoBehaviour
             v.Show(e);
             drops.Add(e);
         });
+        
+        drops.Add(equipmentList.Random(EquipmentSlot.Soul));
     }
 
     public List<Equip> GetDrops()
@@ -259,9 +262,9 @@ public class Character : MonoBehaviour
             UpdateState();
             return equipmentVisuals.IndexOf(slot);
         }
-
-        UpdateState();
+        
         inventory.Add(e);
+        UpdateState();
 
         return -1;
     }

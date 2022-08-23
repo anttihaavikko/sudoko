@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AnttiStarterKit.Utils;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -52,6 +53,13 @@ namespace Equipment
             sb.Append($"<size=30>{GetName()}</size>");
             sb.Append("<size=5>\n\n</size>");
             skills.ForEach(s => sb.Append($"{s.GetDescription()}<size=5>\n\n</size>"));
+            
+            if (slot == EquipmentSlot.Soul)
+            {
+                const string text = "Souls need to be inserted to a piece of equipment with a free socket. They can not be removed afterwards.";
+                sb.Append(TextUtils.TextWith(text, Color.gray, 15));
+            }
+            
             return sb.ToString();
         }
 
@@ -62,6 +70,8 @@ namespace Equipment
 
         private int GetRandomSlotCount()
         {
+            if (slot == EquipmentSlot.Soul) return 0;
+            
             return Random.value switch
             {
                 < 0.1f => 3,

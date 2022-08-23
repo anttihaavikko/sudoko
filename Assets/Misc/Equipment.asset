@@ -189,3 +189,11 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 6
     groundAngle: 90
+  - title: Soul
+    sprite: {fileID: 21300000, guid: 169b46ee7979b4238a3956eb09e49a99, type: 3}
+    trim: {fileID: 0}
+    grounded: {fileID: 0}
+    colors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    slot: 7
+    groundAngle: 0

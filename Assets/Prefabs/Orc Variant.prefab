@@ -281,7 +281,7 @@ PrefabInstance:
       objectReference: {fileID: 3301128704987089033}
     - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: spritesNeedingShader.Array.size
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: spritesNeedingShader.Array.data[11]
@@ -291,6 +291,10 @@ PrefabInstance:
       propertyPath: spritesNeedingShader.Array.data[12]
       value: 
       objectReference: {fileID: 5201115819558634257}
+    - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: spritesNeedingShader.Array.data[13]
+      value: 
+      objectReference: {fileID: 4009556294003938713}
     - target: {fileID: 1131941160878101220, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Color.b
       value: 0.27999288
@@ -784,6 +788,11 @@ PrefabInstance:
 --- !u!4 &3414170658352959275 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8049601105030399696, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+  m_PrefabInstance: {fileID: 4671498976877169147}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &4009556294003938713 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8606574210910002274, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
   m_PrefabInstance: {fileID: 4671498976877169147}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &4350047211417197521 stripped

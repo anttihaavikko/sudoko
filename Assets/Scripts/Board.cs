@@ -25,7 +25,7 @@ public class Board : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private Inventory inventory;
     [SerializeField] private Appearer continueButton, startButton;
-    [SerializeField] private SkillSet weaponSkills, armorSkills;
+    [SerializeField] private SkillSet weaponSkills, armorSkills, soulSkills;
 
     private Character enemy;
     private readonly TileGrid<Tile> grid = new(9, 9);
@@ -185,9 +185,15 @@ public class Board : MonoBehaviour
         }
     }
 
+    private SkillSet GetSkillSetFor(EquipmentSlot slot)
+    {
+        if (slot == EquipmentSlot.Soul) return soulSkills;
+        return slot == EquipmentSlot.Weapon ? weaponSkills : armorSkills;
+    }
+
     private IEnumerator EndWalk()
     {
-        var drops = enemy.GetDrops();
+        var drops = enemy.GetDrops().OrderBy(_ => Random.value).ToList();
         var p = enemy.transform.position;
         var dropItems = new List<Drop>();
         
@@ -196,7 +202,7 @@ public class Board : MonoBehaviour
         drops.ForEach(d =>
         {
             var drop = Instantiate(dropPrefab, p, Quaternion.identity);
-            var set = d.slot == EquipmentSlot.Weapon ? weaponSkills : armorSkills;
+            var set = GetSkillSetFor(d.slot);
             d.AddSkill(set.Random());
             drop.Setup(d);
             dropItems.Add(drop);

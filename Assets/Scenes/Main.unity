@@ -2852,6 +2852,7 @@ MonoBehaviour:
   startButton: {fileID: 667630147}
   weaponSkills: {fileID: 11400000, guid: 47e85a45526f94c609f49c72ed946b0e, type: 2}
   armorSkills: {fileID: 11400000, guid: 77a419a6438c343f2a8c03fc90ed888f, type: 2}
+  soulSkills: {fileID: 11400000, guid: 531c21d6495a44e738aa77c41344b6a4, type: 2}
 --- !u!114 &688767331
 MonoBehaviour:
   m_ObjectHideFlags: 0
