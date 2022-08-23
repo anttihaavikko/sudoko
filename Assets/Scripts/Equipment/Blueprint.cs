@@ -9,6 +9,7 @@ namespace Equipment
     {
         public string title;
         public Sprite sprite, trim, grounded;
+        public bool canFlip;
         public ColorCollection colors, trimColors;
         public EquipmentSlot slot;
         public float groundAngle;

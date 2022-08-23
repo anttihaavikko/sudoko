@@ -23,8 +23,10 @@ public class InventoryIcon : MonoBehaviour
         rootElement = root;
         
         image.sprite = e.grounded;
+        image.transform.Mirror(e.flipped);
         image.color = e.color;
         trim.sprite = e.trim;
+        trim.transform.Mirror(e.flipped);
         trim.color = e.trim ? e.trimColor : Color.clear;
 
         equip = e;
@@ -45,12 +47,14 @@ public class InventoryIcon : MonoBehaviour
     public void Hover()
     {
         if (dragging) return;
+        Inventory.Instance.MarkSlot(equip);
         newIndicator.SetActive(false);
         ItemTooltip.Instance.Show(transform.position, equip);
     }
 
     public void HoverOut()
     {
+        Inventory.Instance.UnMarkSlots();
         ItemTooltip.Instance.Hide();
     }
 

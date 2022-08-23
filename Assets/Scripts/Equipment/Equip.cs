@@ -15,7 +15,7 @@ namespace Equipment
         public Sprite sprite, trim, grounded;
         public Color color, trimColor;
         public EquipmentSlot slot;
-        public bool noFlip;
+        public bool flipped;
         public float groundAngle;
 
         private List<Skill> skills = new();
@@ -33,6 +33,7 @@ namespace Equipment
             trimColor = blueprint.trimColors.Random();
             slot = blueprint.slot;
             groundAngle = blueprint.groundAngle;
+            flipped = blueprint.canFlip && Random.value < 0.5f;
 
             slotCount = GetRandomSlotCount();
         }

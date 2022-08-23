@@ -19,8 +19,10 @@ namespace Equipment
             equip = e;
             sprite.sprite = useGrounded ? e.grounded : e.sprite;
             sprite.color = e.color;
+            sprite.flipX = e.flipped;
             trim.sprite = e.trim;
             trim.color = e.trimColor;
+            trim.flipX = e.flipped;
             free = false;
 
             if (slot == EquipmentSlot.Hat)

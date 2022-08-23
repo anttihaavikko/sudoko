@@ -1,19 +1,26 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using AnttiStarterKit.Managers;
 using Equipment;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class Inventory : Manager<Inventory>
 {
     [SerializeField] private Character player;
     [SerializeField] private Transform container, root;
     [SerializeField] private InventoryIcon iconPrefab;
-    [SerializeField] private List<Transform> slots;
+    [SerializeField] private List<SlotEquipper> slots;
 
     public Transform Container => container;
 
-    private List<InventoryIcon> icons = new();
+    private readonly List<InventoryIcon> icons = new();
+
+    public void MarkSlot(Equip e)
+    {
+        var marked = slots.Where(s => s.Matches(e)).ToList();
+        marked.ForEach(s => s.Mark(true));
+    }
 
     private void Start()
     {
@@ -47,7 +54,7 @@ public class Inventory : MonoBehaviour
         
         var t = icon.transform;
         t.SetParent(root, true);
-        t.position = slots[index].position;
+        t.position = slots[index].transform.position;
     }
     
     public void AddToInventory(Equip e)
@@ -55,5 +62,10 @@ public class Inventory : MonoBehaviour
         var icon = Instantiate(iconPrefab, container);
         icons.Add(icon);
         icon.Setup(root, e);
+    }
+
+    public void UnMarkSlots()
+    {
+        slots.ForEach(s => s.Mark(false));
     }
 }

@@ -380,6 +380,11 @@ public class Character : MonoBehaviour
         return inventory.ToList();
     }
 
+    public bool SlotMatches(Equip e, int slotIndex)
+    {
+        return equipmentVisuals[slotIndex].Slot == e.slot;
+    }
+
     public bool CanSlot(Equip e, int slotIndex)
     {
         return equipmentVisuals[slotIndex].Slot == e.slot && !equipmentVisuals[slotIndex].Has(e); 

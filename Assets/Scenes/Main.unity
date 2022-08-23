@@ -475,11 +475,11 @@ MonoBehaviour:
   root: {fileID: 15403124}
   iconPrefab: {fileID: 3258485491710452009, guid: aef324534a3664cbc98af6a372de828d, type: 3}
   slots:
-  - {fileID: 368382525}
-  - {fileID: 165732264}
-  - {fileID: 878230737}
-  - {fileID: 1049605848}
-  - {fileID: 319609292}
+  - {fileID: 368382526}
+  - {fileID: 165732268}
+  - {fileID: 878230743}
+  - {fileID: 1049605849}
+  - {fileID: 319609293}
 --- !u!1 &86844395
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,6 +890,7 @@ MonoBehaviour:
   slotIndex: 1
   player: {fileID: 1826115811}
   inventory: {fileID: 18567012}
+  rim: {fileID: 165732266}
 --- !u!1 &199904462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,6 +1337,7 @@ MonoBehaviour:
   slotIndex: 4
   player: {fileID: 1826115811}
   inventory: {fileID: 18567012}
+  rim: {fileID: 319609295}
 --- !u!61 &319609294
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1608,6 +1610,7 @@ MonoBehaviour:
   slotIndex: 0
   player: {fileID: 1826115811}
   inventory: {fileID: 18567012}
+  rim: {fileID: 368382528}
 --- !u!61 &368382527
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3704,6 +3707,7 @@ MonoBehaviour:
   slotIndex: 2
   player: {fileID: 1826115811}
   inventory: {fileID: 18567012}
+  rim: {fileID: 878230740}
 --- !u!1 &880728336
 GameObject:
   m_ObjectHideFlags: 0
@@ -4414,6 +4418,7 @@ MonoBehaviour:
   slotIndex: 3
   player: {fileID: 1826115811}
   inventory: {fileID: 18567012}
+  rim: {fileID: 1049605851}
 --- !u!61 &1049605850
 BoxCollider2D:
   m_ObjectHideFlags: 0
