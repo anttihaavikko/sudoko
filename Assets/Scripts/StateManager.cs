@@ -26,7 +26,7 @@ public class StateManager : Manager<StateManager>
     public void NextLevel()
     {
         Level++;
-        SceneChanger.Instance.ChangeScene("Main");
+        SceneChanger.Instance.ChangeScene("Map");
     }
 
     public void UpdateEquips(IEnumerable<Equip> equips, IEnumerable<Equip> inv)
