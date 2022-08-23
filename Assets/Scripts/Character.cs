@@ -42,6 +42,8 @@ public class Character : MonoBehaviour
 
     private float moveTimer;
 
+    private bool fightStarted;
+
     public int CurrentHealth => health.Current;
     
     public Board Board { get; set; }
@@ -180,18 +182,17 @@ public class Character : MonoBehaviour
 
     private void Update()
     {
-        if (!isPlayer && IsAlive())
+        if (!fightStarted || isPlayer || !IsAlive()) return;
+        
+        moveTimer -= Time.deltaTime;
+
+        var amount = 1f - moveTimer / stats.speed;
+        moveBar.localScale = moveBar.localScale.WhereY(amount);
+
+        if (moveTimer <= 0)
         {
-            moveTimer -= Time.deltaTime;
-
-            var amount = 1f - moveTimer / stats.speed;
-            moveBar.localScale = moveBar.localScale.WhereY(amount);
-
-            if (moveTimer <= 0)
-            {
-                moveTimer = stats.speed;
-                Board.EnemyAttack(0);
-            }
+            moveTimer = stats.speed;
+            Board.EnemyAttack(0);
         }
     }
 
@@ -371,5 +372,10 @@ public class Character : MonoBehaviour
     public bool CanSlot(Equip e, int slotIndex)
     {
         return equipmentVisuals[slotIndex].Slot == e.slot && !equipmentVisuals[slotIndex].Has(e); 
+    }
+
+    public void StartTimer()
+    {
+        fightStarted = true;
     }
 }

@@ -23,22 +23,30 @@ public class Board : MonoBehaviour
     [SerializeField] private GameObject enemyTooltip;
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private Inventory inventory;
-    [SerializeField] private Appearer continueButton;
+    [SerializeField] private Appearer continueButton, startButton;
 
     private Character enemy;
     private readonly TileGrid<Tile> grid = new(9, 9);
 
     private SudokuBoard sudoku;
     private bool ending;
+    private bool fightStarted;
 
     private void Start()
     {
         CreateGrid();
-        Generate();
 
         player.SetHealth(StateManager.Instance.Health);
 
         SpawnEnemy();
+    }
+
+    public void StartFight()
+    {
+        startButton.Hide();
+        fightStarted = true;
+        Generate();
+        enemy.StartTimer();
     }
 
     private void Update()
@@ -70,6 +78,7 @@ public class Board : MonoBehaviour
             for (var y = 0; y < 9; y++)
             {
                 var tile = Instantiate(tilePrefab, transform);
+                tile.Clear();
                 tile.transform.position = new Vector3(x - 4.1f + GetGap(x), -y + 4.1f - GetGap(y), 0);
                 grid.Set(tile, x, y);
             }
@@ -123,7 +132,7 @@ public class Board : MonoBehaviour
 
     public void TryFill(Tile tile, int index)
     {
-        if (!enemy.IsAlive() || !player.IsAlive()) return;
+        if (!fightStarted || !enemy.IsAlive() || !player.IsAlive()) return;
 
         var value = numberPicker.Number;
         var cell = sudoku.GetCell(index);
