@@ -132,7 +132,7 @@ public class Character : MonoBehaviour
         sb.Append($"Speed: 1 / {stats.speed} s\n");
         if (stats.defence > 0)
         {
-            sb.Append($"Defence: {stats.defence}\n");
+            sb.Append($"Defense: {stats.defence}\n");
         }
         skills.ForEach(s => sb.Append($"<size=10>\n</size>{s.GetDescription()}<size=10>\n</size>"));
         return sb.ToString();

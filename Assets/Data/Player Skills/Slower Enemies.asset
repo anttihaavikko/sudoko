@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f708d324ecf048c490f85b2fb4655ba7, type: 3}
   m_Name: Slower Enemies
   m_EditorClassIdentifier: 
-  description: 
+  description: Slow all enemies down by (25%).
+  prefix: Nimble
+  suffix: 
   type: 0
+  stats:
+    attack: 0
+    defence: 0
+    speed: 0
+  hp: 0
   interrupts: 0

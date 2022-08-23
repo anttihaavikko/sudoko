@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f708d324ecf048c490f85b2fb4655ba7, type: 3}
   m_Name: Ignores Defence
   m_EditorClassIdentifier: 
-  description: Ignores defence on any attack.
+  description: (Ignores defense) on any attack.
   prefix: Penetrating
   suffix: 
   type: 3

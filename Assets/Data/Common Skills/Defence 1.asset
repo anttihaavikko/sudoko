@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f708d324ecf048c490f85b2fb4655ba7, type: 3}
   m_Name: Defence 1
   m_EditorClassIdentifier: 
-  description: Defence (+1).
+  description: Defense (+1).
   prefix: Thick
   suffix: 
   type: 0
