@@ -9,14 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f708d324ecf048c490f85b2fb4655ba7, type: 3}
-  m_Name: Heal Instead On X
+  m_Script: {fileID: 11500000, guid: d274ad8893b941cf8a851a765ac5b840, type: 3}
+  m_Name: _Player Skills
   m_EditorClassIdentifier: 
-  description: Instead of you attacking, (heals) on any placed [1].
-  type: 1
-  stats:
-    attack: 0
-    defence: 0
-    speed: 0
-  hp: 0
-  interrupts: 0
+  items: []

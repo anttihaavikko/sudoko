@@ -3931,8 +3931,8 @@ MonoBehaviour:
   startsWith: []
   flasher: {fileID: 1045587445051442415}
   health:
-    cur: 100
-    max: 100
+    cur: 20
+    max: 20
     display: {fileID: 2204557337669817515}
     bar: {fileID: 5458672983067884270}
     onDeath:

@@ -7,6 +7,8 @@ public class Skill : ScriptableObject
     [TextArea]
     [SerializeField] private string description;
     [SerializeField] private SkillType type;
+    [SerializeField] private Stats stats;
+    [SerializeField] private int hp;
     [SerializeField] private bool interrupts;
 
     private int first, second;
@@ -47,13 +49,36 @@ public class Skill : ScriptableObject
     public string GetDescription()
     {
         return description
+            .Replace("(", "<color=red>")
+            .Replace(")", "</color>")
             .Replace("[1]", TextUtils.TextWith(first.ToString(), Color.red))
             .Replace("[2]", TextUtils.TextWith(second.ToString(), Color.red));
+    }
+
+    public Stats GetStats()
+    {
+        return stats;
+    }
+
+    public int GetHp()
+    {
+        return hp;
     }
 }
 
 public enum SkillType
 {
     None,
-    HealInsteadOnX
+    HealInsteadOnX,
+    Thorns,
+    IgnoresDefence,
+    AttackInsteadOnX,
+    ClearColOnAttack,
+    ClearRowOnAttack,
+    ClearSectionOnAttack,
+    ClearCellOnAttack,
+    DisableCellOnAttack,
+    HideSolvedCellOnAttack,
+    NoStagger,
+    StaggerOnlyOnX
 }

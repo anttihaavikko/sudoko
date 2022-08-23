@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f708d324ecf048c490f85b2fb4655ba7, type: 3}
-  m_Name: Heal Instead On X
+  m_Name: Clear Cell On Attack
   m_EditorClassIdentifier: 
-  description: Instead of you attacking, (heals) on any placed [1].
-  type: 1
+  description: Clears random (cell) on any attack.
+  type: 8
   stats:
     attack: 0
     defence: 0

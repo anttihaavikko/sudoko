@@ -18,7 +18,7 @@ public class Character : MonoBehaviour
 {
     [SerializeField] private string title;
     [SerializeField] private Stats stats;
-    [SerializeField] private List<Skill> startsWith;
+    [SerializeField] private SkillSet startsWith;
     
     [SerializeField] private Flasher flasher;
     [SerializeField] private Health health;
@@ -65,7 +65,7 @@ public class Character : MonoBehaviour
         healthDisplay.SetParent(null, true);
         moveDisplay.SetParent(null, true);
 
-        Stagger();
+        Stagger(true);
 
         if (isPlayer)
         {
@@ -76,10 +76,24 @@ public class Character : MonoBehaviour
         Scale();
 
         Gear();
-        
-        startsWith.ForEach(s => skills.Add(s.Copy()));
+
+        if (startsWith)
+        {
+            startsWith.Random(2).ToList().ForEach(s => skills.Add(s.Copy()));   
+        }
+
+        UpdateStats();
         
         showDescription?.Invoke(GetDescription());
+    }
+
+    private void UpdateStats()
+    {
+        var adds = skills.Select(s => s.GetStats()).ToList();
+        stats.Add(adds);
+
+        var hpAddition = skills.Sum(s => s.GetHp());
+        health.AddMax(hpAddition);
     }
 
     private void Scale()
@@ -108,7 +122,7 @@ public class Character : MonoBehaviour
         {
             sb.Append($"Defence: {stats.defence}\n");
         }
-        skills.ForEach(s => sb.Append($"\n{s.GetDescription()}"));
+        skills.ForEach(s => sb.Append($"<size=10>\n</size>{s.GetDescription()}<size=10>\n</size>"));
         return sb.ToString();
     }
 
@@ -181,7 +195,7 @@ public class Character : MonoBehaviour
         }
     }
 
-    private void Stagger()
+    private void Stagger(bool forced = false)
     {
         moveTimer = stats.speed;
         moveBar.localScale = moveBar.localScale.WhereY(0);

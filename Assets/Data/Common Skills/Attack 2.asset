@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f708d324ecf048c490f85b2fb4655ba7, type: 3}
-  m_Name: Heal Instead On X
+  m_Name: Attack 2
   m_EditorClassIdentifier: 
-  description: Instead of you attacking, (heals) on any placed [1].
-  type: 1
+  description: Attack (+2).
+  type: 0
   stats:
-    attack: 0
+    attack: 2
     defence: 0
     speed: 0
   hp: 0

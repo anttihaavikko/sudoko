@@ -16,6 +16,11 @@ namespace AnttiStarterKit.ScriptableObjects
             return !items.Any() ? default : items.Random();
         }
 
+        public IEnumerable<T> Random(int amount)
+        {
+            return !items.Any() ? new List<T>() : items.OrderBy(_ => UnityEngine.Random.value).Take(amount);
+        }
+
         public T Get(int index)
         {
             return items[index];

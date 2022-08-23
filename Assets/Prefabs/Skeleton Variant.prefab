@@ -284,6 +284,10 @@ PrefabInstance:
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith
+      value: 
+      objectReference: {fileID: 11400000, guid: 3d40d51f29f834e62bb15199caa0cd45, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: stats.speed
       value: 10
       objectReference: {fileID: 0}
@@ -291,6 +295,94 @@ PrefabInstance:
       propertyPath: stats.attack
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.size
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 98885b58005b0441bb1c91c26877ea10, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6b489dba46958481da419d1d9ea013d8, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4460a76f52ee74a6386299d28530deb7, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: b7c75f7f278f54caea500f9ecb6cbfb2, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: f9c1065fb3669409681c59142a4fb70e, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1288f48a098f247c6b6db5326c4cfef8, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9180ac6075f0b4132897f30e05c24122, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: d4cb77b6a02bf47d5b16dcb71c798240, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 25c89928cb10b447fbfcfb456ff8da59, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: e4a87b0b294604487bfbf56c9972c5bf, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: a62c87e30f17f40ff8a6fcb022cb59ff, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 680376179a0854127b8f43c7b879c16f, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: dc0405ed66101463fb39b34c616f4de6, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: ea029a432b0864437a6ced340009812e, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[14]
+      value: 
+      objectReference: {fileID: 11400000, guid: 300dccf7e3efd4fecbc38ead9a1c11c8, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[15]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4ef42077ea4d24e57876148acf824541, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[16]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5265347653c154333965fa3491d7f527, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[17]
+      value: 
+      objectReference: {fileID: 11400000, guid: 46ffa625a47c14ff1bf228ec4d926922, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[18]
+      value: 
+      objectReference: {fileID: 11400000, guid: 286e614c4ebf04986bdb8cfe138d75c4, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[19]
+      value: 
+      objectReference: {fileID: 11400000, guid: 33a259bd9a685423696f11b26e190bec, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: startsWith.Array.data[20]
+      value: 
+      objectReference: {fileID: 11400000, guid: 914dc020561d740c6b5e53a1fd6de318, type: 2}
     - target: {fileID: 5155774360808405337, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.83206
