@@ -5,8 +5,8 @@ public class SoulSlot : MonoBehaviour
 {
     [SerializeField] private Image image;
 
-    public void Fill()
+    public void Fill(Color color)
     {
-        image.color = Color.white;
+        image.color = color;
     }
 }

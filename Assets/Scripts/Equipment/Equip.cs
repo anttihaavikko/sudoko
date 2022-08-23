@@ -21,7 +21,13 @@ namespace Equipment
         private List<Skill> skills = new();
         private int slotCount;
 
+        private List<Equip> slots = new();
+
         public int SlotCount => slotCount;
+
+        public bool HasFreeSlot => slots.Count < slotCount;
+
+        public bool IsSoul => slot == EquipmentSlot.Soul;
 
         public Equip(Blueprint blueprint)
         {
@@ -36,6 +42,14 @@ namespace Equipment
             flipped = blueprint.canFlip && Random.value < 0.5f;
 
             slotCount = GetRandomSlotCount();
+        }
+
+        public void Slot(Equip e)
+        {
+            if (HasFreeSlot)
+            {
+                slots.Add(e);
+            }
         }
 
         public void AddSkill(Skill s)
@@ -55,6 +69,8 @@ namespace Equipment
             sb.Append("<size=5>\n\n</size>");
             skills.ForEach(s => sb.Append($"{s.GetDescription()}<size=5>\n\n</size>"));
             
+            slots.SelectMany(s => s.skills).ToList().ForEach(s => sb.Append($"{s.GetDescription()}<size=5>\n\n</size>"));
+            
             if (slot == EquipmentSlot.Soul)
             {
                 const string text = "Souls need to be inserted to a piece of equipment with a free socket. They can not be removed afterwards.";
@@ -66,7 +82,7 @@ namespace Equipment
 
         public IEnumerable<Skill> GetSkills()
         {
-            return skills;
+            return skills.Concat(slots.SelectMany(s => s.skills));
         }
 
         private int GetRandomSlotCount()
@@ -80,6 +96,11 @@ namespace Equipment
                 < 0.5f => 1,
                 _ => 0
             };
+        }
+
+        public Color GetSoulColor(int i)
+        {
+            return slots.Count <= i ? Color.clear : slots[i].color;
         }
     }
 }

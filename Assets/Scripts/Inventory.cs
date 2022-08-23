@@ -28,6 +28,15 @@ public class Inventory : Manager<Inventory>
         player.GetInventory().ForEach(AddToInventory);
     }
 
+    public void UpdateSlotsFor(Equip e)
+    {
+        var icon = icons.FirstOrDefault(i => i.Has(e));
+        if (icon)
+        {
+            icon.UpdateSlots();
+        }
+    }
+
     public void Strip(Equip e)
     {
         player.Remove(e);
@@ -39,6 +48,15 @@ public class Inventory : Manager<Inventory>
         if (icon)
         {
             icon.transform.SetParent(container, false);
+        }
+    }
+
+    public void Hide(Equip e)
+    {
+        var icon = icons.FirstOrDefault(i => i.Has(e));
+        if (icon)
+        {
+            icon.gameObject.SetActive(false);
         }
     }
 

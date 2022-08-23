@@ -37,6 +37,11 @@ public class InventoryIcon : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         slotDisplay.Show(e);
     }
 
+    public void UpdateSlots()
+    {
+        slotDisplay.Show(equip);
+    }
+
     private void Update()
     {
         if (dragging)

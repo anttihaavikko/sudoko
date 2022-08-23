@@ -14,6 +14,7 @@ public class SlotDisplay : MonoBehaviour
         slots.ForEach(s =>
         {
             s.gameObject.SetActive(i < amount);
+            s.Fill(e.GetSoulColor(i));
             i++;
         });
     }

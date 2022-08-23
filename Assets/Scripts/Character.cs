@@ -88,9 +88,10 @@ public class Character : MonoBehaviour
 
         if (isPlayer)
         {
+            var eq = GetEquips();
             SetHealth(StateManager.Instance.Health);
             skills.Clear();
-            GetEquips().ForEach(e => skills.AddRange(e.GetSkills()));
+            eq.ForEach(e => skills.AddRange(e.GetSkills()));
         }
 
         UpdateStats();
@@ -389,9 +390,24 @@ public class Character : MonoBehaviour
     {
         return equipmentVisuals[slotIndex].Slot == e.slot && !equipmentVisuals[slotIndex].Has(e); 
     }
+    
+    public bool CanSlotSoul(int slotIndex)
+    {
+        var e = equipmentVisuals[slotIndex].GetEquip();
+        return e != default && e.HasFreeSlot;
+    }
 
     public void StartTimer()
     {
         fightStarted = true;
+    }
+
+    public void Slot(Equip e, int slotIndex)
+    {
+        inventory.Remove(e);
+        var target = equipmentVisuals[slotIndex].GetEquip();
+        target.Slot(e);
+        UpdateState();
+        Inventory.Instance.UpdateSlotsFor(target);
     }
 }

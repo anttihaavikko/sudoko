@@ -11,17 +11,26 @@ public class SlotEquipper : MonoBehaviour
 
     public bool CanSlot(Equip e)
     {
-        return player.CanSlot(e, slotIndex);
+        return e.IsSoul ? 
+            player.CanSlotSoul(slotIndex) : 
+            player.CanSlot(e, slotIndex);
     }
 
     public bool Matches(Equip e)
     {
-        return player.SlotMatches(e, slotIndex);
+        return e.IsSoul && player.CanSlotSoul(slotIndex) || player.SlotMatches(e, slotIndex);
     }
 
     public bool Add(Equip e)
     {
         if (!CanSlot(e)) return false;
+
+        if (e.IsSoul)
+        {
+            inventory.Hide(e);
+            player.Slot(e, slotIndex);
+            return true;
+        }
         
         player.Remove(e);
         
