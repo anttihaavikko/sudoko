@@ -10,6 +10,7 @@ namespace Equipment
     [Serializable]
     public class Equip
     {
+        public string title;
         public Sprite sprite, trim, grounded;
         public Color color, trimColor;
         public EquipmentSlot slot;
@@ -23,6 +24,7 @@ namespace Equipment
 
         public Equip(Blueprint blueprint)
         {
+            title = blueprint.title;
             sprite = blueprint.sprite;
             trim = blueprint.trim;
             grounded = blueprint.grounded ? blueprint.grounded : blueprint.sprite;
@@ -41,7 +43,7 @@ namespace Equipment
 
         public string GetName()
         {
-            return skills.First().Decorate(sprite.name);
+            return skills.First().Decorate(title);
         }
 
         public string GetDescription()
