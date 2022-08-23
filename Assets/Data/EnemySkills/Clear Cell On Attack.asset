@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f708d324ecf048c490f85b2fb4655ba7, type: 3}
   m_Name: Clear Cell On Attack
   m_EditorClassIdentifier: 
-  description: Clears random (cell) on any attack.
+  description: (Clears) random (cell) on any attack.
+  prefix: 
+  suffix: 
   type: 8
   stats:
     attack: 0

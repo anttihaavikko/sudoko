@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f708d324ecf048c490f85b2fb4655ba7, type: 3}
   m_Name: Disable Cell On Attack
   m_EditorClassIdentifier: 
-  description: Completely (disables) a random cell on attack.
+  description: Completely (disables) a random (cell) on attack.
+  prefix: 
+  suffix: 
   type: 9
   stats:
     attack: 0

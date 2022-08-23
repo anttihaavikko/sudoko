@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f708d324ecf048c490f85b2fb4655ba7, type: 3}
   m_Name: Hide Solved Cell On Attack
   m_EditorClassIdentifier: 
-  description: Hides filled value of random cell on attack.
+  description: (Hides) filled value of random (cell) on attack.
+  prefix: 
+  suffix: 
   type: 10
   stats:
     attack: 0

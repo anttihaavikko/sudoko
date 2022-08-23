@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f708d324ecf048c490f85b2fb4655ba7, type: 3}
   m_Name: Clear Row On Attack
   m_EditorClassIdentifier: 
-  description: Clears random (row) on attack.
+  description: (Clears) random (row) on attack.
+  prefix: 
+  suffix: 
   type: 6
   stats:
     attack: 0
