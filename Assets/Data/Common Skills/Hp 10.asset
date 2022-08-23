@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Hp 10
   m_EditorClassIdentifier: 
   description: HP (+10).
+  prefix: 
+  suffix: of Vigor
   type: 0
   stats:
     attack: 0

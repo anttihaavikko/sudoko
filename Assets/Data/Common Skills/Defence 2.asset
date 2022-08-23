@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Defence 2
   m_EditorClassIdentifier: 
   description: Defence (+2).
+  prefix: Studded
+  suffix: 
   type: 0
   stats:
     attack: 0

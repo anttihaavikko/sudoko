@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class StateManager : Manager<StateManager>
 {
     public int Level { get; private set; }
-    public int Health { get; set; } = 100;
+    public int Health { get; set; } = 20;
 
     private readonly List<Equip> gear = new();
     private readonly List<Equip> inventory = new();

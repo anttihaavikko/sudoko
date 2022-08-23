@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Hp 15
   m_EditorClassIdentifier: 
   description: HP (+15).
+  prefix: 
+  suffix: of Health
   type: 0
   stats:
     attack: 0

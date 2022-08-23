@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Defence 3
   m_EditorClassIdentifier: 
   description: Defence (+3).
+  prefix: Hardy
+  suffix: 
   type: 0
   stats:
     attack: 0

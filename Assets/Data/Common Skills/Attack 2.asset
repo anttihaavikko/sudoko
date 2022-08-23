@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Attack 2
   m_EditorClassIdentifier: 
   description: Attack (+2).
+  prefix: Deadly
+  suffix: 
   type: 0
   stats:
     attack: 2

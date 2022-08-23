@@ -5,6 +5,7 @@ using System.Linq;
 using AnttiStarterKit.Animations;
 using AnttiStarterKit.Extensions;
 using AnttiStarterKit.Utils;
+using Equipment;
 using Sudoku;
 using Sudoku.Model;
 using TMPro;
@@ -24,6 +25,7 @@ public class Board : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private Inventory inventory;
     [SerializeField] private Appearer continueButton, startButton;
+    [SerializeField] private SkillSet weaponSkills, armorSkills;
 
     private Character enemy;
     private readonly TileGrid<Tile> grid = new(9, 9);
@@ -35,14 +37,13 @@ public class Board : MonoBehaviour
     private void Start()
     {
         CreateGrid();
-
-        player.SetHealth(StateManager.Instance.Health);
-
         SpawnEnemy();
     }
 
     public void StartFight()
     {
+        if (fightStarted) return;
+        
         startButton.Hide();
         fightStarted = true;
         Generate();
@@ -194,6 +195,8 @@ public class Board : MonoBehaviour
         drops.ForEach(d =>
         {
             var drop = Instantiate(dropPrefab, p, Quaternion.identity);
+            var set = d.slot == EquipmentSlot.Weapon ? weaponSkills : armorSkills;
+            d.AddSkill(set.Random());
             drop.Setup(d);
             dropItems.Add(drop);
             Tweener.MoveToQuad(drop.transform, p + 2f * offset * Vector3.right, 0.2f);

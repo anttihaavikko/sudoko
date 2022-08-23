@@ -10,6 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d274ad8893b941cf8a851a765ac5b840, type: 3}
-  m_Name: _Player Skills
+  m_Name: _Weapon Skills
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - {fileID: 11400000, guid: a62c87e30f17f40ff8a6fcb022cb59ff, type: 2}
+  - {fileID: 11400000, guid: 680376179a0854127b8f43c7b879c16f, type: 2}
+  - {fileID: 11400000, guid: dc0405ed66101463fb39b34c616f4de6, type: 2}
+  - {fileID: 11400000, guid: 33a259bd9a685423696f11b26e190bec, type: 2}

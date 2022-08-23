@@ -10,6 +10,7 @@ using AnttiStarterKit.Managers;
 using AnttiStarterKit.Utils;
 using AnttiStarterKit.Visuals;
 using Equipment;
+using Unity.VisualScripting;
 using UnityEditor.ShaderGraph;
 using UnityEngine.Rendering.UI;
 using Random = UnityEngine.Random;
@@ -84,6 +85,13 @@ public class Character : MonoBehaviour
             startsWith.Random(2).ToList().ForEach(s => skills.Add(s.Copy()));   
         }
 
+        if (isPlayer)
+        {
+            SetHealth(StateManager.Instance.Health);
+            skills.Clear();
+            GetEquips().ForEach(e => skills.AddRange(e.GetSkills()));
+        }
+
         UpdateStats();
         
         showDescription?.Invoke(GetDescription());
@@ -95,7 +103,7 @@ public class Character : MonoBehaviour
         stats.Add(adds);
 
         var hpAddition = skills.Sum(s => s.GetHp());
-        health.AddMax(hpAddition);
+        health.AddMax(hpAddition, !isPlayer);
     }
 
     private void Scale()
@@ -239,7 +247,7 @@ public class Character : MonoBehaviour
             }   
         }
 
-        EffectManager.AddTextPopup(e.sprite.name.ToUpper(), transform.position + Vector3.up * 3);
+        EffectManager.AddTextPopup(e.GetName().ToUpper(), transform.position + Vector3.up * 3);
         
         var slot = inSlot >= 0 ? 
             equipmentVisuals[inSlot] : 

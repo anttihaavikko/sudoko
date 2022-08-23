@@ -41,11 +41,20 @@ public class InventoryIcon : MonoBehaviour
 
     public void Hover()
     {
+        if (dragging) return;
         newIndicator.SetActive(false);
+        ItemTooltip.Instance.Show(transform.position, equip.GetDescription());
+    }
+
+    public void HoverOut()
+    {
+        ItemTooltip.Instance.Hide();
     }
 
     public void MouseDown()
     {
+        ItemTooltip.Instance.Hide();
+        
         var t = transform;
         start = t.position;
         parent = t.parent;

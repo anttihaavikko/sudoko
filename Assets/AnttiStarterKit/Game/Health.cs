@@ -54,10 +54,13 @@ namespace AnttiStarterKit.Game
             UpdateDisplays();
         }
 
-        public void AddMax(int amount)
+        public void AddMax(int amount, bool heals)
         {
             max += amount;
-            cur = Mathf.Min(cur + amount, max);
+            if (heals)
+            {
+                cur = Mathf.Min(cur + amount, max);
+            }
             UpdateDisplays();
         }
 

@@ -6,6 +6,7 @@ public class Skill : ScriptableObject
 {
     [TextArea]
     [SerializeField] private string description;
+    [SerializeField] private string prefix, suffix;
     [SerializeField] private SkillType type;
     [SerializeField] private Stats stats;
     [SerializeField] private int hp;
@@ -63,6 +64,11 @@ public class Skill : ScriptableObject
     public int GetHp()
     {
         return hp;
+    }
+
+    public string Decorate(string itemName)
+    {
+        return $"{prefix} {itemName} {suffix}".Trim();
     }
 }
 
