@@ -1055,6 +1055,7 @@ MonoBehaviour:
   trim: {fileID: 2491547235802129984}
   slot: 1
   hair: {fileID: 0}
+  chance: 0.7
 --- !u!1 &2491547236268891013
 GameObject:
   m_ObjectHideFlags: 0

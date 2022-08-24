@@ -7,12 +7,15 @@ namespace Equipment
         [SerializeField] private SpriteRenderer sprite, trim;
         [SerializeField] private EquipmentSlot slot;
         [SerializeField] private GameObject hair;
+        [SerializeField] private float chance = 0.5f;
 
         private bool free = true;
         private Equip equip;
 
         public EquipmentSlot Slot => slot;
         public bool IsFree => free;
+
+        public bool Spawns => Random.value < chance;
 
         public void Show(Equip e, bool useGrounded = false)
         {

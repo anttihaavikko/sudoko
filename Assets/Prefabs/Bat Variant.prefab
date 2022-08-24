@@ -102,6 +102,7 @@ MonoBehaviour:
   trim: {fileID: 6640362739558648354}
   slot: 6
   hair: {fileID: 0}
+  chance: 0.1
 --- !u!1 &1177282812815236357
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,6 +205,7 @@ MonoBehaviour:
   trim: {fileID: 1113269824542551430}
   slot: 6
   hair: {fileID: 0}
+  chance: 0.1
 --- !u!1 &2969823651389523161
 GameObject:
   m_ObjectHideFlags: 0

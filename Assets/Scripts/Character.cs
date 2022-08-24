@@ -199,7 +199,7 @@ public class Character : MonoBehaviour
         equipmentVisuals.ForEach(v =>
         {
             v.Hide();
-            if (!(Random.value < 0.5f)) return;
+            if (!v.Spawns) return;
             var e = equipmentList.Random(v.Slot);
             v.Show(e);
             drops.Add(e);
