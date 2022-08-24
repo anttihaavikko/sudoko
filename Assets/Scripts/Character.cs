@@ -23,6 +23,7 @@ public class Character : MonoBehaviour
     [SerializeField] private SkillSet startsWith;
     
     [SerializeField] private Flasher flasher;
+    [SerializeField] private StatsDisplay statsDisplay;
     [SerializeField] private Health health;
     [SerializeField] private List<Transform> mirrorables;
     [SerializeField] private Transform healthDisplay, moveDisplay;
@@ -106,6 +107,8 @@ public class Character : MonoBehaviour
 
         var hpAddition = skills.Sum(s => s.GetHp());
         health.AddMax(hpAddition, !isPlayer);
+        
+        statsDisplay.Set(stats);
     }
 
     private void Scale()
@@ -127,14 +130,18 @@ public class Character : MonoBehaviour
     {
         var sb = new StringBuilder();
         sb.Append(TextUtils.TextWith(title, 30));
-        sb.Append(TextUtils.TextWith("\n\n", 10));
-        sb.Append($"Attack: {stats.attack}\n");
-        sb.Append($"Speed: 1 / {stats.speed} s\n");
-        if (stats.defence > 0)
-        {
-            sb.Append($"Defense: {stats.defence}\n");
-        }
-        skills.ForEach(s => sb.Append($"<size=10>\n</size>{s.GetDescription()}<size=10>\n</size>"));
+        sb.Append(TextUtils.TextWith("\n", 13));
+        
+        const string text = "Lorem ipsum dolor sit amet etc something something maybe description?";
+        sb.Append(TextUtils.TextWith(text, Color.gray, 15));
+        
+        // sb.Append($"Attack: {stats.attack}\n");
+        // sb.Append($"Speed: 1 / {stats.speed} s\n");
+        // if (stats.defence > 0)
+        // {
+        //     sb.Append($"Defense: {stats.defence}\n");
+        // }
+        skills.ForEach(s => sb.Append($"<size=10>\n\n</size>{s.GetDescription()}"));
         return sb.ToString();
     }
 
