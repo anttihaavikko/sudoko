@@ -219,6 +219,8 @@ public class Board : MonoBehaviour
         
         if (!player.IsAlive()) yield break;
         
+        player.ReattachHpDisplay();
+        
         inventoryPanel.SetActive(true);
         // uiHider.HideWithDelay();
         
@@ -226,13 +228,15 @@ public class Board : MonoBehaviour
         var start = p.x;
         foreach (var d in dropItems)
         {
-            var duration = player.WalkTo(start + offset * 2f, false);
+            var duration = player.WalkTo(start + offset * 2f, true, false);
             offset++;
             yield return new WaitForSeconds(duration);
-            
+
             d.gameObject.SetActive(false);
             inventory.Add(d.Equipment, true);
             
+            player.RecalculateStats();
+
             yield return new WaitForSeconds(0.6f);
         }
         

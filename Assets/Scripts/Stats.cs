@@ -15,4 +15,14 @@ public class Stats
         defence += adds.Sum(a => a.defence);
         speed += adds.Sum(a => a.speed);
     }
+
+    public Stats Copy()
+    {
+        return new Stats
+        {
+            attack = attack,
+            defence = defence,
+            speed = speed
+        };
+    }
 }

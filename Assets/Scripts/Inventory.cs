@@ -40,6 +40,12 @@ public class Inventory : Manager<Inventory>
     public void Strip(Equip e)
     {
         player.Remove(e);
+        RecalculateStats();
+    }
+
+    public void RecalculateStats()
+    {
+        player.RecalculateStats();
     }
 
     public void Return(Equip e)

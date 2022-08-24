@@ -59,6 +59,9 @@ public class Character : MonoBehaviour
     private static readonly int SkillTrigger = Animator.StringToHash("skill");
     private readonly List<Equip> inventory = new();
 
+    private Stats baseStats;
+    private int baseHealth;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -89,22 +92,39 @@ public class Character : MonoBehaviour
 
         if (isPlayer)
         {
-            var eq = GetEquips();
-            SetHealth(StateManager.Instance.Health);
-            skills.Clear();
-            eq.ForEach(e => skills.AddRange(e.GetSkills()));
+            RedoSkills();
         }
+
+        baseStats = stats.Copy();
+        baseHealth = health.Max;
 
         UpdateStats();
         
         showDescription?.Invoke(GetDescription());
     }
 
-    private void UpdateStats()
+    public void RecalculateStats()
     {
+        RedoSkills();
+        UpdateStats();
+    }
+
+    public void RedoSkills()
+    {
+        var eq = GetEquips();
+        SetHealth(StateManager.Instance.Health);
+        skills.Clear();
+        eq.ForEach(e => skills.AddRange(e.GetSkills()));
+    }
+
+    public void UpdateStats()
+    {
+        stats = baseStats.Copy();
+        
         var adds = skills.Select(s => s.GetStats()).ToList();
         stats.Add(adds);
 
+        health.SetMax(baseHealth);
         var hpAddition = skills.Sum(s => s.GetHp());
         health.AddMax(hpAddition, !isPlayer);
         
@@ -283,10 +303,13 @@ public class Character : MonoBehaviour
         StateManager.Instance.UpdateEquips(equips, inventory);
     }
 
-    public float WalkTo(float pos, bool showHpAfter)
+    public float WalkTo(float pos, bool showHpAfter, bool hideHpBefore = true)
     {
-        healthDisplay.gameObject.SetActive(false);
-        
+        if (hideHpBefore)
+        {
+            healthDisplay.gameObject.SetActive(false);   
+        }
+
         anim.SetBool(Walking, true);
         var t = transform;
         var p = origin.WhereX(pos);
@@ -479,5 +502,15 @@ public class Character : MonoBehaviour
         
         GetSkills(SkillType.DisableCellOnAttack).ForEach(s => Board.DisableRandomCell());
         GetSkills(SkillType.HideSolvedCellOnAttack).ForEach(s => Board.HideSolvedCell());
+    }
+
+    public void ReattachHpDisplay()
+    {
+        healthDisplay.SetParent(transform, true);
+    }
+
+    public void ShowHp()
+    {
+        healthDisplay.gameObject.SetActive(true);
     }
 }

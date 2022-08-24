@@ -104,6 +104,7 @@ public class InventoryIcon : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             {
                 if (equipper.Add(equip))
                 {
+                    Inventory.Instance.RecalculateStats();
                     Tweener.MoveToBounceOut(t, hit.transform.position, 0.1f);
                     return;   
                 }

@@ -3021,6 +3021,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 2491547236678160809, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
   - {fileID: 6797947411694959416, guid: 68bdba8c43a1a46daba76d168f2f0c5a, type: 3}
+  - {fileID: 9176066167115653719, guid: 5a77e3f40815649029199d318288dc83, type: 3}
   - {fileID: 9176066167115653719, guid: 055f11369785f4a0aba679ad923a8a81, type: 3}
   dropPrefab: {fileID: 6607880770887199579, guid: a375b46bdeb73421d826addf9aa670a7, type: 3}
   enemyDescription: {fileID: 873811192}

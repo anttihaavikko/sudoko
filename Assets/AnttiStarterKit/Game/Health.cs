@@ -54,6 +54,16 @@ namespace AnttiStarterKit.Game
             UpdateDisplays();
         }
 
+        public void SetMax(int amount)
+        {
+            max = amount;
+
+            if (cur > max)
+            {
+                cur = max;
+            }
+        }
+
         public void AddMax(int amount, bool heals)
         {
             max += amount;
