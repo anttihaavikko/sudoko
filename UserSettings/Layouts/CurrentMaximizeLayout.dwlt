@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 5337
+  controlID: 13271
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 5338
+  controlID: 13272
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -420,9 +420,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.738806, y: 7.289971, z: -0.13556135}
+    m_Target: {x: -9.245975, y: 7.045761, z: -0.1191876}
     speed: 2
-    m_Value: {x: -4.738806, y: 7.289971, z: -0.13556135}
+    m_Value: {x: -9.245975, y: 7.045761, z: -0.1191876}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -473,9 +473,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.4629745
+    m_Target: 3.5654404
     speed: 2
-    m_Value: 5.4629745
+    m_Value: 3.5654404
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -532,6 +532,7 @@ MonoBehaviour:
     m_KeySerializationHelper:
     - {fileID: -551449981778663214, guid: a31b5ba01921c45f79fa894d1e53ca3c, type: 2}
     - {fileID: -1782018240116456024, guid: 1bb596873675747e5b040246b700f757, type: 2}
+    - {fileID: -5470421612051715191, guid: e690cb1cf21ad44e791a0a28f2072ee9, type: 2}
     m_ValueSerializationHelper:
     - e00: 1.0050004
       e01: 0
@@ -565,10 +566,26 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 1bb596873675747e5b040246b700f757, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: e690cb1cf21ad44e791a0a28f2072ee9, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -1782018240116456024, guid: 1bb596873675747e5b040246b700f757, type: 2}
+  - m_Target: {fileID: -5470421612051715191, guid: e690cb1cf21ad44e791a0a28f2072ee9, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -749,7 +766,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -301658
+  m_LastSelectedObjectID: 289680
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -774,7 +791,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 5258
+  controlID: 13179
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -851,7 +868,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 13}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -961,7 +978,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Sprites/_clothes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -975,7 +992,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: de040000
     m_LastClickedID: 1246
-    m_ExpandedIDs: ffffffff00000000b47d0000b67d0000b87d0000ba7d0000bc7d0000be7d0000c07d0000c27d0000c47d0000c67d0000c87d0000
+    m_ExpandedIDs: ffffffff00000000b47d0000b67d0000b87d0000ba7d0000bc7d0000be7d0000c07d0000c27d0000c47d0000c67d0000c87d0000647e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1000,10 +1017,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 923.499}
+    scrollPos: {x: 0, y: 1925.5005}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000b47d0000b67d0000b87d0000ba7d0000bc7d0000be7d0000c07d0000c27d0000c47d0000c67d0000c87d0000
+    m_ExpandedIDs: ffffffff00000000b47d0000b67d0000b87d0000ba7d0000bc7d0000be7d0000c07d0000c27d0000c47d0000c67d0000c87d0000647e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1083,7 +1100,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 5302
+  controlID: 13208
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52

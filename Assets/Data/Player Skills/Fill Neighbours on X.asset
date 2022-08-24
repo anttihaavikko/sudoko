@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f708d324ecf048c490f85b2fb4655ba7, type: 3}
   m_Name: Fill Neighbours on X
   m_EditorClassIdentifier: 
-  description: (Fill) all (surrounding cells) when placing [1].
+  description: (Fill) all (surrounding cells) when placing any [1].
   prefix: 
   suffix: of Plenty
   type: 16
