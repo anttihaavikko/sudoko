@@ -12,6 +12,8 @@ namespace Map
     {
         [SerializeField] private MapNode nodePrefab;
         [SerializeField] private Transform currentMarker, pickLine;
+        
+        [SerializeField] private Character player;
 
         private const float HorizontalStep = 3.5f;
         private const float VerticalStep = 2.25f;
@@ -135,7 +137,13 @@ namespace Map
         {
             var node = Instantiate(nodePrefab, transform);
             node.transform.position = pos;
+            node.WorldMap = this;
             return node;
+        }
+
+        public void OnPick()
+        {
+            player.WalkTo(10, false);
         }
     }
 }

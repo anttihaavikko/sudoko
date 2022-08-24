@@ -8,7 +8,7 @@ public class Blinders : MonoBehaviour
     public Transform left, right;
     public bool startsOpen, openAtStart = true;
 
-    private readonly float duration = 0.3f;
+    private readonly float duration = 0.4f;
     private bool isOpen;
 
     // Start is called before the first frame update

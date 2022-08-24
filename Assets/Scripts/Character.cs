@@ -314,6 +314,8 @@ public class Character : MonoBehaviour
         var t = transform;
         var p = origin.WhereX(pos);
         var walkTime = Mathf.Max(Mathf.Abs(p.x - t.position.x) * 0.25f, 0.2f);
+        
+        StopAllCoroutines();
 
         Tweener.MoveToQuad(t, p, walkTime);
         this.StartCoroutine(() =>

@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using AnttiStarterKit.Animations;
+using AnttiStarterKit.Extensions;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -24,6 +26,9 @@ namespace Map
 
         private int x, y;
         private bool canPick;
+        private MapIcon iconType;
+        
+        public WorldMap WorldMap { get; set; }
     
         public bool IsDone => backConnections.Any();
         public bool HasConnections => connections.Any();
@@ -91,7 +96,23 @@ namespace Map
             if (!canPick) return;
             MapState.Instance.x = x;
             MapState.Instance.y = y;
-            SceneChanger.Instance.ChangeScene("Main");
+            
+            WorldMap.OnPick();
+            this.StartCoroutine(() => SceneChanger.Instance.ChangeScene(GetScene()), 1.5f);
+        }
+
+        private string GetScene()
+        {
+            return iconType switch
+            {
+                MapIcon.None => "Map",
+                MapIcon.Fight => "Main",
+                MapIcon.Boss => "Main",
+                MapIcon.Star => "Map",
+                MapIcon.Shop => "Map",
+                MapIcon.Unknown => "Map",
+                _ => throw new ArgumentOutOfRangeException()
+            };
         }
 
         public void OnPointerEnter(PointerEventData eventData)
@@ -108,6 +129,7 @@ namespace Map
 
         public void SetType(MapIcon type)
         {
+            iconType = type;
             icon.sprite = icons[(int)type];
         }
         

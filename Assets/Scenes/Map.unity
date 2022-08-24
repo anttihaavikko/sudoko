@@ -768,6 +768,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+--- !u!114 &281018614 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+  m_PrefabInstance: {fileID: 281018613}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8880a20d1740e8961cedce5f159057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &351317754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,6 +1602,7 @@ MonoBehaviour:
   nodePrefab: {fileID: 5292645973818155509, guid: 88a98723020d842eb85f103682f87e03, type: 3}
   currentMarker: {fileID: 776368127}
   pickLine: {fileID: 87284165}
+  player: {fileID: 281018614}
 --- !u!114 &2144894636
 MonoBehaviour:
   m_ObjectHideFlags: 0
