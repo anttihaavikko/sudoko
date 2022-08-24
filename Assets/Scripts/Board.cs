@@ -344,7 +344,11 @@ public class Board : MonoBehaviour
     public void FillCell(int index)
     {
         var cell = sudoku.GetCell(index);
-        cell.Value = Enumerable.Range(0, 9).First(i => sudoku.Solver.IsValidValueForTheCell(i, cell));
+        var val = Enumerable.Range(0, 9).FirstOrDefault(i => sudoku.Solver.IsValidValueForTheCell(i, cell));
+        if (val > 0)
+        {
+            cell.Value = val;
+        }
     }
 
     public void DisableRandomCell()
