@@ -25,7 +25,7 @@ namespace Equipment
             trim.flipX = e.flipped;
             free = false;
 
-            if (slot == EquipmentSlot.Hat)
+            if (hair && slot == EquipmentSlot.Hat)
             {
                 hair.SetActive(false);
             }
@@ -38,7 +38,7 @@ namespace Equipment
             trim.sprite = null;
             free = true;
             
-            if (slot == EquipmentSlot.Hat)
+            if (hair && slot == EquipmentSlot.Hat)
             {
                 hair.SetActive(true);
             }

@@ -3019,6 +3019,7 @@ MonoBehaviour:
   player: {fileID: 1826115811}
   enemyPos: {fileID: 1547794286}
   enemies:
+  - {fileID: 2491547236678160809, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
   - {fileID: 6797947411694959416, guid: 68bdba8c43a1a46daba76d168f2f0c5a, type: 3}
   - {fileID: 9176066167115653719, guid: 055f11369785f4a0aba679ad923a8a81, type: 3}
   dropPrefab: {fileID: 6607880770887199579, guid: a375b46bdeb73421d826addf9aa670a7, type: 3}
@@ -5966,6 +5967,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1513790603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1513790604}
+  m_Layer: 0
+  m_Name: Stats Display
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1513790604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513790603}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.442, y: 5.096, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1547794285
 GameObject:
   m_ObjectHideFlags: 0
