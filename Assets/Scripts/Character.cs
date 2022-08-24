@@ -127,6 +127,7 @@ public class Character : MonoBehaviour
         health.SetMax(baseHealth);
         var hpAddition = skills.Sum(s => s.GetHp());
         health.AddMax(hpAddition, !isPlayer);
+        health.Cap();
         
         statsDisplay.Set(stats);
     }

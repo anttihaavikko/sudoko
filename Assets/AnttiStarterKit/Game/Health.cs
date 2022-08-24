@@ -57,7 +57,10 @@ namespace AnttiStarterKit.Game
         public void SetMax(int amount)
         {
             max = amount;
+        }
 
+        public void Cap()
+        {
             if (cur > max)
             {
                 cur = max;

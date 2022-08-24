@@ -253,6 +253,8 @@ public class Board : MonoBehaviour
         if (!player.IsAlive()) yield break;
         
         player.ReattachHpDisplay();
+
+        StateManager.Instance.Health = player.CurrentHealth;
         
         if (player.HasSkill(SkillType.HealAfterCombat))
         {
