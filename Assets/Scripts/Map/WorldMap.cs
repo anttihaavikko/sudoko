@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using AnttiStarterKit.Extensions;
+using AnttiStarterKit.Utils;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -34,6 +36,7 @@ namespace Map
             nodes[0].Random().Dim();
             var node = nodes[state.x][state.y];
             node.Activate();
+            node.HideIcon();
 
             currentMarker.position = node.transform.position;
             pickLine.position = pickLine.position.WhereX(nodes[state.x + 1].First().transform.position.x); 
@@ -58,6 +61,8 @@ namespace Map
                     var node = AddNode(p + transform.position);
                     level.Add(node);
                     node.SetupPosition(ix, iy);
+                    
+                    node.SetType(GetTypeFor(ix));
                     
                     var t = node.transform;
 
@@ -104,6 +109,26 @@ namespace Map
             if (level is 0 or Levels - 1) return 1;
             if (level == 1) return 2;
             return Random.Range(2, 6);
+        }
+
+        private MapIcon GetTypeFor(int level)
+        {
+            if (level == 0) return MapIcon.None;
+            if (level == 1) return MapIcon.Fight;
+            if (level == Levels - 1) return MapIcon.Boss;
+            
+            return GetRandomType();
+        }
+
+        private MapIcon GetRandomType()
+        {
+            return Random.value switch
+            {
+                < 0.15f => MapIcon.Shop,
+                < 0.3f => MapIcon.Star,
+                < 0.45f => MapIcon.Unknown,
+                _ => MapIcon.Fight
+            };
         }
 
         public MapNode AddNode(Vector3 pos)

@@ -377,7 +377,7 @@ public class Character : MonoBehaviour
 
         var thorns = target.GetSkillCount(SkillType.Thorns);
         
-        if (thorns > 0)
+        if (thorns > 0 && boosted)
         {
             this.StartCoroutine(() => target.Attack(this, thorns, false), 0.4f);
         }

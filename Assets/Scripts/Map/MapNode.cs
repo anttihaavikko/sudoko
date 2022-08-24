@@ -14,6 +14,8 @@ namespace Map
         [SerializeField] private Color activeColor = Color.white;
         [SerializeField] private Pulsate pulsate;
         [SerializeField] private GameObject outline;
+        [SerializeField] private SpriteRenderer icon;
+        [SerializeField] private List<Sprite> icons;
 
         private readonly List<MapNode> connections = new();
         private readonly List<MapNode> backConnections = new();
@@ -54,6 +56,7 @@ namespace Map
         {
             sprite.sortingOrder += 10;
             lines.ForEach(l => l.sortingOrder += 5);
+            ShowIcon();
             
             connections.ForEach(c => c.MakeActive());
         }
@@ -102,5 +105,30 @@ namespace Map
             if (!canPick) return;
             outline.SetActive(false);
         }
+
+        public void SetType(MapIcon type)
+        {
+            icon.sprite = icons[(int)type];
+        }
+        
+        public void HideIcon()
+        {
+            icon.gameObject.SetActive(false);
+        }
+
+        public void ShowIcon()
+        {
+            icon.gameObject.SetActive(true);
+        }
     }
+}
+
+public enum MapIcon
+{
+    None,
+    Fight,
+    Boss,
+    Star,
+    Shop,
+    Unknown
 }

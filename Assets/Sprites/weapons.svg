@@ -16,7 +16,14 @@
    inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
    sodipodi:docname="weapons.svg">
   <defs
-     id="defs1143" />
+     id="defs1143">
+    <rect
+       x="1210.8495"
+       y="368.84338"
+       width="242.16989"
+       height="214.22721"
+       id="rect2798" />
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#b8b8b8"
@@ -24,19 +31,20 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.035507958"
-     inkscape:cx="6934.8883"
-     inkscape:cy="946.63243"
+     inkscape:zoom="0.14203183"
+     inkscape:cx="2688.0162"
+     inkscape:cy="2376.7843"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="964"
+     inkscape:window-width="1440"
+     inkscape:window-height="784"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:snap-global="true" />
+     inkscape:snap-global="false"
+     showguides="false" />
   <metadata
      id="metadata1146">
     <rdf:RDF>
@@ -748,6 +756,184 @@ AADAMAoXAACAYRQuAAAAwyhcAAAAhlG4AAAADKNwAQAAGPb/ZWLiA4Uwf9cAAAAASUVORK5CYII=
        inkscape:radius="0"
        inkscape:original="M 2033.8047 216.02539 L 2197.1406 547.96875 L 2355.209 216.02539 L 2033.8047 216.02539 z "
        d="M 2033.8047,216.02539 2197.1406,547.96875 2355.209,216.02539 Z"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:30;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path2722"
+       sodipodi:sides="5"
+       sodipodi:cx="762.67645"
+       sodipodi:cy="467.61682"
+       sodipodi:r1="74.245544"
+       sodipodi:r2="29.698217"
+       sodipodi:arg1="0.43984258"
+       sodipodi:arg2="1.0681611"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 829.85521,499.23035 -52.87204,-5.5885 -23.6136,47.63488 -11.02337,-52.01124 -52.60047,-7.73787 46.05922,-26.55621 -8.89529,-52.41716 39.48954,35.59861 47.10289,-24.65771 -21.65335,48.55735 z"
+       inkscape:transform-center-x="-0.43494303"
+       inkscape:transform-center-y="-6.9123589"
+       transform="rotate(29.481108,762.57641,467.76856)"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <rect
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:3.21768;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect1087-7-0"
+       width="7.1492867"
+       height="28.187443"
+       x="1033.0988"
+       y="-344.15765"
+       ry="0"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/claymore.png"
+       transform="rotate(45)" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 975.89531,482.51044 7.50788,7.50788 c 30.12631,-26.15073 78.33481,-71.46975 100.71161,-108.7694 -31.4285,19.9374 -82.0573,70.46588 -108.21949,101.26152 z"
+       id="path1091-1-5"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/claymore.png" />
+    <rect
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:2.64583;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect1089-1-0"
+       width="26.02232"
+       height="8.316412"
+       x="1023.6623"
+       y="-352.11868"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/claymore.png"
+       transform="rotate(45)" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2.24379;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path2683-6"
+       cx="1036.6735"
+       cy="-312.5437"
+       rx="6.1365514"
+       ry="5.9005423"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/claymore.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25"
+       transform="rotate(45)" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 985.9478,480.1298 78.2606,-78.26057"
+       id="path2707-1"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/claymore.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <rect
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:3.21768;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect1087-7-0-2"
+       width="7.1492867"
+       height="28.187443"
+       x="-406.63528"
+       y="1097.8029"
+       ry="0"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/claymore.png"
+       transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1061.7704,484.08478 -7.5079,7.50788 c -30.1263,-26.15073 -78.33482,-71.46975 -100.71162,-108.7694 31.4285,19.9374 82.05732,70.46588 108.21952,101.26152 z"
+       id="path1091-1-5-4"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/claymore.png" />
+    <rect
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:2.64583;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect1089-1-0-5"
+       width="26.02232"
+       height="8.316412"
+       x="-416.07169"
+       y="1089.8418"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/claymore.png"
+       transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2.24379;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path2683-6-0"
+       cx="-403.06058"
+       cy="1129.4167"
+       rx="6.1365514"
+       ry="5.9005423"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/claymore.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25"
+       transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 1051.7179,481.70414 973.45728,403.44357"
+       id="path2707-1-1"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/claymore.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <text
+       xml:space="preserve"
+       id="text2796"
+       style="line-height:1.25;font-family:'Upheaval TT (BRK)';font-size:10.58333333000000032px;letter-spacing:5.29166666999999968px;-inkscape-font-specification:'Upheaval TT (BRK)';white-space:pre;shape-inside:url(#rect2798);" />
+    <text
+       xml:space="preserve"
+       style="font-size:203.59px;line-height:1.25;font-family:'Upheaval TT (BRK)';-inkscape-font-specification:'Upheaval TT (BRK)';letter-spacing:10.1795px;fill:#ffffff;stroke-width:0.508975"
+       x="1192.1208"
+       y="523.77966"
+       id="text2804"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25"><tspan
+         sodipodi:role="line"
+         id="tspan2802"
+         x="1192.1208"
+         y="523.77966"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:203.59px;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, ';fill:#ffffff;stroke-width:0.508975">?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Upheaval TT (BRK)';-inkscape-font-specification:'Upheaval TT (BRK)';letter-spacing:5.29167px;stroke-width:0.264583"
+       x="1188.4952"
+       y="311.09518"
+       id="text2808"><tspan
+         sodipodi:role="line"
+         id="tspan2806"
+         x="1188.4952"
+         y="311.09518"
+         style="stroke-width:0.264583">?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Upheaval TT (BRK)';-inkscape-font-specification:'Upheaval TT (BRK)';letter-spacing:5.29167px;stroke-width:0.264583"
+       x="1495.8647"
+       y="381.88327"
+       id="text2812"><tspan
+         sodipodi:role="line"
+         id="tspan2810"
+         x="1495.8647"
+         y="381.88327"
+         style="stroke-width:0.264583">ss</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:177.662px;line-height:1.25;font-family:'Upheaval TT (BRK)';-inkscape-font-specification:'Upheaval TT (BRK)';letter-spacing:8.8831px;fill:#ffffff;stroke-width:0.444155"
+       x="-925.41357"
+       y="-616.06726"
+       id="text2804-0"
+       transform="scale(-1)"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25"><tspan
+         sodipodi:role="line"
+         id="tspan2802-2"
+         x="-925.41357"
+         y="-616.06726"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:177.662px;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, ';fill:#ffffff;stroke-width:0.444155">$</tspan></text>
+    <path
+       id="path2838"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:30;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 1132.1441,588.10608 c -38.3234,2.1e-4 -75.9126,54.93181 -67.9934,86.6222 5.5885,22.36385 13.1372,32.33941 35.0907,42.78968 -0.1062,0.94232 -0.1628,1.90006 -0.1628,2.87166 v 5.5671 h 7.134 v -6.05441 h 5.8213 v 6.05441 h 5.5992 v -5.93762 h 5.8213 v 5.93762 h 5.6524 v -6.17067 h 5.8213 v 6.17067 h 7.1128 v -6.63628 h 5.8213 v 6.63628 h 6.9856 v -5.70508 h 5.8214 v 5.70508 h 6.4032 v -5.5671 c 0,-0.9716 -0.056,-1.92934 -0.1623,-2.87166 21.9536,-10.45027 29.968,-21.35724 36.0223,-42.78968 8.8797,-31.43496 -32.4647,-86.62226 -70.7883,-86.6222 z m 27.2208,56.81683 v 0 c 0.026,-5e-5 0.051,-5e-5 0.077,0 11.5934,1.9e-4 20.9916,9.39861 20.9915,20.99202 -2e-4,11.59319 -9.3983,20.99127 -20.9915,20.99146 -11.5934,8e-5 -20.9918,-9.39808 -20.992,-20.99146 -2e-4,-11.56341 9.3512,-20.94942 20.9145,-20.99202 z m -55.485,0.39637 c 0.025,-5e-5 0.051,-5e-5 0.077,0 11.5934,-7e-5 20.9918,9.39808 20.992,20.99146 10e-5,11.5936 -9.3984,20.9921 -20.992,20.99202 -11.5934,-1.9e-4 -20.9916,-9.39861 -20.9915,-20.99202 10e-5,-11.56337 9.3517,-20.94912 20.915,-20.99146 z m 23.7515,44.70371 1.4433,18.52446 h -11.0639 z m 7.6254,0.4186 9.6206,18.52443 h -11.0639 z m -36.1601,45.76101 c 0.4761,13.50719 11.1736,32.14172 24.801,32.14172 h 17.6971 c 13.6274,0 24.9835,-18.63453 25.4595,-32.14172 h -6.3851 v 7.10189 h -5.8214 v -7.10189 h -6.9856 v 6.17069 h -5.8213 v -6.17069 h -7.1128 v 6.63631 h -5.8213 v -6.63631 h -5.6524 v 6.86885 h -5.8213 v -6.86885 h -5.5992 v 6.75256 h -5.8213 v -6.75256 z"
+       sodipodi:nodetypes="sscsccccccccccccccccccccccscsssscssssscsssscccccccccssccccccccccccccccccccccs"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
   </g>
