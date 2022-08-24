@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -15,12 +16,16 @@ namespace AnttiStarterKit.Animations
         private float _startAngle;
         private Transform _t;
 
-        public void Shake()
+        private void Start()
         {
             _t = transform;
-            _durationLeft = duration;
             _startPos = _t.position;
             _startAngle = _t.rotation.eulerAngles.z;
+        }
+
+        public void Shake()
+        {
+            _durationLeft = duration;
         }
 
         private void Update()

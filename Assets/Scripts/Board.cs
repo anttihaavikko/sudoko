@@ -269,13 +269,14 @@ public class Board : MonoBehaviour
     private void Attack(Character attacker, Character target, int damage)
     {
         attacker.Attack(target, damage);
-        Invoke(nameof(CheckEnd), 0.2f);
+        Invoke(nameof(CheckEnd), 0.5f);
     }
 
     public void EnemyAttack(int damage)
     {
         if (!player.IsAlive()) return;
         enemy.Attack(player, damage);
+        Invoke(nameof(CheckEnd), 0.8f);
     }
 
     private static float GetGap(int pos)
