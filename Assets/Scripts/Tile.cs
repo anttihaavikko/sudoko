@@ -86,4 +86,9 @@ public class Tile : MonoBehaviour
             board.FillCell(index);
         }
     }
+
+    public void Shake()
+    {
+        shaker.Shake();
+    }
 }

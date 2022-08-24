@@ -515,4 +515,9 @@ public class Character : MonoBehaviour
     {
         healthDisplay.gameObject.SetActive(true);
     }
+
+    public int GetAttack()
+    {
+        return stats.attack;
+    }
 }

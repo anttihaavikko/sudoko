@@ -481,6 +481,8 @@ MonoBehaviour:
   - {fileID: 878230743}
   - {fileID: 1049605849}
   - {fileID: 319609293}
+  equipmentList: {fileID: 11400000, guid: 200a26c490ac04b2cabb3674f5a589dd, type: 2}
+  soulSkills: {fileID: 11400000, guid: 531c21d6495a44e738aa77c41344b6a4, type: 2}
 --- !u!1 &86844395
 GameObject:
   m_ObjectHideFlags: 0

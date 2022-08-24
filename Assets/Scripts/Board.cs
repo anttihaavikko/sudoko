@@ -58,6 +58,11 @@ public class Board : MonoBehaviour
             if(!fightStarted) StartFight();
             Attack(player, enemy, 5);
         }
+
+        if (DevKey.Down(KeyCode.N))
+        {
+            Win();
+        }
     }
 
     private void SpawnEnemy()
@@ -133,12 +138,15 @@ public class Board : MonoBehaviour
         }
     }
 
-    public void TryFill(Tile tile, int index)
+    public void TryFill(Tile tile, int index, int val = -1)
     {
         if (!fightStarted || !enemy.IsAlive() || !player.IsAlive()) return;
 
-        var value = numberPicker.Number;
+        var value = val > -1 ? val : numberPicker.Number;
         var cell = sudoku.GetCell(index);
+        
+        var x = cell.Position.Column - 1;
+        var y = cell.Position.Row - 1;
         
         if (sudoku.Solver.IsValidValueForTheCell(value, cell))
         {
@@ -146,8 +154,22 @@ public class Board : MonoBehaviour
 
             cell.Value = value;
 
+            if (player.HasSkill(SkillType.ClearNeighboursOnX, value))
+            {
+                var neighbours = grid.GetNeighbours(x, y);
+                StartCoroutine(ClearCells(neighbours, Vector3.zero));
+            }
+
             if (sudoku.IsBoardFilled())
             {
+                var bigDamage = player.GetSkillCount(SkillType.BigDamageOnClear);
+                if (bigDamage > 0)
+                {
+                    var attack = player.GetAttack() + 1;
+                    var amount = bigDamage * 20 * attack;
+                    this.StartCoroutine(() => Attack(player, enemy, amount, false), 0.8f);
+                }
+                
                 Invoke(nameof(Clear), 0.75f);
                 Invoke(nameof(Generate), 1.5f);
             }
@@ -156,9 +178,20 @@ public class Board : MonoBehaviour
             {
                 return;
             }
-            
-            Attack(player, enemy, value);
-            
+
+            var hits = player.GetSkillCount(SkillType.ExtraHitOnX, value) + 1;
+
+            for (var i = 0; i < hits; i++)
+            {
+                this.StartCoroutine(() => Attack(player, enemy, value), i * 0.2f);
+            }
+
+            if (player.HasSkill(SkillType.FillNeighboursOnX, value))
+            {
+                var neighbours = grid.GetNeighbours(x, y).Where(c => !c.IsRevealed);
+                StartCoroutine(FillCells(neighbours, Vector3.zero));
+            }
+
             return;
         }
 
@@ -212,7 +245,7 @@ public class Board : MonoBehaviour
         });
         
         yield return new WaitForSeconds(0.5f);
-        
+
         // uiHider.Show();
         
         yield return new WaitForSeconds(0.5f);
@@ -220,6 +253,14 @@ public class Board : MonoBehaviour
         if (!player.IsAlive()) yield break;
         
         player.ReattachHpDisplay();
+        
+        if (player.HasSkill(SkillType.HealAfterCombat))
+        {
+            player.ShowHp();
+            yield return new WaitForSeconds(0.2f);
+            player.Heal(9999);
+            yield return new WaitForSeconds(0.7f);
+        }
         
         inventoryPanel.SetActive(true);
         // uiHider.HideWithDelay();
@@ -266,9 +307,9 @@ public class Board : MonoBehaviour
     {
     }
 
-    private void Attack(Character attacker, Character target, int damage)
+    private void Attack(Character attacker, Character target, int damage, bool boosted = true)
     {
-        attacker.Attack(target, damage);
+        attacker.Attack(target, damage, boosted);
         Invoke(nameof(CheckEnd), 0.5f);
     }
 
@@ -345,11 +386,27 @@ public class Board : MonoBehaviour
             yield return new WaitForSeconds(0.03f);
         }
     }
+    
+    private IEnumerator FillCells(IEnumerable<Tile> cells, Vector3 origin)
+    {
+        var ordered = cells.OrderBy(c => Vector3.Distance(c.transform.position, origin)).ToList();
+        foreach (var tile in ordered)
+        {
+            var cell = sudoku.GetCell(tile.Index);
+            var val = Enumerable.Range(1, 9).FirstOrDefault(i => sudoku.Solver.IsValidValueForTheCell(i, cell));
+            if (val > 0)
+            {
+                TryFill(tile, tile.Index, val);
+                tile.Shake();
+            }
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
 
     public void FillCell(int index)
     {
         var cell = sudoku.GetCell(index);
-        var val = Enumerable.Range(0, 9).FirstOrDefault(i => sudoku.Solver.IsValidValueForTheCell(i, cell));
+        var val = Enumerable.Range(1, 9).FirstOrDefault(i => sudoku.Solver.IsValidValueForTheCell(i, cell));
         if (val > 0)
         {
             cell.Value = val;

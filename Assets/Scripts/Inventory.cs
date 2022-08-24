@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AnttiStarterKit.Managers;
+using AnttiStarterKit.Utils;
 using Equipment;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Inventory : Manager<Inventory>
@@ -11,10 +13,29 @@ public class Inventory : Manager<Inventory>
     [SerializeField] private Transform container, root;
     [SerializeField] private InventoryIcon iconPrefab;
     [SerializeField] private List<SlotEquipper> slots;
+    [SerializeField] private EquipmentList equipmentList;
+    [SerializeField] private SkillSet soulSkills;
 
     public Transform Container => container;
 
     private readonly List<InventoryIcon> icons = new();
+
+    private void Update()
+    {
+        if (DevKey.Down(KeyCode.G))
+        {
+            var soul = equipmentList.Random(EquipmentSlot.Soul);
+            soul.AddSkill(soulSkills.Random().Copy());
+            Add(soul);
+        }
+        
+        if (DevKey.Down(KeyCode.H))
+        {
+            var soul = equipmentList.Random(EquipmentSlot.Hat);
+            soul.AddSkill(soulSkills.Random().Copy());
+            Add(soul);
+        }
+    }
 
     public void MarkSlot(Equip e)
     {

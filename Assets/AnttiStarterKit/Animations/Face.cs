@@ -88,37 +88,37 @@ namespace AnttiStarterKit.Animations
 		void Update () {
 			MoveFace ();
 
-			if (Application.isEditor) {
-
-				if (Input.GetKeyDown (KeyCode.Alpha1)) {
-					Emote (Emotion.Default);
-				}
-
-				if (Input.GetKeyDown (KeyCode.Alpha2)) {
-					Emote (Emotion.Angry);
-				}
-
-				if (Input.GetKeyDown (KeyCode.Alpha3)) {
-					Emote (Emotion.Happy);
-				}
-
-				if (Input.GetKeyDown (KeyCode.Alpha4)) {
-					Emote (Emotion.Shocked);
-				}
-
-				if (Input.GetKeyDown (KeyCode.Alpha5)) {
-					Emote (Emotion.Sad);
-				}
-
-				if (Input.GetKeyDown (KeyCode.Alpha6)) {
-					Emote (Emotion.Sneaky);
-				}
-
-				if (Input.GetKeyDown (KeyCode.Alpha7)) {
-					Emote (Emotion.Brag);
-				}
-
-			}
+			// if (Application.isEditor) {
+			//
+			// 	if (Input.GetKeyDown (KeyCode.Alpha1)) {
+			// 		Emote (Emotion.Default);
+			// 	}
+			//
+			// 	if (Input.GetKeyDown (KeyCode.Alpha2)) {
+			// 		Emote (Emotion.Angry);
+			// 	}
+			//
+			// 	if (Input.GetKeyDown (KeyCode.Alpha3)) {
+			// 		Emote (Emotion.Happy);
+			// 	}
+			//
+			// 	if (Input.GetKeyDown (KeyCode.Alpha4)) {
+			// 		Emote (Emotion.Shocked);
+			// 	}
+			//
+			// 	if (Input.GetKeyDown (KeyCode.Alpha5)) {
+			// 		Emote (Emotion.Sad);
+			// 	}
+			//
+			// 	if (Input.GetKeyDown (KeyCode.Alpha6)) {
+			// 		Emote (Emotion.Sneaky);
+			// 	}
+			//
+			// 	if (Input.GetKeyDown (KeyCode.Alpha7)) {
+			// 		Emote (Emotion.Brag);
+			// 	}
+			//
+			// }
 
 			if (brows.Length > 0) {
 				for (int i = 0; i < brows.Length; i++) {
