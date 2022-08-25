@@ -67,6 +67,12 @@ namespace AnttiStarterKit.Game
             valueField.text = Format(Mathf.RoundToInt(shownValue));
         }
 
+        private string GetAdditionAsText()
+        {
+            var number = separateThousands ? addition.AsScore() : addition.ToString();
+            return addition > 0 ? $"+{number}" : number;
+        }
+
         public void Add(int amount)
         {
             var amt = amount * multiplier;
@@ -74,7 +80,7 @@ namespace AnttiStarterKit.Game
             value += amt;
             addition += amt;
 
-            additionField.text = addition.WithSign();
+            additionField.text = GetAdditionAsText();
             additionAppearer.Show();
             
             CancelInvoke(nameof(ClearAddition));
