@@ -94,6 +94,12 @@ public class Board : MonoBehaviour
         {
             Win();
         }
+
+        if (DevKey.Down(KeyCode.B))
+        {
+            MapState.Instance.x = 6;
+            SceneChanger.Instance.ChangeScene("Main");
+        }
     }
 
     private void SpawnEnemy()
