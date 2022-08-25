@@ -108,9 +108,9 @@ namespace Map
                 MapIcon.None => "Map",
                 MapIcon.Fight => "Main",
                 MapIcon.Boss => "Main",
-                MapIcon.Star => "Map",
-                MapIcon.Shop => "Map",
-                MapIcon.Unknown => "Map",
+                MapIcon.Star => "Chest",
+                MapIcon.Shop => "Chest",
+                MapIcon.Unknown => "Chest",
                 _ => throw new ArgumentOutOfRangeException()
             };
         }
