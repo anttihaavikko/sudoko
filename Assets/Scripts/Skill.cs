@@ -95,5 +95,7 @@ public enum SkillType
     HealOnX,
     MoreDamageOnX,
     SlowEnemies,
-    StartWithFill
+    StartWithFill,
+    MultiGuard,
+    BiggerMultiOnLowDef
 }
