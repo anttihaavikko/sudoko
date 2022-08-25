@@ -20,6 +20,7 @@ using Random = UnityEngine.Random;
 public class Character : Lootable
 {
     [SerializeField] private string title;
+    [SerializeField] private bool isBoss;
     [SerializeField] private int score = 100;
     [SerializeField] private Stats stats;
     [SerializeField] private int skillPicks;
@@ -51,6 +52,7 @@ public class Character : Lootable
 
     public int CurrentHealth => health.Current;
     public int Score => score;
+    public bool IsBoss => isBoss;
     
     public Board Board { get; set; }
 
@@ -60,6 +62,8 @@ public class Character : Lootable
     private static readonly int AttackAnim = Animator.StringToHash("attack");
     private static readonly int Hurt = Animator.StringToHash("hurt");
     private static readonly int SkillTrigger = Animator.StringToHash("skill");
+    private static readonly int BossAttack = Animator.StringToHash("bossAttack");
+    
     private readonly List<Equip> inventory = new();
 
     private Stats baseStats;
@@ -420,7 +424,8 @@ public class Character : Lootable
         var critical = HasSkill(SkillType.IgnoresDefence);
         var t = transform;
         AttackAnimation();
-        Tweener.MoveToBounceOut(t, origin + Vector3.right * 1.5f * t.localScale.x, 0.2f);
+        var distanceMod = isBoss ? 0.25f : 1f; 
+        Tweener.MoveToBounceOut(t, origin + Vector3.right * 1.5f * t.localScale.x * distanceMod, 0.2f);
         this.StartCoroutine(() =>
         {
             target.Damage(boosted ? amount + stats.attack : amount, amount, critical);
@@ -438,7 +443,7 @@ public class Character : Lootable
 
     public void AttackAnimation()
     {
-        anim.SetTrigger(AttackAnim);
+        anim.SetTrigger(isBoss ? BossAttack : AttackAnim);
     }
 
     public bool HasSkill(SkillType skill)

@@ -31,9 +31,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.14203183"
-     inkscape:cx="7537.5506"
-     inkscape:cy="4089.3654"
+     inkscape:zoom="0.28406366"
+     inkscape:cx="1295.9776"
+     inkscape:cy="-731.06528"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -1603,6 +1603,129 @@ AElFTkSuQmCC
        style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 1984.0785,1035.6725 3.2931,61.2513"
        id="path3059"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:20;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1778-3-0"
+       width="633.0094"
+       height="729.54102"
+       x="2589.5339"
+       y="-441.14713"
+       ry="51.522804"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <rect
+       style="fill:#deaa87;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+       id="rect1758-6"
+       width="7.4835467"
+       height="225.57547"
+       x="507.60922"
+       y="-88.570755"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/halberd.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#cccccc;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 508.37676,-68.614921 -8.23269,-3.622384 -0.98793,-12.184383 -12.18438,2.305154 19.09985,-16.794643 1.31723,-55.652993 8.89129,55.982293 c 11.78361,1.62294 18.76223,-7.565343 27.33255,-13.172303 -1.80574,17.483464 -4.50535,34.519966 -11.52576,49.396104 -6.51063,-8.585128 -14.56691,-9.957254 -23.71016,-6.256845 z"
+       id="path4186"
+       sodipodi:nodetypes="cccccccccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/halberd.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#e6e6e6;stroke:#e6e6e6;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 536.49945,-101.52507 c 1.14802,12.728918 -2.01052,22.381721 -6.98567,30.736948"
+       id="path4188"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/halberd.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <rect
+       style="fill:#b3b3b3;fill-opacity:1;stroke:#b3b3b3;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect4190"
+       width="1.9758458"
+       height="16.794689"
+       x="510.35263"
+       y="-92.48864"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/halberd.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <rect
+       style="fill:#deaa87;fill-opacity:1;stroke:#000000;stroke-width:3.38134;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+       id="rect1758-0"
+       width="8.1022062"
+       height="148.88605"
+       x="574.82812"
+       y="-22.749075"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/mace.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <rect
+       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect4236"
+       width="14.902762"
+       height="29.339813"
+       x="571.42786"
+       y="-10.711361"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/mace.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <circle
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:3.19475;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path2711-8"
+       cx="578.87921"
+       cy="-25.614119"
+       r="22.303602"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/mace.png" />
+    <circle
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path2713-0"
+       cx="578.87921"
+       cy="-28.874224"
+       r="14.624871"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/mace.png" />
+    <path
+       id="path4252"
+       style="fill:#917c6f;stroke:#000000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 593.3381,-383.76266 -10.35595,4.19199 c -0.15777,32.43307 0.44545,63.83956 3.88244,91.42233 h -15.4368 v 5.12268 h 16.1122 c 1.38055,9.84467 3.15056,19.16338 5.41467,27.81588 6.27402,48.67319 0.59085,86.05288 -11.5068,117.37422 l 8.05481,8.85011 c 8.54755,-34.33186 19.32443,-69.77685 9.97252,-123.42967 -7.28356,-38.69125 -10.10343,-81.47891 -6.13709,-131.34754 z"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/scythe.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#cccccc;stroke:#000000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 580.70506,-377.03425 13.17231,-3.95169 0.32933,5.59823 c 51.4584,-16.99026 73.27086,-3.55441 91.87682,13.17231 -32.17034,-8.67859 -64.80621,-18.92303 -87.59584,3.95169 l -5.59821,-3.95169 -11.85508,4.93961 z"
+       id="path4257"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/scythe.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#cccccc;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 336.53526,-142.82396 -0.1563,-8.2312 c -65.96753,-27.04052 -15.87621,-73.11821 28.66761,-56.22061 -38.74382,2.41535 -77.37932,18.8721 -24.54186,52.86176 l -0.43339,11.86544 z"
+       id="path4273"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/sickle.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       id="rect4275"
+       style="fill:#917c6f;fill-opacity:1;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 333.83581,-147.58936 h 7.45139 c -1.35431,10.43889 -1.74024,20.68411 0,30.50409 h -7.45139 c 1.89602,-9.35545 2.43633,-19.29192 0,-30.50409 z"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/sickle.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#999999;stroke:#999999;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 335.8938,-153.78667 c -49.69564,-31.6035 -13.00394,-51.38468 14.48954,-54.66507 -34.51494,-2.21119 -67.30846,29.96035 -14.48954,54.66507 z"
+       id="path4278"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/sickle.png"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
   </g>

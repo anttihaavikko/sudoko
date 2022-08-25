@@ -31,6 +31,7 @@ public class Board : MonoBehaviour
     [SerializeField] private ScoreDisplay scoreDisplay;
     [SerializeField] private Looter looter;
     [SerializeField] private GameObject gameOverStuff;
+    [SerializeField] private GameObject bossCam;
 
     private Character enemy;
     private readonly TileGrid<Tile> grid = new(9, 9);
@@ -38,6 +39,8 @@ public class Board : MonoBehaviour
     private SudokuBoard sudoku;
     private bool ending;
     private bool fightStarted;
+
+    private Camera cam;
 
     private void Start()
     {
@@ -102,6 +105,11 @@ public class Board : MonoBehaviour
         enemy.showDescription = ShowDescription;
         
         looter.SetSource(enemy);
+
+        if (enemy.IsBoss)
+        {
+            bossCam.SetActive(true);
+        }
     }
 
     private void ShowDescription(string desc)
@@ -294,6 +302,12 @@ public class Board : MonoBehaviour
         if (!player.IsAlive()) yield break;
 
         StateManager.Instance.Health = player.CurrentHealth;
+        
+        if (enemy.IsBoss)
+        {
+            bossCam.SetActive(false);
+            yield return new WaitForSeconds(4f);
+        }
         
         if (player.HasSkill(SkillType.HealAfterCombat))
         {
