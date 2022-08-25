@@ -31,9 +31,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.28406366"
-     inkscape:cx="1295.9776"
-     inkscape:cy="-731.06528"
+     inkscape:zoom="0.73670299"
+     inkscape:cx="1786.0174"
+     inkscape:cy="-910.9301"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -43,7 +43,7 @@
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:snap-global="false"
+     inkscape:snap-global="true"
      showguides="false" />
   <metadata
      id="metadata1146">
@@ -1726,6 +1726,173 @@ AElFTkSuQmCC
        id="path4278"
        sodipodi:nodetypes="ccc"
        inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/sickle.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <rect
+       style="fill:#e9c6af;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect5079"
+       width="5.4651694"
+       height="47.844906"
+       x="231.7637"
+       y="-67.909149"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/katana.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       id="path5077"
+       style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 248.93332,-67.505129 c 0,2.700655 -6.20973,6.667647 -14.1831,6.667647 -7.97336,0 -14.691,-3.966992 -14.691,-6.667647 0,-2.700655 6.46369,-4.88997 14.43705,-4.88997 7.97336,0 14.43705,2.189315 14.43705,4.88997 z"
+       sodipodi:nodetypes="sssss"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/katana.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 229.73298,-68.237251 c 1.83345,-50.608679 1.10252,-102.072149 1.03798,-153.313499 l 8.84851,9.77994 c 0.35001,48.02083 1.29237,96.18974 -0.93141,143.56712 -2.98503,1.905769 -5.97005,1.433309 -8.95508,-0.03356 z"
+       id="path5081"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/katana.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 230.46325,-56.970151 6.47582,9.01537 -5.84094,6.6028 7.61863,9.90421 -7.11073,7.36466"
+       id="path5084"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/katana.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 238.20884,-56.716191 -7.11071,8.2535 6.34884,7.61862 -6.85676,9.3963 8.12655,8.38048"
+       id="path5086"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/katana.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#ffffff;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 232.87581,-213.82926 2.53953,5.33303 c 0.50791,3.55536 -1.01582,136.373293 -1.01582,136.373293 3.67049,-41.182053 4.18378,-90.287113 3.04745,-138.658883 z"
+       id="path5088"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/katana.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#deaa87;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 423.08734,-61.964776 1.01582,-121.897914 6.60281,-15.74515 -1.52372,-1.52373 -5.07908,18.7926 -8.38048,0.25396 c -5.75404,-8.53181 -2.22712,-17.72654 1.26978,-26.91912 8.31634,-7.2107 15.55516,-4.72361 21.84004,6.34884 l -8.88841,20.57027 -0.76186,120.3742 z"
+       id="path5090"
+       sodipodi:nodetypes="ccccccccccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/staff2.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <ellipse
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2.91427;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path5097"
+       cx="481.3063"
+       cy="-177.00594"
+       rx="3.7886848"
+       ry="3.5982194"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/wand.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 472.63507,-280.49238 -5.02803,-10.77436 12.57006,-29.4499 12.92923,26.93588 -6.10547,15.08411 -6.46462,7.90119 z"
+       id="path5099"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/wand.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       id="rect5092"
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 488.45856,-280.57562 c -5.42361,1.35588 -10.84722,2.10751 -16.27082,0.61288 l 5.43684,8.64545 c 1.12758,31.13233 2.18416,62.25046 0,92.72044 h 7.18304 c -3.17677,-30.92851 -3.06144,-61.67745 -1.58536,-92.60596 z"
+       sodipodi:nodetypes="ccccccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/wand.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 469.58234,-291.98503 10.41519,1.43658 10.41521,-3.05274"
+       id="path5101"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/wand.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 480.1771,-313.17459 v 22.62614 l -0.17957,8.61948"
+       id="path5103"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/wand.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 476.94482,-268.28146 6.46459,-0.35915"
+       id="path5105"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/wand.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 483.76855,-264.69001 h -6.28502"
+       id="path5107"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/wand.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 476.94482,-260.7394 6.28501,0.17957"
+       id="path5109"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/wand.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 477.30396,-256.60923 6.10545,-0.17958"
+       id="path5111"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/wand.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:2.91427;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path5097-6"
+       cx="521.35217"
+       cy="-177.63055"
+       rx="3.7886848"
+       ry="3.5982194"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/wand-trim.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       id="path5099-2"
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:7.55906;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 1966.1973 -1214.5176 L 1918.6875 -1103.2109 L 1937.6914 -1062.4902 L 1940.1562 -1059.4648 C 1958.2959 -1055.4563 1976.4365 -1057.7652 1994.5762 -1062.0957 L 2015.0625 -1112.7129 L 1966.1973 -1214.5176 z "
+       transform="scale(0.26458333)"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/wand-trim.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       id="rect5092-7"
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 528.50441,-281.20023 c -5.42361,1.35588 -10.84722,2.10751 -16.27082,0.61288 l 5.43684,8.64545 c 1.12758,31.13233 2.18416,62.25046 0,92.72044 h 7.18304 c -3.17677,-30.92851 -3.06144,-61.67745 -1.58536,-92.60596 z"
+       sodipodi:nodetypes="ccccccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/wand-trim.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 509.62819,-292.60964 10.41519,1.43658 10.41521,-3.05274"
+       id="path5101-8"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/wand-trim.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 520.22295,-313.7992 v 22.62614 l -0.17957,8.61948"
+       id="path5103-4"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/wand-trim.png"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
   </g>

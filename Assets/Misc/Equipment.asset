@@ -365,3 +365,47 @@ MonoBehaviour:
     groundAngle: 90
     masked: 0
     groundOffset: 0
+  - title: Katana
+    sprite: {fileID: 21300000, guid: c69797eb5702c4d3b8441693a9ff78e9, type: 3}
+    trim: {fileID: 0}
+    grounded: {fileID: 0}
+    canFlip: 0
+    colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
+    trimColors: {fileID: 11400000, guid: 612aa135d695541869ef45c397c40d74, type: 2}
+    slot: 6
+    groundAngle: 90
+    masked: 0
+    groundOffset: 0
+  - title: Staff
+    sprite: {fileID: 21300000, guid: 25f64f1f89f7746619899be109aeebf8, type: 3}
+    trim: {fileID: 0}
+    grounded: {fileID: 0}
+    canFlip: 1
+    colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
+    trimColors: {fileID: 11400000, guid: 612aa135d695541869ef45c397c40d74, type: 2}
+    slot: 6
+    groundAngle: 90
+    masked: 0
+    groundOffset: 0
+  - title: Staff
+    sprite: {fileID: 21300000, guid: 5a28494a10603454097d0bfe877d6938, type: 3}
+    trim: {fileID: 0}
+    grounded: {fileID: 0}
+    canFlip: 1
+    colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
+    trimColors: {fileID: 11400000, guid: 612aa135d695541869ef45c397c40d74, type: 2}
+    slot: 6
+    groundAngle: 90
+    masked: 0
+    groundOffset: 0
+  - title: Wand
+    sprite: {fileID: 21300000, guid: e6d09a102052941809939f2f46b99455, type: 3}
+    trim: {fileID: 21300000, guid: b26f2423acec54757aab6e6f3717811e, type: 3}
+    grounded: {fileID: 0}
+    canFlip: 1
+    colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
+    trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    slot: 6
+    groundAngle: 90
+    masked: 0
+    groundOffset: 0
