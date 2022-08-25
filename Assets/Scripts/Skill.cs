@@ -97,5 +97,6 @@ public enum SkillType
     SlowEnemies,
     StartWithFill,
     MultiGuard,
-    BiggerMultiOnLowDef
+    BiggerMultiOnLowDef,
+    AutoFillOnTimer
 }

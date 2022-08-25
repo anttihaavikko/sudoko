@@ -53,6 +53,28 @@ public class Board : MonoBehaviour
         fightStarted = true;
         Generate();
         enemy.StartTimer();
+        
+        Invoke(nameof(StartFills), 0.5f);
+        Invoke(nameof(FillOnTimer), 30f);
+    }
+
+    private void StartFills()
+    {
+        RandomFills(player.GetSkillCount(SkillType.StartWithFill));
+    }
+
+    private void RandomFills(int fills)
+    {
+        var cells = grid.All().Where(c => !c.IsRevealed).OrderBy(_ => Random.value).Take(fills);
+        StartCoroutine(FillCells(cells, Vector3.zero));
+    }
+
+    private void FillOnTimer()
+    {
+        var fills = player.GetSkillCount(SkillType.AutoFillOnTimer);
+        if (fills <= 0) return;
+        RandomFills(fills);
+        Invoke(nameof(FillOnTimer), 30f);
     }
 
     private void Update()
@@ -155,10 +177,16 @@ public class Board : MonoBehaviour
         if (sudoku.Solver.IsValidValueForTheCell(value, cell))
         {
             tile.Reveal(value);
-            
-            scoreDisplay.Add(value);
+
+            scoreDisplay.Add(value * GetDefScoreMulti());
 
             cell.Value = value;
+
+            var heals = player.GetSkillCount(SkillType.HealOnX, value);
+            if (heals > 0)
+            {
+                this.StartCoroutine(() => player.Heal(value), 0.5f);
+            }
 
             if (player.HasSkill(SkillType.ClearNeighboursOnX, value))
             {
@@ -185,11 +213,14 @@ public class Board : MonoBehaviour
                 return;
             }
 
+            var boost = player.GetSkillCount(SkillType.MoreDamageOnX, value);
+            var mod = Mathf.Pow(1.5f, boost);
             var hits = player.GetSkillCount(SkillType.ExtraHitOnX, value) + 1;
 
             for (var i = 0; i < hits; i++)
             {
-                this.StartCoroutine(() => Attack(player, enemy, value), i * 0.2f);
+                var rounded = Mathf.RoundToInt(value * mod);
+                this.StartCoroutine(() => Attack(player, enemy, rounded), i * 0.2f);
             }
 
             if (player.HasSkill(SkillType.FillNeighboursOnX, value))
@@ -204,6 +235,18 @@ public class Board : MonoBehaviour
         tile.IndicateWrong(value);
         
         Attack(enemy, player, value);
+    }
+
+    private int GetDefScoreMulti()
+    {
+        var skills = player.GetSkillCount(SkillType.BiggerMultiOnLowDef);
+        var diff = 5 - player.GetDefense();
+        return Mathf.Max(1, 1 + diff * skills);
+    }
+
+    public float GetSlowMod()
+    {
+        return Mathf.Pow(1.25f, player.GetSkillCount(SkillType.SlowEnemies));
     }
 
     private void CheckEnd()

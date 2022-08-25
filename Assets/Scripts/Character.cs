@@ -45,8 +45,8 @@ public class Character : MonoBehaviour
     private readonly List<Skill> skills = new();
 
     private float moveTimer;
-
     private bool fightStarted;
+    private int guards;
 
     public int CurrentHealth => health.Current;
     public int Score => score;
@@ -103,6 +103,8 @@ public class Character : MonoBehaviour
         UpdateStats();
         
         showDescription?.Invoke(GetDescription());
+
+        guards = GetSkillCount(SkillType.MultiGuard);
     }
 
     public void RecalculateStats()
@@ -227,8 +229,9 @@ public class Character : MonoBehaviour
     private void Update()
     {
         if (!fightStarted || isPlayer || !IsAlive()) return;
-        
-        moveTimer -= Time.deltaTime;
+
+        var mod = Board ? Board.GetSlowMod() : 1f;
+        moveTimer -= Time.deltaTime / mod;
 
         var amount = 1f - moveTimer / stats.speed;
         moveBar.localScale = moveBar.localScale.WhereY(amount);
@@ -369,7 +372,8 @@ public class Character : MonoBehaviour
         EffectManager.AddEffect(3, center.position);
         SkillEffect();
         health.Heal(amount);
-        EffectManager.AddTextPopup(amount.ToString(), hitPos.position.RandomOffset(0.2f));
+        var pop = EffectManager.AddTextPopup(amount.ToString(), hitPos.position.RandomOffset(0.2f));
+        pop.SetColor(Color.green);
     }
 
     public void Damage(int amount, int madeWith, bool critical = false)
@@ -392,7 +396,7 @@ public class Character : MonoBehaviour
 
         if (isPlayer)
         {
-            Board.DecreaseMulti();
+            DecreaseMulti();
         }
 
         if (!HasSkill(SkillType.NoStagger) && !HasSkill(SkillType.StaggerOnlyOnX, madeWith))
@@ -402,6 +406,17 @@ public class Character : MonoBehaviour
 
         EffectManager.AddTextPopup(reduced.ToString(), p.RandomOffset(0.2f));
         EffectManager.AddEffect(0, p.RandomOffset(0.2f));
+    }
+
+    private void DecreaseMulti()
+    {
+        if (guards > 0)
+        {
+            guards--;
+            return;
+        }
+
+        Board.DecreaseMulti();
     }
 
     public void Attack(Character target, int amount, bool boosted = true)
@@ -529,5 +544,10 @@ public class Character : MonoBehaviour
     public int GetAttack()
     {
         return stats.attack;
+    }
+
+    public int GetDefense()
+    {
+        return stats.defence;
     }
 }

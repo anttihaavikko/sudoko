@@ -35,5 +35,10 @@ namespace AnttiStarterKit.Managers
         {
             EffectManager.Instance.ReturnToPool(this);
         }
+
+        public void SetColor(Color color)
+        {
+            texts[0].color = color;
+        }
     }
 }
