@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using AnttiStarterKit.Animations;
 using AnttiStarterKit.Extensions;
 using AnttiStarterKit.Utils;
 using UnityEngine;
@@ -141,8 +142,10 @@ namespace Map
             return node;
         }
 
-        public void OnPick()
+        public void OnPick(MapNode pickedNode)
         {
+            nodes.SelectMany(s => s).ToList().ForEach(node => node.DisablePick());
+            Tweener.MoveToQuad(currentMarker, pickedNode.transform.position, 2f);
             player.WalkTo(10, false);
         }
     }

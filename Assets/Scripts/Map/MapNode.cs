@@ -97,7 +97,7 @@ namespace Map
             MapState.Instance.x = x;
             MapState.Instance.y = y;
             
-            WorldMap.OnPick();
+            WorldMap.OnPick(this);
             this.StartCoroutine(() => SceneChanger.Instance.ChangeScene(GetScene()), 1.5f);
         }
 
@@ -141,6 +141,11 @@ namespace Map
         public void ShowIcon()
         {
             icon.gameObject.SetActive(true);
+        }
+
+        public void DisablePick()
+        {
+            canPick = false;
         }
     }
 }
