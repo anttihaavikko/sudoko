@@ -327,7 +327,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9168301038856086746, guid: c851d3dff68174d028e9f5632d0cd3ee, type: 3}
   m_PrefabInstance: {fileID: 9168301038871505854}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 9168301038871505855}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e88b487cc3024920b52e8acb0df6adf4, type: 3}
@@ -676,6 +676,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291205878}
   m_CullTransparentMesh: 1
+--- !u!1 &410677785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 410677787}
+  - component: {fileID: 410677786}
+  m_Layer: 0
+  m_Name: Looter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &410677786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410677785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d214867439f424aab16eb0db9c14804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryPanel: {fileID: 9168301038871505855}
+  player: {fileID: 1826115811}
+  dropPrefab: {fileID: 6607880770887199579, guid: a375b46bdeb73421d826addf9aa670a7, type: 3}
+  weaponSkills: {fileID: 11400000, guid: 47e85a45526f94c609f49c72ed946b0e, type: 2}
+  armorSkills: {fileID: 11400000, guid: 77a419a6438c343f2a8c03fc90ed888f, type: 2}
+  soulSkills: {fileID: 11400000, guid: 531c21d6495a44e738aa77c41344b6a4, type: 2}
+  inventory: {fileID: 18567012}
+--- !u!4 &410677787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410677785}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &434433854 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6734564064547346749, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
@@ -1707,10 +1758,8 @@ MonoBehaviour:
   continueButton: {fileID: 639524203}
   startButton: {fileID: 667630147}
   uiHider: {fileID: 441391013}
-  weaponSkills: {fileID: 11400000, guid: 47e85a45526f94c609f49c72ed946b0e, type: 2}
-  armorSkills: {fileID: 11400000, guid: 77a419a6438c343f2a8c03fc90ed888f, type: 2}
-  soulSkills: {fileID: 11400000, guid: 531c21d6495a44e738aa77c41344b6a4, type: 2}
   scoreDisplay: {fileID: 1582433401}
+  looter: {fileID: 410677786}
 --- !u!114 &688767331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5198,3 +5247,8 @@ PrefabInstance:
       objectReference: {fileID: 1826115811}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c851d3dff68174d028e9f5632d0cd3ee, type: 3}
+--- !u!1 &9168301038871505855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9168301038856086752, guid: c851d3dff68174d028e9f5632d0cd3ee, type: 3}
+  m_PrefabInstance: {fileID: 9168301038871505854}
+  m_PrefabAsset: {fileID: 0}

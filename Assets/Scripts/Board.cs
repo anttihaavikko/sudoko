@@ -27,8 +27,8 @@ public class Board : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private Inventory inventory;
     [SerializeField] private Appearer continueButton, startButton, uiHider;
-    [SerializeField] private SkillSet weaponSkills, armorSkills, soulSkills;
     [SerializeField] private ScoreDisplay scoreDisplay;
+    [SerializeField] private Looter looter;
 
     private Character enemy;
     private readonly TileGrid<Tile> grid = new(9, 9);
@@ -98,6 +98,8 @@ public class Board : MonoBehaviour
         enemy.Board = this;
         enemy.Mirror();
         enemy.showDescription = ShowDescription;
+        
+        looter.SetSource(enemy);
     }
 
     private void ShowDescription(string desc)
@@ -273,32 +275,11 @@ public class Board : MonoBehaviour
         }
     }
 
-    private SkillSet GetSkillSetFor(EquipmentSlot slot)
-    {
-        if (slot == EquipmentSlot.Soul) return soulSkills;
-        return slot == EquipmentSlot.Weapon ? weaponSkills : armorSkills;
-    }
-
     private IEnumerator EndWalk()
     {
         scoreDisplay.Add(enemy.Score * (StateManager.Instance.Level + 1));
-        
-        var drops = enemy.GetDrops().OrderBy(_ => Random.value).ToList();
-        var p = enemy.transform.position;
-        var dropItems = new List<Drop>();
-        
-        var offset = 0;
-        
-        drops.ForEach(d =>
-        {
-            var drop = Instantiate(dropPrefab, p, Quaternion.identity);
-            var set = GetSkillSetFor(d.slot);
-            d.AddSkill(set.Random());
-            drop.Setup(d);
-            dropItems.Add(drop);
-            Tweener.MoveToQuad(drop.transform, p + 2f * offset * Vector3.right, 0.2f);
-            offset++;
-        });
+
+        looter.GenerateDrops();
         
         yield return new WaitForSeconds(0.5f);
         
@@ -309,8 +290,6 @@ public class Board : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         
         if (!player.IsAlive()) yield break;
-        
-        player.ReattachHpDisplay();
 
         StateManager.Instance.Health = player.CurrentHealth;
         
@@ -324,22 +303,8 @@ public class Board : MonoBehaviour
         
         inventoryPanel.SetActive(true);
         // uiHider.HideWithDelay();
-        
-        offset = 0;
-        var start = p.x;
-        foreach (var d in dropItems)
-        {
-            var duration = player.WalkTo(start + offset * 2f, true, false);
-            offset++;
-            yield return new WaitForSeconds(duration);
 
-            d.gameObject.SetActive(false);
-            inventory.Add(d.Equipment, true);
-            
-            player.RecalculateStats();
-
-            yield return new WaitForSeconds(0.6f);
-        }
+        yield return looter.LootDrops();
         
         continueButton.Show();
         

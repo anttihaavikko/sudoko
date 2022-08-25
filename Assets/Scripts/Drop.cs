@@ -13,6 +13,6 @@ public class Drop : MonoBehaviour
     {
         equip = e;
         visuals.Show(e, true);
-        transform.Rotate(new Vector3(0, 0, e.groundAngle));
+        visuals.transform.Rotate(new Vector3(0, 0, e.groundAngle));
     }
 }

@@ -16,7 +16,7 @@ using UnityEditor.ShaderGraph;
 using UnityEngine.Rendering.UI;
 using Random = UnityEngine.Random;
 
-public class Character : MonoBehaviour
+public class Character : Lootable
 {
     [SerializeField] private string title;
     [SerializeField] private int score = 100;
@@ -41,7 +41,6 @@ public class Character : MonoBehaviour
 
     private Vector3 origin;
     private EffectCamera cam;
-    private readonly List<Equip> drops = new();
     private readonly List<Skill> skills = new();
 
     private float moveTimer;
@@ -213,11 +212,6 @@ public class Character : MonoBehaviour
         });
         
         drops.Add(equipmentList.Random(EquipmentSlot.Soul));
-    }
-
-    public List<Equip> GetDrops()
-    {
-        return drops;
     }
 
     public void Mirror()
@@ -423,7 +417,7 @@ public class Character : MonoBehaviour
     {
         var critical = HasSkill(SkillType.IgnoresDefence);
         var t = transform;
-        anim.SetTrigger(AttackAnim);
+        AttackAnimation();
         Tweener.MoveToBounceOut(t, origin + Vector3.right * 1.5f * t.localScale.x, 0.2f);
         this.StartCoroutine(() =>
         {
@@ -438,6 +432,11 @@ public class Character : MonoBehaviour
         {
             this.StartCoroutine(() => target.Attack(this, thorns, false), 0.4f);
         }
+    }
+
+    public void AttackAnimation()
+    {
+        anim.SetTrigger(AttackAnim);
     }
 
     public bool HasSkill(SkillType skill)
