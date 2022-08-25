@@ -64,7 +64,7 @@ public class Looter : MonoBehaviour
             d.AddSkill(set.Random());
             drop.Setup(d);
             dropItems.Add(drop);
-            var targetPos = p + (spawnOffset + 2f * offset) * Vector3.right;
+            var targetPos = p + (spawnOffset + 2f * offset) * Vector3.right + Vector3.up * d.groundOffset;
             Tweener.MoveToQuad(drop.transform, targetPos, 0.5f * speed);
             var rot = Quaternion.Euler(0, 0, Random.Range(0, 360f));
             lastPos = targetPos.x;

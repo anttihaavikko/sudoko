@@ -22,6 +22,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 1
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
   - title: Bowler Hat
     sprite: {fileID: 21300000, guid: 17673ecf34303466b8518b9f75913c2d, type: 3}
     trim: {fileID: 21300000, guid: e92144637966f4ae79dac06532fa52ec, type: 3}
@@ -31,6 +33,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 1
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
   - title: Beanie
     sprite: {fileID: 21300000, guid: 73fccb0e97dba44c99ae97d2eb187888, type: 3}
     trim: {fileID: 0}
@@ -40,6 +44,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 1
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
   - title: Tiny Crown
     sprite: {fileID: 21300000, guid: 99134c29778fb4c7995c7fded552063b, type: 3}
     trim: {fileID: 0}
@@ -49,6 +55,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 1
     groundAngle: 0
+    masked: 0
+    groundOffset: -0.2
   - title: Crown
     sprite: {fileID: 21300000, guid: be1a28588627d4bbb9c4dceee2fa9706, type: 3}
     trim: {fileID: 0}
@@ -58,6 +66,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 1
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
   - title: Beanie
     sprite: {fileID: 21300000, guid: 73fccb0e97dba44c99ae97d2eb187888, type: 3}
     trim: {fileID: 21300000, guid: 420d847b521a24668bb17eb8e3a0ff27, type: 3}
@@ -67,6 +77,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 1
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
   - title: Cone Hat
     sprite: {fileID: 21300000, guid: 7d5713d7c485b4bd58d78daeeb3b6df7, type: 3}
     trim: {fileID: 0}
@@ -76,6 +88,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 1
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
   - title: Cone Hat
     sprite: {fileID: 21300000, guid: 7d5713d7c485b4bd58d78daeeb3b6df7, type: 3}
     trim: {fileID: 21300000, guid: d5b73a45c0588461495c23d8bc32923c, type: 3}
@@ -85,6 +99,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 1
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
   - title: Cone Hat
     sprite: {fileID: 21300000, guid: 7d5713d7c485b4bd58d78daeeb3b6df7, type: 3}
     trim: {fileID: 21300000, guid: 34abf79c67ce04642a68e412ae19dfcf, type: 3}
@@ -94,6 +110,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 1
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
   - title: Bycocket
     sprite: {fileID: 21300000, guid: 9ca6c9fe5a5a44bee8b7f7761fe9106f, type: 3}
     trim: {fileID: 0}
@@ -103,6 +121,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 1
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
   - title: Cap
     sprite: {fileID: 21300000, guid: dd64e803286724e94962f79f0bee551a, type: 3}
     trim: {fileID: 21300000, guid: 5c7549578ccb2452a8161ee909c7fbe9, type: 3}
@@ -112,6 +132,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 612aa135d695541869ef45c397c40d74, type: 2}
     slot: 1
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
   - title: Cap
     sprite: {fileID: 21300000, guid: dd64e803286724e94962f79f0bee551a, type: 3}
     trim: {fileID: 21300000, guid: d10ebad63dec146a9b5489541eee2f3e, type: 3}
@@ -121,6 +143,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 612aa135d695541869ef45c397c40d74, type: 2}
     slot: 1
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
   - title: Elf Hat
     sprite: {fileID: 21300000, guid: ab69498897bac44ceba09c8e7833347a, type: 3}
     trim: {fileID: 0}
@@ -130,6 +154,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 612aa135d695541869ef45c397c40d74, type: 2}
     slot: 1
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
   - title: Cap
     sprite: {fileID: 21300000, guid: bccfefc8aa6924576bc8eb9c51498ca7, type: 3}
     trim: {fileID: 0}
@@ -139,6 +165,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 612aa135d695541869ef45c397c40d74, type: 2}
     slot: 1
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
   - title: Cap
     sprite: {fileID: 21300000, guid: bccfefc8aa6924576bc8eb9c51498ca7, type: 3}
     trim: {fileID: 21300000, guid: b2b7998f144c54767ac4d9caa72c2264, type: 3}
@@ -148,6 +176,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 1
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
   - title: Jacket
     sprite: {fileID: 21300000, guid: 278a61b71ad254ac2b3de2f53c255540, type: 3}
     trim: {fileID: 21300000, guid: 8071e3fa41059491db59a1fb176f2d9b, type: 3}
@@ -157,6 +187,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 5
     groundAngle: 0
+    masked: 0
+    groundOffset: 0.2
   - title: Vest
     sprite: {fileID: 21300000, guid: 278a61b71ad254ac2b3de2f53c255540, type: 3}
     trim: {fileID: 0}
@@ -166,6 +198,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 5
     groundAngle: 0
+    masked: 0
+    groundOffset: 0.2
   - title: Eyepatch
     sprite: {fileID: 21300000, guid: 4e440516d45804ebbb3aacd7055eb16d, type: 3}
     trim: {fileID: 0}
@@ -175,6 +209,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 2
     groundAngle: 0
+    masked: 1
+    groundOffset: 0
   - title: Dagger
     sprite: {fileID: 21300000, guid: e67ab5ce45205444ba64ed638a2a04c6, type: 3}
     trim: {fileID: 0}
@@ -184,6 +220,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 6
     groundAngle: 90
+    masked: 0
+    groundOffset: 0
   - title: Bo Staff
     sprite: {fileID: 21300000, guid: a43ff8adf95a146efaffbba63a130a9c, type: 3}
     trim: {fileID: 0}
@@ -193,6 +231,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 6
     groundAngle: 90
+    masked: 0
+    groundOffset: 0
   - title: Longsword
     sprite: {fileID: 21300000, guid: 976a53266e1694530b001b44f5427303, type: 3}
     trim: {fileID: 0}
@@ -202,6 +242,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 6
     groundAngle: 90
+    masked: 0
+    groundOffset: 0
   - title: Claymore
     sprite: {fileID: 21300000, guid: 0d237343fb32a4fb2a1ce266273a34aa, type: 3}
     trim: {fileID: 0}
@@ -211,6 +253,8 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 6
     groundAngle: 90
+    masked: 0
+    groundOffset: 0
   - title: Soul
     sprite: {fileID: 21300000, guid: 169b46ee7979b4238a3956eb09e49a99, type: 3}
     trim: {fileID: 0}
@@ -220,3 +264,49 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 7
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
+  - title: Scarf
+    sprite: {fileID: 21300000, guid: d18f7250c9186457b985814a9538de89, type: 3}
+    trim: {fileID: 21300000, guid: bc477deb7f19d4a6d80894d2d8896452, type: 3}
+    grounded: {fileID: 0}
+    canFlip: 1
+    colors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    slot: 5
+    groundAngle: -90
+    masked: 0
+    groundOffset: 0.2
+  - title: Glasses
+    sprite: {fileID: 21300000, guid: 1be48581ed2fb47f29c8375ae03bddb6, type: 3}
+    trim: {fileID: 0}
+    grounded: {fileID: 21300000, guid: 03557920ea190460fb02be8aedc4d867, type: 3}
+    canFlip: 0
+    colors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    slot: 2
+    groundAngle: 0
+    masked: 0
+    groundOffset: 0.1
+  - title: Seal
+    sprite: {fileID: 21300000, guid: e3239184730264239bdfb5bdbcf27809, type: 3}
+    trim: {fileID: 0}
+    grounded: {fileID: 0}
+    canFlip: 0
+    colors: {fileID: 11400000, guid: 612aa135d695541869ef45c397c40d74, type: 2}
+    trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    slot: 2
+    groundAngle: 0
+    masked: 0
+    groundOffset: -0.1
+  - title: Mask
+    sprite: {fileID: 21300000, guid: 94b1cffb3512b47aa949f6d79bcb11ee, type: 3}
+    trim: {fileID: 21300000, guid: 8afa205db5d044a8186de03544b909c5, type: 3}
+    grounded: {fileID: 0}
+    canFlip: 0
+    colors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    slot: 2
+    groundAngle: 90
+    masked: 0
+    groundOffset: 0.2

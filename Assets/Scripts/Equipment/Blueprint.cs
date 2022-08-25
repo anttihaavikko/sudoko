@@ -13,5 +13,7 @@ namespace Equipment
         public ColorCollection colors, trimColors;
         public EquipmentSlot slot;
         public float groundAngle;
+        public bool masked;
+        public float groundOffset;
     }
 }

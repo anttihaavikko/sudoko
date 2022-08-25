@@ -8,6 +8,7 @@ namespace Equipment
         [SerializeField] private EquipmentSlot slot;
         [SerializeField] private GameObject hair;
         [SerializeField] private float chance = 0.5f;
+        [SerializeField] private bool canMask;
 
         private bool free = true;
         private Equip equip;
@@ -31,6 +32,12 @@ namespace Equipment
             if (hair && slot == EquipmentSlot.Hat)
             {
                 hair.SetActive(false);
+            }
+
+            if (canMask)
+            {
+                sprite.maskInteraction = e.masked ? SpriteMaskInteraction.VisibleInsideMask : SpriteMaskInteraction.None;
+                trim.maskInteraction = e.masked ? SpriteMaskInteraction.VisibleInsideMask : SpriteMaskInteraction.None;   
             }
         }
 

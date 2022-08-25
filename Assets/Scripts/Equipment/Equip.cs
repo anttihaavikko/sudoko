@@ -17,6 +17,8 @@ namespace Equipment
         public EquipmentSlot slot;
         public bool flipped;
         public float groundAngle;
+        public bool masked;
+        public float groundOffset;
 
         private List<Skill> skills = new();
         private int slotCount;
@@ -40,6 +42,8 @@ namespace Equipment
             slot = blueprint.slot;
             groundAngle = blueprint.groundAngle;
             flipped = blueprint.canFlip && Random.value < 0.5f;
+            masked = blueprint.masked;
+            groundOffset = blueprint.groundOffset;
 
             slotCount = GetRandomSlotCount();
         }
