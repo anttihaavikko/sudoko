@@ -8,6 +8,7 @@ using AnttiStarterKit.Extensions;
 using AnttiStarterKit.Game;
 using AnttiStarterKit.Utils;
 using Equipment;
+using Map;
 using Sudoku;
 using Sudoku.Model;
 using TMPro;
@@ -20,7 +21,7 @@ public class Board : MonoBehaviour
     [SerializeField] private NumberPicker numberPicker;
     [SerializeField] private Character player;
     [SerializeField] private Transform enemyPos;
-    [SerializeField] private List<Character> enemies;
+    [SerializeField] private List<EnemyList> enemies;
     [SerializeField] private Drop dropPrefab;
     [SerializeField] private TMP_Text enemyDescription;
     [SerializeField] private GameObject enemyTooltip;
@@ -93,7 +94,7 @@ public class Board : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        enemy = Instantiate(enemies.Random(), enemyPos);
+        enemy = Instantiate(enemies[MapState.Instance.x].Random(), enemyPos);
         enemy.transform.localPosition = Vector3.zero;
         enemy.Board = this;
         enemy.Mirror();

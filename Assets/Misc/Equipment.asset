@@ -105,7 +105,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 7d5713d7c485b4bd58d78daeeb3b6df7, type: 3}
     trim: {fileID: 21300000, guid: 34abf79c67ce04642a68e412ae19dfcf, type: 3}
     grounded: {fileID: 0}
-    canFlip: 0
+    canFlip: 1
     colors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 1
@@ -127,7 +127,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: dd64e803286724e94962f79f0bee551a, type: 3}
     trim: {fileID: 21300000, guid: 5c7549578ccb2452a8161ee909c7fbe9, type: 3}
     grounded: {fileID: 0}
-    canFlip: 0
+    canFlip: 1
     colors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     trimColors: {fileID: 11400000, guid: 612aa135d695541869ef45c397c40d74, type: 2}
     slot: 1
@@ -138,7 +138,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: dd64e803286724e94962f79f0bee551a, type: 3}
     trim: {fileID: 21300000, guid: d10ebad63dec146a9b5489541eee2f3e, type: 3}
     grounded: {fileID: 0}
-    canFlip: 0
+    canFlip: 1
     colors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     trimColors: {fileID: 11400000, guid: 612aa135d695541869ef45c397c40d74, type: 2}
     slot: 1
@@ -215,7 +215,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: e67ab5ce45205444ba64ed638a2a04c6, type: 3}
     trim: {fileID: 0}
     grounded: {fileID: 0}
-    canFlip: 0
+    canFlip: 1
     colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 6
@@ -226,7 +226,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: a43ff8adf95a146efaffbba63a130a9c, type: 3}
     trim: {fileID: 0}
     grounded: {fileID: 0}
-    canFlip: 0
+    canFlip: 1
     colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 6
@@ -237,7 +237,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 976a53266e1694530b001b44f5427303, type: 3}
     trim: {fileID: 0}
     grounded: {fileID: 0}
-    canFlip: 0
+    canFlip: 1
     colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 6
@@ -248,7 +248,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 0d237343fb32a4fb2a1ce266273a34aa, type: 3}
     trim: {fileID: 0}
     grounded: {fileID: 0}
-    canFlip: 0
+    canFlip: 1
     colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 6
@@ -300,7 +300,7 @@ MonoBehaviour:
     masked: 0
     groundOffset: -0.1
   - title: Mask
-    sprite: {fileID: 21300000, guid: 94b1cffb3512b47aa949f6d79bcb11ee, type: 3}
+    sprite: {fileID: 21300000, guid: 9657f2f92ff81414aa0d5c74787d8b05, type: 3}
     trim: {fileID: 21300000, guid: 8afa205db5d044a8186de03544b909c5, type: 3}
     grounded: {fileID: 0}
     canFlip: 0
@@ -310,3 +310,14 @@ MonoBehaviour:
     groundAngle: 90
     masked: 0
     groundOffset: 0.2
+  - title: Shades
+    sprite: {fileID: 21300000, guid: 488d2601438774782a5ce71e3a6980da, type: 3}
+    trim: {fileID: 0}
+    grounded: {fileID: 0}
+    canFlip: 0
+    colors: {fileID: 11400000, guid: 612aa135d695541869ef45c397c40d74, type: 2}
+    trimColors: {fileID: 11400000, guid: 612aa135d695541869ef45c397c40d74, type: 2}
+    slot: 2
+    groundAngle: 0
+    masked: 0
+    groundOffset: 0.1
