@@ -712,6 +712,8 @@ MonoBehaviour:
   armorSkills: {fileID: 11400000, guid: 77a419a6438c343f2a8c03fc90ed888f, type: 2}
   soulSkills: {fileID: 11400000, guid: 531c21d6495a44e738aa77c41344b6a4, type: 2}
   inventory: {fileID: 18567012}
+  spawnOffset: 0
+  continueButton: {fileID: 639524203}
 --- !u!4 &410677787
 Transform:
   m_ObjectHideFlags: 0

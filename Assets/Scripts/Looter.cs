@@ -15,6 +15,7 @@ public class Looter : MonoBehaviour
     [SerializeField] private SkillSet weaponSkills, armorSkills, soulSkills;
     [SerializeField] private Inventory inventory;
     [SerializeField] private float spawnOffset;
+    [SerializeField] private Appearer continueButton;
 
     private Lootable lootSource;
     private readonly List<Drop> dropItems = new();
@@ -37,6 +38,7 @@ public class Looter : MonoBehaviour
 
     public void Continue()
     {
+        continueButton.Hide();
         player.WalkTo(lastPos + 10, false);
         Invoke(nameof(NextLevel), 1.5f);
     }

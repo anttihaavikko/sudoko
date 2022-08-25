@@ -2204,6 +2204,7 @@ MonoBehaviour:
   soulSkills: {fileID: 11400000, guid: 531c21d6495a44e738aa77c41344b6a4, type: 2}
   inventory: {fileID: 274258216}
   spawnOffset: 2.5
+  continueButton: {fileID: 197780177}
 --- !u!1 &1778790574
 GameObject:
   m_ObjectHideFlags: 0
