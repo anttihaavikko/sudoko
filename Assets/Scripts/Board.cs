@@ -194,19 +194,7 @@ public class Board : MonoBehaviour
                 StartCoroutine(ClearCells(neighbours, Vector3.zero));
             }
 
-            if (sudoku.IsBoardFilled())
-            {
-                var bigDamage = player.GetSkillCount(SkillType.BigDamageOnClear);
-                if (bigDamage > 0)
-                {
-                    var attack = player.GetAttack() + 1;
-                    var amount = bigDamage * 20 * attack;
-                    this.StartCoroutine(() => Attack(player, enemy, amount, false), 0.8f);
-                }
-                
-                Invoke(nameof(Clear), 0.75f);
-                Invoke(nameof(Generate), 1.5f);
-            }
+            CheckForFullBoard();
             
             if (enemy.Interrupts(value, player))
             {
@@ -235,6 +223,23 @@ public class Board : MonoBehaviour
         tile.IndicateWrong(value);
         
         Attack(enemy, player, value);
+    }
+
+    private void CheckForFullBoard()
+    {
+        if (sudoku.IsBoardFilled())
+        {
+            var bigDamage = player.GetSkillCount(SkillType.BigDamageOnClear);
+            if (bigDamage > 0)
+            {
+                var attack = player.GetAttack() + 1;
+                var amount = bigDamage * 20 * attack;
+                this.StartCoroutine(() => Attack(player, enemy, amount, false), 0.8f);
+            }
+
+            Invoke(nameof(Clear), 0.75f);
+            Invoke(nameof(Generate), 1.5f);
+        }
     }
 
     private int GetDefScoreMulti()
@@ -467,12 +472,14 @@ public class Board : MonoBehaviour
         if (val > 0)
         {
             cell.Value = val;
+            CheckForFullBoard();
         }
     }
 
     public void DisableRandomCell()
     {
         grid.All().Where(c => !c.IsRevealed).ToList().Random().DisableTile("X");
+        CheckForFullBoard();
     }
 
     public void HideSolvedCell()

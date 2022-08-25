@@ -80,6 +80,7 @@ public class Tile : MonoBehaviour
         isDisabled = true;
         disabler.Show();
         disableMark.text = mark;
+        IsRevealed = true;
 
         if (board)
         {
