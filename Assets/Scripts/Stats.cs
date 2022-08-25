@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 [Serializable]
 public class Stats
@@ -24,5 +25,11 @@ public class Stats
             defence = defence,
             speed = speed
         };
+    }
+
+    public void Cap()
+    {
+        attack = Mathf.Max(0, attack);
+        defence = Mathf.Max(0, defence);
     }
 }
