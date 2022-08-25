@@ -1759,11 +1759,12 @@ MonoBehaviour:
     - {fileID: 6797947411694959416, guid: 68bdba8c43a1a46daba76d168f2f0c5a, type: 3}
   - enemies:
     - {fileID: 9176066167115653719, guid: 5a77e3f40815649029199d318288dc83, type: 3}
-  - enemies:
     - {fileID: 1520335001922872537, guid: 691ba933cee2140f4b68289e88014d06, type: 3}
   - enemies:
+    - {fileID: 1520335001922872537, guid: 691ba933cee2140f4b68289e88014d06, type: 3}
     - {fileID: 9176066167115653719, guid: 055f11369785f4a0aba679ad923a8a81, type: 3}
   - enemies:
+    - {fileID: 9176066167115653719, guid: 055f11369785f4a0aba679ad923a8a81, type: 3}
     - {fileID: 9176066167115653719, guid: a6b8551ff3b0a4faeae9e1ee291547d3, type: 3}
   - enemies:
     - {fileID: 9176066167115653719, guid: a6b8551ff3b0a4faeae9e1ee291547d3, type: 3}
