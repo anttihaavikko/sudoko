@@ -19,6 +19,7 @@ using Random = UnityEngine.Random;
 public class Character : MonoBehaviour
 {
     [SerializeField] private string title;
+    [SerializeField] private int score = 100;
     [SerializeField] private Stats stats;
     [SerializeField] private SkillSet startsWith;
     
@@ -48,6 +49,7 @@ public class Character : MonoBehaviour
     private bool fightStarted;
 
     public int CurrentHealth => health.Current;
+    public int Score => score;
     
     public Board Board { get; set; }
 
@@ -385,6 +387,11 @@ public class Character : MonoBehaviour
         
         cam.BaseEffect(0.2f);
         health.TakeDamage(reduced);
+
+        if (isPlayer)
+        {
+            Board.DecreaseMulti();
+        }
 
         if (!HasSkill(SkillType.NoStagger) && !HasSkill(SkillType.StaggerOnlyOnX, madeWith))
         {

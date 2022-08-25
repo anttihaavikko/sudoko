@@ -17,6 +17,9 @@ public class StateManager : Manager<StateManager>
 
     public List<Equip> Gear => gear.ToList();
     public List<Equip> Inventory => inventory.ToList();
+
+    public int Score { get; set; }
+    public int Multiplier { get; set; } = 1;
     
     private void Start()
     {

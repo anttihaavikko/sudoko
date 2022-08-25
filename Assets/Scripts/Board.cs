@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using AnttiStarterKit.Animations;
 using AnttiStarterKit.Extensions;
+using AnttiStarterKit.Game;
 using AnttiStarterKit.Utils;
 using Equipment;
 using Sudoku;
@@ -27,6 +28,7 @@ public class Board : MonoBehaviour
     [SerializeField] private Inventory inventory;
     [SerializeField] private Appearer continueButton, startButton, uiHider;
     [SerializeField] private SkillSet weaponSkills, armorSkills, soulSkills;
+    [SerializeField] private ScoreDisplay scoreDisplay;
 
     private Character enemy;
     private readonly TileGrid<Tile> grid = new(9, 9);
@@ -39,6 +41,8 @@ public class Board : MonoBehaviour
     {
         CreateGrid();
         SpawnEnemy();
+
+        player.Board = this;
     }
 
     public void StartFight()
@@ -151,6 +155,8 @@ public class Board : MonoBehaviour
         if (sudoku.Solver.IsValidValueForTheCell(value, cell))
         {
             tile.Reveal(value);
+            
+            scoreDisplay.Add(value);
 
             cell.Value = value;
 
@@ -227,6 +233,8 @@ public class Board : MonoBehaviour
 
     private IEnumerator EndWalk()
     {
+        scoreDisplay.Add(enemy.Score * (StateManager.Instance.Level + 1));
+        
         var drops = enemy.GetDrops().OrderBy(_ => Random.value).ToList();
         var p = enemy.transform.position;
         var dropItems = new List<Drop>();
@@ -245,6 +253,8 @@ public class Board : MonoBehaviour
         });
         
         yield return new WaitForSeconds(0.5f);
+        
+        scoreDisplay.AddMulti();
 
         // uiHider.Show();
         
@@ -284,6 +294,8 @@ public class Board : MonoBehaviour
         }
         
         continueButton.Show();
+        
+        ScoreLoader.Save(scoreDisplay);
     }
 
     public void Continue()
@@ -423,5 +435,10 @@ public class Board : MonoBehaviour
     public void HideSolvedCell()
     {
         grid.All().Where(c => c.IsRevealed).ToList().Random().DisableTile("?");
+    }
+
+    public void DecreaseMulti()
+    {
+        scoreDisplay.DecreaseMulti();
     }
 }
