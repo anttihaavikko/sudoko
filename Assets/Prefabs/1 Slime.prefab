@@ -1547,8 +1547,8 @@ MonoBehaviour:
   flasher: {fileID: 2491547236678160808}
   statsDisplay: {fileID: 5813015162769065252}
   health:
-    cur: 20
-    max: 20
+    cur: 25
+    max: 25
     display: {fileID: 2491547237014907115}
     bar: {fileID: 2491547235742628650}
     onDeath:
