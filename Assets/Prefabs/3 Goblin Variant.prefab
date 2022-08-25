@@ -413,11 +413,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: health.cur
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: health.max
-      value: 20
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: skillPicks
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: startsWith
@@ -425,11 +429,11 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 3d40d51f29f834e62bb15199caa0cd45, type: 2}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: stats.speed
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: stats.attack
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: stats.defence
@@ -453,7 +457,11 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 9180ac6075f0b4132897f30e05c24122, type: 2}
     - target: {fileID: 4862016167994420695, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.14804292
+      value: 0.14679904
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862016167994420695, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9891664
       objectReference: {fileID: 0}
     - target: {fileID: 5096219929665178563, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Solver.targetPosition.x
@@ -505,11 +513,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6764983838236610905, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.24018738
+      value: -0.24471952
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764983838236610905, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.96959394
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296922935165563704, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.95731515
       objectReference: {fileID: 0}
     - target: {fileID: 7296922935165563704, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.2613068
+      value: 0.28904617
       objectReference: {fileID: 0}
     - target: {fileID: 7362577751083708161, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Solver.targetPosition.x
@@ -709,7 +725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8973993410123798356, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Name
-      value: Goblin Variant
+      value: 3 Goblin Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8973993410123798357, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_RootOrder

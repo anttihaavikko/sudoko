@@ -103,6 +103,7 @@ MonoBehaviour:
   slot: 6
   hair: {fileID: 0}
   chance: 0.1
+  canMask: 0
 --- !u!1 &1177282812815236357
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +207,7 @@ MonoBehaviour:
   slot: 6
   hair: {fileID: 0}
   chance: 0.1
+  canMask: 0
 --- !u!1 &2969823651389523161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,12 +1210,24 @@ PrefabInstance:
       value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 2491547236678160809, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
+      propertyPath: health.cur
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491547236678160809, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
+      propertyPath: health.max
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491547236678160809, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
+      propertyPath: skillPicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491547236678160809, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
       propertyPath: stats.speed
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2491547236678160809, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
       propertyPath: stats.attack
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2491547236678160809, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
       propertyPath: equipmentVisuals.Array.size
@@ -1229,7 +1243,7 @@ PrefabInstance:
       objectReference: {fileID: 2953391277072369170}
     - target: {fileID: 2491547236678160810, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
       propertyPath: m_Name
-      value: Bat Variant
+      value: 4 Bat Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2491547236678160811, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
       propertyPath: m_RootOrder

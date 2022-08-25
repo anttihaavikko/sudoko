@@ -413,11 +413,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: health.cur
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: health.max
-      value: 25
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: skillPicks
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: startsWith
@@ -425,11 +429,11 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 3d40d51f29f834e62bb15199caa0cd45, type: 2}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: stats.speed
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: stats.attack
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: startsWith.Array.size
@@ -857,7 +861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8973993410123798356, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Name
-      value: Skeleton Variant
+      value: 2 Skeleton Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8973993410123798357, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_RootOrder

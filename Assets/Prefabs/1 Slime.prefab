@@ -1056,6 +1056,7 @@ MonoBehaviour:
   slot: 1
   hair: {fileID: 0}
   chance: 0.7
+  canMask: 0
 --- !u!1 &2491547236268891013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,11 +1535,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a8880a20d1740e8961cedce5f159057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPos: {fileID: 0}
   title: Slime
+  score: 75
   stats:
     attack: 1
     defence: 0
-    speed: 12
+    speed: 15
+  skillPicks: 0
   startsWith: {fileID: 11400000, guid: 3d40d51f29f834e62bb15199caa0cd45, type: 2}
   flasher: {fileID: 2491547236678160808}
   statsDisplay: {fileID: 5813015162769065252}

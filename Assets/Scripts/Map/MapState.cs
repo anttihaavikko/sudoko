@@ -12,6 +12,8 @@ namespace Map
 
         private int seed = -1;
 
+        public int World { get; private set; }
+
         private void Start()
         {
             DontDestroyOnLoad(gameObject);
@@ -27,6 +29,7 @@ namespace Map
             x = 0;
             y = 0;
             ReSeed();
+            World++;
         }
 
         public void Seed()

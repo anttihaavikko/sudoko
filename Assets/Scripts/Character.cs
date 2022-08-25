@@ -11,6 +11,7 @@ using AnttiStarterKit.Managers;
 using AnttiStarterKit.Utils;
 using AnttiStarterKit.Visuals;
 using Equipment;
+using Map;
 using Unity.VisualScripting;
 using UnityEditor.ShaderGraph;
 using UnityEngine.Rendering.UI;
@@ -21,6 +22,7 @@ public class Character : Lootable
     [SerializeField] private string title;
     [SerializeField] private int score = 100;
     [SerializeField] private Stats stats;
+    [SerializeField] private int skillPicks;
     [SerializeField] private SkillSet startsWith;
     
     [SerializeField] private Flasher flasher;
@@ -88,7 +90,7 @@ public class Character : Lootable
 
         if (startsWith)
         {
-            startsWith.Random(2).ToList().ForEach(s => skills.Add(s.Copy()));   
+            startsWith.Random(skillPicks + MapState.Instance.World).ToList().ForEach(s => skills.Add(s.Copy()));   
         }
 
         if (isPlayer)

@@ -604,6 +604,10 @@ PrefabInstance:
       value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: score
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: title
       value: Yeti
       objectReference: {fileID: 0}
@@ -613,11 +617,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: health.cur
-      value: 25
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: health.max
-      value: 25
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: skillPicks
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: startsWith
@@ -625,15 +633,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 3d40d51f29f834e62bb15199caa0cd45, type: 2}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: stats.speed
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: stats.attack
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: stats.defence
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: skills.Array.size
@@ -985,7 +993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8973993410123798356, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Name
-      value: Yeti Variant
+      value: 6 Yeti Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8973993410123798357, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_RootOrder
