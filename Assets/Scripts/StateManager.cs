@@ -39,4 +39,13 @@ public class StateManager : Manager<StateManager>
         gear.AddRange(equips);
         inventory.AddRange(inv);
     }
+
+    public void Clear()
+    {
+        Level = 0;
+        Score = 0;
+        Multiplier = 1;
+        gear.Clear();
+        inventory.Clear();
+    }
 }

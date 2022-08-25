@@ -41,5 +41,12 @@ namespace Map
             
             Random.InitState(seed);
         }
+
+        public void Clear()
+        {
+            x = 0;
+            y = 0;
+            ReSeed();
+        }
     }
 }

@@ -30,6 +30,7 @@ public class Board : MonoBehaviour
     [SerializeField] private Appearer continueButton, startButton, uiHider;
     [SerializeField] private ScoreDisplay scoreDisplay;
     [SerializeField] private Looter looter;
+    [SerializeField] private GameObject gameOverStuff;
 
     private Character enemy;
     private readonly TileGrid<Tile> grid = new(9, 9);
@@ -272,7 +273,7 @@ public class Board : MonoBehaviour
         {
             ending = true;
             CancelInvoke(nameof(Win));
-            Invoke(nameof(Lose), 1f);
+            Lose();
         }
     }
 
@@ -333,6 +334,7 @@ public class Board : MonoBehaviour
 
     private void Lose()
     {
+        gameOverStuff.SetActive(true);
     }
 
     private void Attack(Character attacker, Character target, int damage, bool boosted = true)
