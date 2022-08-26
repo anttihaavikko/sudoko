@@ -239,8 +239,8 @@ public class Character : Lootable
 
         var soul = equipmentList.Random(EquipmentSlot.Soul);
         AddExtraSkills(soul);
+        soul.SetGhost(Index, drops);
         drops.Add(soul);
-        soul.SetGhost(Index, indexList);
 
         if (drops.Count < 5)
         {
@@ -634,8 +634,7 @@ public class Character : Lootable
             if (s.GhostIndex < 0) return;
             var ghost = Instantiate(mobList.Get(s.GhostIndex), transform.position + Vector3.left * offset * ghostDistance, Quaternion.identity);
             ghost.Ghostify();
-            // equipmentVisuals.ForEach(v => v.Hide());
-            // s.GhostEquips.ForEach(i => ghost.ShowEquip(equipmentList.Get(i)));
+            s.GhostEquips.ForEach(e => ghost.ShowEquip(e));
             ghosts.Add(ghost);
             offset++;
         });
@@ -643,6 +642,7 @@ public class Character : Lootable
 
     private void Ghostify()
     {
+        equipmentVisuals.ForEach(v => v.Hide());
         isGhost = true;
         healthDisplay.gameObject.SetActive(false);
         timeDisplay.SetActive(false);

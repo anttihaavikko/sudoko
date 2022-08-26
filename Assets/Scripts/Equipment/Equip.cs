@@ -28,7 +28,7 @@ namespace Equipment
         private List<Equip> slots = new();
 
         private int ghostIndex = -1;
-        private List<int> ghostEquips;
+        private List<Equip> ghostEquips;
 
         public int SlotCount => slotCount;
 
@@ -40,7 +40,7 @@ namespace Equipment
         public int SkillCount => skillCount;
 
         public int GhostIndex => ghostIndex;
-        public List<int> GhostEquips => ghostEquips;
+        public List<Equip> GhostEquips => ghostEquips;
 
         public List<Equip> SlottedSouls => slots;
 
@@ -156,7 +156,7 @@ namespace Equipment
             skillCount++;
         }
 
-        public void SetGhost(int index, IEnumerable<int> equips)
+        public void SetGhost(int index, IEnumerable<Equip> equips)
         {
             ghostIndex = index;
             ghostEquips = equips.ToList();
