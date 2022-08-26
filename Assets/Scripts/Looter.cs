@@ -61,7 +61,10 @@ public class Looter : MonoBehaviour
             var drop = Instantiate(dropPrefab, lootSource.SpawnPoint, Quaternion.identity);
             drop.GetComponent<Animator>().speed = speed;
             var set = GetSkillSetFor(d.slot);
-            d.AddSkill(set.Random());
+            for (var i = 0; i < d.SkillCount; i++)
+            {
+                d.AddSkill(set.Random());
+            }
             drop.Setup(d);
             dropItems.Add(drop);
             var targetPos = p + (spawnOffset + 2f * offset) * Vector3.right + Vector3.up * d.groundOffset;

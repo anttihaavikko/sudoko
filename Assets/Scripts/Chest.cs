@@ -39,6 +39,13 @@ public class Chest : Lootable
         {
             drops.Add(equipmentList.Random(type));
         }
+
+        if (Random.value < 0.5f)
+        {
+            drops.Add(equipmentList.Random(EquipmentSlot.Potion));
+        }
+        
+        drops.Add(equipmentList.Random(EquipmentSlot.Gold));
     }
 
     private EquipmentSlot GetLootType()

@@ -213,11 +213,34 @@ public class Character : Lootable
             v.Hide();
             if (!v.Spawns) return;
             var e = equipmentList.Random(v.Slot);
+            AddExtraSkills(e);
             v.Show(e);
             drops.Add(e);
         });
+
+        var soul = equipmentList.Random(EquipmentSlot.Soul);
+        AddExtraSkills(soul);
+        drops.Add(soul);
+
+        if (drops.Count < 5)
+        {
+            drops.Add(equipmentList.Random(EquipmentSlot.Gold));
+        }
         
-        drops.Add(equipmentList.Random(EquipmentSlot.Soul));
+        if (drops.Count < 5 && Random.value < 0.2f)
+        {
+            drops.Add(equipmentList.Random(EquipmentSlot.Potion));
+        }
+    }
+
+    private void AddExtraSkills(Equip e)
+    {
+        if (!isBoss) return;
+        
+        for (var i = 0; i < MapState.Instance.World + 1; i++)
+        {
+            e.AddExtraSkill();
+        }
     }
 
     public void Mirror()
@@ -379,6 +402,7 @@ public class Character : Lootable
         health.Heal(amount);
         var pop = EffectManager.AddTextPopup(amount.ToString(), hitPos.position.RandomOffset(0.2f));
         pop.SetColor(Color.green);
+        StateManager.Instance.Health = health.Current;
     }
 
     public void Damage(int amount, int madeWith, bool critical = false)

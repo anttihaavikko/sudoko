@@ -23,6 +23,7 @@ namespace Equipment
         private List<Skill> skills = new();
         private int slotCount;
         private int goldAmount;
+        private int skillCount = 1;
 
         private List<Equip> slots = new();
 
@@ -33,6 +34,7 @@ namespace Equipment
         public bool IsSoul => slot == EquipmentSlot.Soul;
 
         public int Gold => goldAmount;
+        public int SkillCount => skillCount;
 
         public Equip(Blueprint blueprint)
         {
@@ -77,7 +79,15 @@ namespace Equipment
 
         public string GetName()
         {
-            return !skills.Any() ? title : skills.First().Decorate(title);
+            var pre = CanDoubleDecorate() ? 
+                skills.Skip(1).First(s => s.CanDoubleWith(skills.First())).Decorate(title) : 
+                title;
+            return !skills.Any() ? title : skills.First().Decorate(pre);
+        }
+
+        private bool CanDoubleDecorate()
+        {
+            return skills.Count > 1 && skills.Skip(1).Any(s => s.CanDoubleWith(skills.First()));
         }
 
         public string GetDescription()
@@ -124,6 +134,11 @@ namespace Equipment
         public void AddGold(int amount)
         {
             goldAmount += amount;
+        }
+
+        public void AddExtraSkill()
+        {
+            skillCount++;
         }
     }
 }

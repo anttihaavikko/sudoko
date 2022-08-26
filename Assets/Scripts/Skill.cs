@@ -70,6 +70,11 @@ public class Skill : ScriptableObject
     {
         return $"{prefix} {itemName} {suffix}".Trim();
     }
+
+    public bool CanDoubleWith(Skill other)
+    {
+        return string.IsNullOrEmpty(prefix) != string.IsNullOrEmpty(other.prefix);
+    }
 }
 
 public enum SkillType
