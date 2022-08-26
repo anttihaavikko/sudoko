@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Just Value
   m_EditorClassIdentifier: 
   description: Does (nothing) special but is very (valuable).
-  prefix: 
-  suffix: Valuable
+  prefix: Valuable
+  suffix: 
   type: 0
   stats:
     attack: 0

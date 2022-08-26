@@ -39,6 +39,8 @@ public class Character : Lootable
     [SerializeField] private EquipmentList equipmentList;
     [SerializeField] private Transform hitPos, center;
     [SerializeField] private Transform groundMask;
+    
+    [SerializeField] private Color healColor;
 
     private Animator anim;
 
@@ -401,7 +403,7 @@ public class Character : Lootable
         SkillEffect();
         health.Heal(amount);
         var pop = EffectManager.AddTextPopup(amount.ToString(), hitPos.position.RandomOffset(0.2f));
-        pop.SetColor(Color.green);
+        pop.SetColor(healColor);
         StateManager.Instance.Health = health.Current;
     }
 

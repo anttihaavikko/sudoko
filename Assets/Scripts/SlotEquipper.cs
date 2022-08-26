@@ -1,3 +1,4 @@
+using System;
 using Equipment;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,13 @@ public class SlotEquipper : MonoBehaviour
     [SerializeField] private Inventory inventory;
     [SerializeField] private Image rim;
     [SerializeField] private Image icon;
+
+    private Color baseColor;
+
+    private void Start()
+    {
+        baseColor = rim.color;
+    }
 
     public bool CanSlot(Equip e)
     {
@@ -49,7 +57,7 @@ public class SlotEquipper : MonoBehaviour
     public void Mark(bool state)
     {
         rim.color = icon.color = state ? 
-            new Color(1f, 1f, 1f, 1f) :
-            new Color(1f, 1f, 1f, 0.6f);
+            Color.white :
+            baseColor;
     }
 }

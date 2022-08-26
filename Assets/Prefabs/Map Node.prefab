@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linePrefab: {fileID: 2681941323658407598, guid: 0d4f0379649f54ec5a4d4f994da8a1d7, type: 3}
   sprite: {fileID: 1429160223983762547}
-  dimColor: {r: 0.47726062, g: 0.6132076, b: 0.51324654, a: 1}
+  dimColor: {r: 0.36078432, g: 0.5019608, b: 0.003921569, a: 1}
   activeColor: {r: 1, g: 1, b: 1, a: 1}
   pulsate: {fileID: 985497423369396313}
   outline: {fileID: 1849563675495400506}
