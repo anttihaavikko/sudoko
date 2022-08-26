@@ -31,9 +31,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.52092768"
-     inkscape:cx="659.12086"
-     inkscape:cy="-403.55274"
+     inkscape:zoom="0.092087874"
+     inkscape:cx="9617.3955"
+     inkscape:cy="1833.7252"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -43,7 +43,7 @@
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:snap-global="true"
+     inkscape:snap-global="false"
      showguides="false" />
   <metadata
      id="metadata1146">
@@ -1950,6 +1950,64 @@ AElFTkSuQmCC
        id="path5225"
        sodipodi:nodetypes="cccccccccccccccc"
        inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/hammer-small.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#999999;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -29.458663,-234.65349 -1.777677,6.09489 -43.680089,0.25396 c 10.494659,7.5001 20.564142,15.48611 34.28379,19.3005 h 13.205608 l 1.523723,15.64001 -6.602805,0.25396 c -1.784105,4.0279 -3.98183,10.76072 -2.539539,14.32771 h 47.997306 c 1.058617,-3.75482 -1.080502,-10.61229 -3.3014022,-14.83562 L 2.031632,-194.6339 c 0,0 -2.73716054,-9.08825 1.0338639,-14.29585 4.3097423,-3.41188 32.7420161,-14.04186 32.7420161,-14.04186 v -6.34885 l -3.183448,-4.99193 z"
+       id="path5241"
+       sodipodi:nodetypes="cccccccccccccccc"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -30.431961,-228.5586 v 18.7926"
+       id="path5243"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m -38.981938,-228.30464 v 18.79259"
+       id="path5245"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#b3b3b3;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m -29.839594,-182.08501 c 13.344692,-11.99244 25.6371863,-11.70924 36.9503059,0"
+       id="path5249"
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <rect
+       style="fill:#808080;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect5251"
+       width="8.1265278"
+       height="17.903755"
+       x="-38.854961"
+       y="-227.92372"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#808080;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -25.882625,-230.08232 c 18.3693387,9.49272 36.738677,8.09139 55.108016,0"
+       id="path5247-1"
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M -26.538192,-230.08232 H 28.569824"
+       id="path5247"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:20;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1778-3-0-0"
+       width="641.84796"
+       height="224.08365"
+       x="2500.5208"
+       y="372.08588"
+       ry="15.825591"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
   </g>

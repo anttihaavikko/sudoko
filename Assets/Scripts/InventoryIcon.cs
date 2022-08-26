@@ -92,6 +92,14 @@ public class InventoryIcon : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         {
             var inventory = hit.GetComponent<Inventory>();
             var equipper = hit.GetComponent<SlotEquipper>();
+            var seller = hit.GetComponent<Seller>();
+
+            if (seller)
+            {
+                seller.Sell(equip);
+                gameObject.SetActive(false);
+                return;
+            }
 
             if (inventory)
             {
