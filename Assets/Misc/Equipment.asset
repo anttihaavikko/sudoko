@@ -299,17 +299,6 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: -0.1
-  - title: Mask
-    sprite: {fileID: 21300000, guid: 9657f2f92ff81414aa0d5c74787d8b05, type: 3}
-    trim: {fileID: 21300000, guid: 8afa205db5d044a8186de03544b909c5, type: 3}
-    grounded: {fileID: 0}
-    canFlip: 0
-    colors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
-    trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
-    slot: 2
-    groundAngle: 90
-    masked: 0
-    groundOffset: 0.4
   - title: Shades
     sprite: {fileID: 21300000, guid: 488d2601438774782a5ce71e3a6980da, type: 3}
     trim: {fileID: 0}
