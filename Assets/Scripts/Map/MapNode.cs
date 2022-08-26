@@ -111,7 +111,7 @@ namespace Map
                 MapIcon.Boss => "Main",
                 MapIcon.Star => "Chest",
                 MapIcon.Shop => "Shop",
-                MapIcon.Unknown => "Chest",
+                MapIcon.Unknown => GetMysteryScene(),
                 _ => throw new ArgumentOutOfRangeException()
             };
         }
