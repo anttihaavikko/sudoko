@@ -252,7 +252,7 @@ MonoBehaviour:
     colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 6
-    groundAngle: 90
+    groundAngle: -90
     masked: 0
     groundOffset: 0
   - title: Soul
@@ -340,7 +340,7 @@ MonoBehaviour:
     colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
     trimColors: {fileID: 11400000, guid: 612aa135d695541869ef45c397c40d74, type: 2}
     slot: 6
-    groundAngle: 90
+    groundAngle: -90
     masked: 0
     groundOffset: 0
   - title: Sickle
@@ -351,7 +351,7 @@ MonoBehaviour:
     colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
     trimColors: {fileID: 11400000, guid: 612aa135d695541869ef45c397c40d74, type: 2}
     slot: 6
-    groundAngle: 90
+    groundAngle: -90
     masked: 0
     groundOffset: 0
   - title: Scythe
@@ -384,7 +384,7 @@ MonoBehaviour:
     colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
     trimColors: {fileID: 11400000, guid: 612aa135d695541869ef45c397c40d74, type: 2}
     slot: 6
-    groundAngle: 90
+    groundAngle: -90
     masked: 0
     groundOffset: 0
   - title: Staff
@@ -406,7 +406,7 @@ MonoBehaviour:
     colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 6
-    groundAngle: 90
+    groundAngle: -90
     masked: 0
     groundOffset: 0
   - title: Gold
@@ -429,5 +429,27 @@ MonoBehaviour:
     trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
     slot: 9
     groundAngle: 0
+    masked: 0
+    groundOffset: 0
+  - title: War Hammer
+    sprite: {fileID: 21300000, guid: 4a1fc8fd0ecf74ec4b0fa858651e3157, type: 3}
+    trim: {fileID: 0}
+    grounded: {fileID: 0}
+    canFlip: 1
+    colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
+    trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    slot: 6
+    groundAngle: -90
+    masked: 0
+    groundOffset: 0
+  - title: Hammer
+    sprite: {fileID: 21300000, guid: 63865ca3b28a64f3ab49ae2e2cdd42c6, type: 3}
+    trim: {fileID: 0}
+    grounded: {fileID: 0}
+    canFlip: 1
+    colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
+    trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    slot: 6
+    groundAngle: 90
     masked: 0
     groundOffset: 0

@@ -5,6 +5,7 @@ using AnttiStarterKit.Animations;
 using AnttiStarterKit.Extensions;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Random = UnityEngine.Random;
 
 namespace Map
 {
@@ -109,9 +110,25 @@ namespace Map
                 MapIcon.Fight => "Main",
                 MapIcon.Boss => "Main",
                 MapIcon.Star => "Chest",
-                MapIcon.Shop => "Chest",
+                MapIcon.Shop => "Shop",
                 MapIcon.Unknown => "Chest",
                 _ => throw new ArgumentOutOfRangeException()
+            };
+        }
+
+        private string GetMysteryScene()
+        {
+            if (Random.value < 0.1f)
+            {
+                StateManager.Instance.ExtraBoss = true;
+                return "Main";
+            }
+            
+            return Random.value switch
+            {
+                < 0.25f => "Shop",
+                < 0.5f => "Chest",
+                _ => "Main"
             };
         }
 

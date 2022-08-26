@@ -32,8 +32,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.52092768"
-     inkscape:cx="1523.9873"
-     inkscape:cy="-1090.5953"
+     inkscape:cx="659.12086"
+     inkscape:cy="-403.55274"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -1912,6 +1912,44 @@ AElFTkSuQmCC
        id="path5186"
        style="fill:#ffffff;fill-opacity:0.2;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 381.35935,-357.50455 5.99813,5.56916 -7.9144,51.04856 c -8.82562,8.54959 -14.79303,22.99427 -14.79303,30.14055 0,10.52963 13.80512,12.63967 29.77702,12.63967 15.97186,0 28.063,-2.11004 28.063,-12.63967 5e-5,-7.17212 -6.00977,-21.69724 -14.88806,-30.23469 l -7.3913,-50.95442 5.57005,-5.56916 z"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <rect
+       style="fill:#917c6f;fill-opacity:1;stroke:#000000;stroke-width:4.19504;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect5217"
+       width="6.3919468"
+       height="118.63961"
+       x="-169.42595"
+       y="-180.2019"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/hammer-big.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25"
+       transform="scale(-1,1)" />
+    <rect
+       style="fill:#917c6f;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect5221"
+       width="3.601964"
+       height="46.304745"
+       x="-92.544556"
+       y="-144.75378"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/hammer-small.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25"
+       transform="scale(-1,1)" />
+    <path
+       style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 191.47885,-205.26102 v 25.85845 h -55.30836 c 6.06373,-10.23701 13.81026,-19.21192 23.70358,-26.57674 z"
+       id="path5223"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/hammer-big.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 97.774351,-158.44516 6.507229,-0.11045 0.93315,-2.09958 4.08873,-0.22088 -0.35613,15.15127 h -4.19918 l -1.39972,-2.09959 -5.365609,-0.23328 -5.44818,3.30389 h -4.10621 l -4.20957,-3.07061 c -5.03782,-0.55746 -9.422376,-2.63922 -13.530656,-5.36561 4.26228,-2.07328 7.60294,-4.53059 15.396956,-5.13232 v -2.33287 l 10.18523,-0.11665 z"
+       id="path5225"
+       sodipodi:nodetypes="cccccccccccccccc"
+       inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/hammer-small.png"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
   </g>

@@ -104,7 +104,9 @@ public class Board : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        enemy = Instantiate(enemies[MapState.Instance.x].Random(), enemyPos);
+        var enemyIndex = StateManager.Instance.ExtraBoss ? 6 : MapState.Instance.x;
+        StateManager.Instance.ExtraBoss = false;
+        enemy = Instantiate(enemies[enemyIndex].Random(), enemyPos);
         enemy.transform.localPosition = Vector3.zero;
         enemy.Board = this;
         enemy.Mirror();
