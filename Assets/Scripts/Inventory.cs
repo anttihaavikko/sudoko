@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using AnttiStarterKit.Game;
 using AnttiStarterKit.Managers;
 using AnttiStarterKit.Utils;
 using Equipment;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : Manager<Inventory>
 {
@@ -15,10 +17,12 @@ public class Inventory : Manager<Inventory>
     [SerializeField] private List<SlotEquipper> slots;
     [SerializeField] private EquipmentList equipmentList;
     [SerializeField] private SkillSet soulSkills;
+    [SerializeField] private ScoreDisplay goldDisplay;
 
     public Transform Container => container;
 
     private readonly List<InventoryIcon> icons = new();
+    private RectTransform goldDisplayContainer;
 
     private void Update()
     {
@@ -47,6 +51,21 @@ public class Inventory : Manager<Inventory>
     {
         player.GetEquips().ForEach(e => Add(e));
         player.GetInventory().ForEach(AddToInventory);
+
+        if (goldDisplay)
+        {
+            goldDisplay.Set(StateManager.Instance.Gold);
+            goldDisplayContainer = goldDisplay.GetComponent<RectTransform>();
+            ResizeGoldPanel();
+        }
+    }
+
+    private void ResizeGoldPanel()
+    {
+        if (goldDisplayContainer)
+        {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(goldDisplayContainer);
+        }
     }
 
     public void UpdateSlotsFor(Equip e)
@@ -112,5 +131,12 @@ public class Inventory : Manager<Inventory>
     public void UnMarkSlots()
     {
         slots.ForEach(s => s.Mark(false));
+    }
+
+    public void AddGold(int amount)
+    {
+        goldDisplay.Add(amount);
+        StateManager.Instance.Gold = goldDisplay.Total;
+        ResizeGoldPanel();
     }
 }

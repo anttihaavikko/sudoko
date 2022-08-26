@@ -9,6 +9,8 @@ namespace Equipment
         Pants,
         Jacket,
         Weapon,
-        Soul
+        Soul,
+        Gold,
+        Potion
     }
 }

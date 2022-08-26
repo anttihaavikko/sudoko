@@ -31,15 +31,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.73670299"
-     inkscape:cx="1786.0174"
-     inkscape:cy="-910.9301"
+     inkscape:zoom="0.52092768"
+     inkscape:cx="1523.9873"
+     inkscape:cy="-1090.5953"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="964"
+     inkscape:window-width="1440"
+     inkscape:window-height="784"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
@@ -1893,6 +1893,25 @@ AElFTkSuQmCC
        id="path5103-4"
        sodipodi:nodetypes="ccc"
        inkscape:export-filename="/Users/anttih/dev/Sudoku/Assets/Sprites/_weapons/wand-trim.png"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       style="fill:#d38d5f;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 387.35748,-351.93539 h 12.85323 l 13.14385,-13.5974 -39.1146,0.6059 z"
+       id="path5215"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       id="path5186-7"
+       style="fill:#d40000;fill-opacity:1;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 371.83034,-291.09718 c -4.468,7.4067 -7.18029,15.53535 -7.18029,20.3509 0,10.52964 13.80512,12.63967 29.77702,12.63967 15.97186,0 28.063,-2.11003 28.063,-12.63967 5e-5,-4.81532 -2.71198,-12.94398 -7.17944,-20.3509 z"
+       inkscape:export-xdpi="25"
+       inkscape:export-ydpi="25" />
+    <path
+       id="path5186"
+       style="fill:#ffffff;fill-opacity:0.2;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 381.35935,-357.50455 5.99813,5.56916 -7.9144,51.04856 c -8.82562,8.54959 -14.79303,22.99427 -14.79303,30.14055 0,10.52963 13.80512,12.63967 29.77702,12.63967 15.97186,0 28.063,-2.11004 28.063,-12.63967 5e-5,-7.17212 -6.00977,-21.69724 -14.88806,-30.23469 l -7.3913,-50.95442 5.57005,-5.56916 z"
        inkscape:export-xdpi="25"
        inkscape:export-ydpi="25" />
   </g>

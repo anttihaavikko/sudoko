@@ -29,7 +29,10 @@ namespace AnttiStarterKit.Game
 
         private void Start()
         {
-            multiPulsate = multiField.GetComponent<Pulsater>();
+            if (multiField)
+            {
+                multiPulsate = multiField.GetComponent<Pulsater>();   
+            }
         }
 
         public void Set(int amount, int multi = 1)
@@ -48,14 +51,13 @@ namespace AnttiStarterKit.Game
 
         private void ShowMulti()
         {
-            if (multiField)
-            {
-                multiField.text = $"x{multiplier}";
+            if (!multiField) return;
+            
+            multiField.text = $"x{multiplier}";
 
-                if (multiPulsate)
-                {
-                    multiPulsate.Pulsate();
-                }
+            if (multiPulsate)
+            {
+                multiPulsate.Pulsate();
             }
         }
 

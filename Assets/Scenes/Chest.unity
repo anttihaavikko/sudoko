@@ -612,18 +612,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1530645256}
-    - target: {fileID: 9168301038567673315, guid: c851d3dff68174d028e9f5632d0cd3ee, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9168301038567673315, guid: c851d3dff68174d028e9f5632d0cd3ee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9168301038567673315, guid: c851d3dff68174d028e9f5632d0cd3ee, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.000000059604645
-      objectReference: {fileID: 0}
     - target: {fileID: 9168301038856086746, guid: c851d3dff68174d028e9f5632d0cd3ee, type: 3}
       propertyPath: root
       value: 
@@ -639,10 +627,6 @@ PrefabInstance:
     - target: {fileID: 9168301038985433262, guid: c851d3dff68174d028e9f5632d0cd3ee, type: 3}
       propertyPath: m_Name
       value: Inventory Panel
-      objectReference: {fileID: 0}
-    - target: {fileID: 9168301038985433262, guid: c851d3dff68174d028e9f5632d0cd3ee, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9168301038985433263, guid: c851d3dff68174d028e9f5632d0cd3ee, type: 3}
       propertyPath: m_Pivot.x
@@ -732,14 +716,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1530645256}
-    - target: {fileID: 9168301039071867567, guid: c851d3dff68174d028e9f5632d0cd3ee, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9168301039071867567, guid: c851d3dff68174d028e9f5632d0cd3ee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9168301039165136231, guid: c851d3dff68174d028e9f5632d0cd3ee, type: 3}
       propertyPath: player
       value: 

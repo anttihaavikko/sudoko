@@ -91,7 +91,25 @@ public class Looter : MonoBehaviour
             yield return new WaitForSeconds(duration);
 
             d.gameObject.SetActive(false);
-            inventory.Add(d.Equipment, true);
+
+            if (!d.Equipment.IsConsumable())
+            {
+                inventory.Add(d.Equipment, true);
+            }
+
+            if (d.Equipment.slot == EquipmentSlot.Potion)
+            {
+                player.Shout("POTION");
+                yield return new WaitForSeconds(0.2f);
+                player.Heal(20);
+                yield return new WaitForSeconds(0.5f);
+            }
+
+            if (d.Equipment.slot == EquipmentSlot.Gold)
+            {
+                player.Shout($"+{d.Equipment.Gold} GOLD");
+                inventory.AddGold(d.Equipment.Gold);
+            }
             
             player.RecalculateStats();
 

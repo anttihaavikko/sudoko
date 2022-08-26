@@ -22,6 +22,7 @@ namespace Equipment
 
         private List<Skill> skills = new();
         private int slotCount;
+        private int goldAmount;
 
         private List<Equip> slots = new();
 
@@ -30,6 +31,8 @@ namespace Equipment
         public bool HasFreeSlot => slots.Count < slotCount;
 
         public bool IsSoul => slot == EquipmentSlot.Soul;
+
+        public int Gold => goldAmount;
 
         public Equip(Blueprint blueprint)
         {
@@ -46,6 +49,11 @@ namespace Equipment
             groundOffset = blueprint.groundOffset;
 
             slotCount = GetRandomSlotCount();
+
+            if (slot == EquipmentSlot.Gold)
+            {
+                goldAmount = Random.Range(100, 300);
+            } 
         }
 
         public void Slot(Equip e)
@@ -56,14 +64,20 @@ namespace Equipment
             }
         }
 
+        public bool IsConsumable()
+        {
+            return slot is EquipmentSlot.Gold or EquipmentSlot.Potion;
+        }
+
         public void AddSkill(Skill s)
         {
+            if (IsConsumable()) return;
             skills.Add(s.Copy());
         }
 
         public string GetName()
         {
-            return skills.First().Decorate(title);
+            return !skills.Any() ? title : skills.First().Decorate(title);
         }
 
         public string GetDescription()
@@ -105,6 +119,11 @@ namespace Equipment
         public Color GetSoulColor(int i)
         {
             return slots.Count <= i ? Color.clear : slots[i].color;
+        }
+
+        public void AddGold(int amount)
+        {
+            goldAmount += amount;
         }
     }
 }

@@ -11,6 +11,7 @@ public class StateManager : Manager<StateManager>
 {
     public int Level { get; private set; }
     public int Health { get; set; } = 20;
+    public int Gold { get; set; } = 100;
 
     private readonly List<Equip> gear = new();
     private readonly List<Equip> inventory = new();
@@ -45,6 +46,7 @@ public class StateManager : Manager<StateManager>
         Level = 0;
         Score = 0;
         Multiplier = 1;
+        Gold = 100;
         gear.Clear();
         inventory.Clear();
     }

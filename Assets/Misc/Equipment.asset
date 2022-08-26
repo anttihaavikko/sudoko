@@ -409,3 +409,25 @@ MonoBehaviour:
     groundAngle: 90
     masked: 0
     groundOffset: 0
+  - title: Gold
+    sprite: {fileID: 21300000, guid: 3309bf14317944bb79e1896fe231b337, type: 3}
+    trim: {fileID: 0}
+    grounded: {fileID: 0}
+    canFlip: 1
+    colors: {fileID: 11400000, guid: 8b4c70ebba63f44c8a78321edca713f1, type: 2}
+    trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    slot: 8
+    groundAngle: 0
+    masked: 0
+    groundOffset: 0
+  - title: Potion
+    sprite: {fileID: 21300000, guid: f3eb3ed562b52439681dec3ebed86db7, type: 3}
+    trim: {fileID: 0}
+    grounded: {fileID: 0}
+    canFlip: 1
+    colors: {fileID: 11400000, guid: 5ee56a55e8a404e25b67b54bd819f3c2, type: 2}
+    trimColors: {fileID: 11400000, guid: 0df1d18f72ead41bfa81502e0d3d930b, type: 2}
+    slot: 9
+    groundAngle: 0
+    masked: 0
+    groundOffset: 0

@@ -43,8 +43,17 @@ public class Chest : Lootable
 
     private EquipmentSlot GetLootType()
     {
+        var ignore = new[]
+        {
+            EquipmentSlot.None,
+            EquipmentSlot.Pants,
+            EquipmentSlot.Shirt,
+            // EquipmentSlot.Potion,
+            // EquipmentSlot.Gold
+        };
+        
         return EnumUtils.ToList<EquipmentSlot>()
-            .Where(s => s != EquipmentSlot.None && s != EquipmentSlot.Pants && s != EquipmentSlot.Shirt)
+            .Where(s => !ignore.Contains(s))
             .ToList()
             .Random();
     }

@@ -273,6 +273,11 @@ public class Character : Lootable
         UpdateState();
     }
 
+    public void Shout(string message)
+    {
+        EffectManager.AddTextPopup(message, transform.position + Vector3.up * 3);
+    } 
+
     public int Add(Equip e, int inSlot = -1)
     {
         inventory.Remove(e);
