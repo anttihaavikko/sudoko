@@ -795,6 +795,14 @@ PrefabInstance:
       propertyPath: m_Solver.m_SolverPoses.Array.data[1].solverRotation.z
       value: -0.35843685
       objectReference: {fileID: 0}
+    - target: {fileID: 7673820547309304849, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.030671723
+      objectReference: {fileID: 0}
+    - target: {fileID: 7673820547309304849, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.50834
+      objectReference: {fileID: 0}
     - target: {fileID: 7801021291164589952, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Positions.Array.data[0].x
       value: -0.09305628

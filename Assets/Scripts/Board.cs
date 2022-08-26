@@ -12,6 +12,7 @@ using Map;
 using Sudoku;
 using Sudoku.Model;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -34,6 +35,7 @@ public class Board : MonoBehaviour
     [SerializeField] private GameObject bossCam;
     [SerializeField] private Transform gridContainer;
     [SerializeField] private GameObject numberPanel;
+    [SerializeField] private List<Character> enemyList;
 
     private Character enemy;
     private readonly TileGrid<Tile> grid = new(9, 9);
@@ -89,7 +91,7 @@ public class Board : MonoBehaviour
         if (DevKey.Down(KeyCode.Space))
         {
             if(!fightStarted) StartFight();
-            Attack(player, enemy, 5);
+            Attack(player, enemy, 10);
         }
 
         if (DevKey.Down(KeyCode.N))
@@ -108,7 +110,9 @@ public class Board : MonoBehaviour
     {
         var enemyIndex = StateManager.Instance.ExtraBoss ? 6 : MapState.Instance.x;
         StateManager.Instance.ExtraBoss = false;
-        enemy = Instantiate(enemies[enemyIndex].Random(), enemyPos);
+        var prefab = enemies[enemyIndex].Random();
+        enemy = Instantiate(prefab, enemyPos);
+        enemy.Index = enemyList.IndexOf(prefab);
         enemy.transform.localPosition = Vector3.zero;
         enemy.Board = this;
         enemy.Mirror();
@@ -347,7 +351,7 @@ public class Board : MonoBehaviour
 
     private IEnumerator ChangeScene()
     {
-        player.WalkTo(20, false);
+        player.WalkTo(20, 0, false);
         yield return new WaitForSeconds(1.5f);
         Win();
     }

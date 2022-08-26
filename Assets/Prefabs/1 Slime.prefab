@@ -1585,6 +1585,9 @@ MonoBehaviour:
   hitPos: {fileID: 2491547236825697201}
   center: {fileID: 2491547236985954737}
   groundMask: {fileID: 2491547236048400337}
+  healColor: {r: 0, g: 0, b: 0, a: 0}
+  mobList: {fileID: 0}
+  timeDisplay: {fileID: 2491547235858689865}
 --- !u!114 &2491547236678160808
 MonoBehaviour:
   m_ObjectHideFlags: 0

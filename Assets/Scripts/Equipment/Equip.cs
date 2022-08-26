@@ -27,6 +27,9 @@ namespace Equipment
 
         private List<Equip> slots = new();
 
+        private int ghostIndex = -1;
+        private List<int> ghostEquips;
+
         public int SlotCount => slotCount;
 
         public bool HasFreeSlot => slots.Count < slotCount;
@@ -35,6 +38,11 @@ namespace Equipment
 
         public int Gold => goldAmount;
         public int SkillCount => skillCount;
+
+        public int GhostIndex => ghostIndex;
+        public List<int> GhostEquips => ghostEquips;
+
+        public List<Equip> SlottedSouls => slots;
 
         public Equip(Blueprint blueprint)
         {
@@ -146,6 +154,12 @@ namespace Equipment
         public void AddExtraSkill()
         {
             skillCount++;
+        }
+
+        public void SetGhost(int index, IEnumerable<int> equips)
+        {
+            ghostIndex = index;
+            ghostEquips = equips.ToList();
         }
     }
 }

@@ -41,6 +41,10 @@ public class Character : Lootable
     [SerializeField] private Transform groundMask;
     
     [SerializeField] private Color healColor;
+    [SerializeField] private MobList mobList;
+    [SerializeField] private GameObject timeDisplay;
+
+    private readonly List<Character> ghosts = new();
 
     private Animator anim;
 
@@ -51,12 +55,15 @@ public class Character : Lootable
     private float moveTimer;
     private bool fightStarted;
     private int guards;
+    private float ghostDistance = 2f;
+    private bool isGhost;
 
     public int CurrentHealth => health.Current;
     public int Score => score;
     public bool IsBoss => isBoss;
-    
+
     public Board Board { get; set; }
+    public int Index { get; set; }
 
     public Action<string> showDescription;
     
@@ -83,15 +90,7 @@ public class Character : Lootable
         moveDisplay.SetParent(null, true);
 
         Stagger();
-
-        if (isPlayer)
-        {
-            transform.position += Vector3.left * 7;
-            WalkTo(origin.x, true);
-        }
-
         Scale();
-
         Gear();
 
         if (startsWith)
@@ -112,6 +111,18 @@ public class Character : Lootable
         showDescription?.Invoke(GetDescription());
 
         guards = GetSkillCount(SkillType.MultiGuard);
+        
+        if (isPlayer)
+        {
+            transform.position += Vector3.left * 7;
+            SpawnGhosts();
+            Invoke(nameof(StartWalk), 0.1f);
+        }
+    }
+
+    private void StartWalk()
+    {
+        WalkTo(origin.x, 0, true);
     }
 
     public void RecalculateStats()
@@ -186,6 +197,8 @@ public class Character : Lootable
 
     private void Gear()
     {
+        if (isGhost) return;
+        
         var gear = StateManager.Instance.Gear;
         
         if (isPlayer)
@@ -210,11 +223,15 @@ public class Character : Lootable
 
     private void GearEnemy()
     {
+        var indexList = new List<int>();
+        
         equipmentVisuals.ForEach(v =>
         {
             v.Hide();
             if (!v.Spawns) return;
-            var e = equipmentList.Random(v.Slot);
+            var index = equipmentList.RandomIndex(v.Slot);
+            indexList.Add(index);
+            var e = equipmentList.Get(index);
             AddExtraSkills(e);
             v.Show(e);
             drops.Add(e);
@@ -223,6 +240,7 @@ public class Character : Lootable
         var soul = equipmentList.Random(EquipmentSlot.Soul);
         AddExtraSkills(soul);
         drops.Add(soul);
+        soul.SetGhost(Index, indexList);
 
         if (drops.Count < 5)
         {
@@ -341,8 +359,16 @@ public class Character : Lootable
         StateManager.Instance.UpdateEquips(equips, inventory);
     }
 
-    public float WalkTo(float pos, bool showHpAfter, bool hideHpBefore = true)
+    public float WalkTo(float pos, float delay, bool showHpAfter, bool hideHpBefore = true)
     {
+        var index = 1;
+        ghosts.ForEach(g =>
+        {
+            var i = index;
+            g.StartCoroutine(() => g.WalkTo(pos - i * ghostDistance, 0, false), 0.1f * index);
+            index++;
+        });
+        
         if (hideHpBefore)
         {
             healthDisplay.gameObject.SetActive(false);   
@@ -586,5 +612,39 @@ public class Character : Lootable
     public int GetDefense()
     {
         return stats.defence;
+    }
+
+    private List<Equip> GetSouls()
+    {
+        return GetEquips().SelectMany(e => e.SlottedSouls).ToList();
+    }
+
+    private void ShowEquip(Equip e)
+    {
+        var slot = equipmentVisuals.First(v => v.Slot == e.slot && v.IsFree);
+        slot.Show(e);
+    }
+
+    private void SpawnGhosts()
+    {
+        var souls = GetSouls();
+        var offset = 1;
+        souls.ForEach(s =>
+        {
+            if (s.GhostIndex < 0) return;
+            var ghost = Instantiate(mobList.Get(s.GhostIndex), transform.position + Vector3.left * offset * ghostDistance, Quaternion.identity);
+            ghost.Ghostify();
+            // equipmentVisuals.ForEach(v => v.Hide());
+            // s.GhostEquips.ForEach(i => ghost.ShowEquip(equipmentList.Get(i)));
+            ghosts.Add(ghost);
+            offset++;
+        });
+    }
+
+    private void Ghostify()
+    {
+        isGhost = true;
+        healthDisplay.gameObject.SetActive(false);
+        timeDisplay.SetActive(false);
     }
 }

@@ -2400,6 +2400,17 @@ MonoBehaviour:
   bossCam: {fileID: 1687277067}
   gridContainer: {fileID: 419837743}
   numberPanel: {fileID: 2078140979}
+  enemyList:
+  - {fileID: 2491547236678160809, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
+  - {fileID: 6797947411694959416, guid: 68bdba8c43a1a46daba76d168f2f0c5a, type: 3}
+  - {fileID: 9176066167115653719, guid: 5a77e3f40815649029199d318288dc83, type: 3}
+  - {fileID: 1520335001922872537, guid: 691ba933cee2140f4b68289e88014d06, type: 3}
+  - {fileID: 9176066167115653719, guid: 055f11369785f4a0aba679ad923a8a81, type: 3}
+  - {fileID: 9176066167115653719, guid: a6b8551ff3b0a4faeae9e1ee291547d3, type: 3}
+  - {fileID: 9176066167115653719, guid: eefd9690766d842179ebf7e29e27bbd9, type: 3}
+  - {fileID: 6797947411694959416, guid: 8b0dce5470530418b876efc3284e9e3d, type: 3}
+  - {fileID: 6797947411694959416, guid: 054d00df33f6b48e884c394f42d136a0, type: 3}
+  - {fileID: 9176066167115653719, guid: a78eb06367a4d4f7e88d4d1b05e48c5f, type: 3}
 --- !u!114 &688767331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2793,7 +2804,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7773722, y: 1}
+    m_SensorSize: {x: 1.7763975, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

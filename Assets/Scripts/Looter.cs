@@ -39,7 +39,7 @@ public class Looter : MonoBehaviour
     public void Continue()
     {
         continueButton.Hide();
-        player.WalkTo(lastPos + 10, false);
+        player.WalkTo(lastPos + 10, 0, false);
         Invoke(nameof(NextLevel), 1.5f);
     }
 
@@ -89,7 +89,7 @@ public class Looter : MonoBehaviour
         var start = p.x;
         foreach (var d in dropItems)
         {
-            var duration = player.WalkTo(start + offset * 2f + spawnOffset, true, false);
+            var duration = player.WalkTo(start + offset * 2f + spawnOffset, 0, true, false);
             offset++;
             yield return new WaitForSeconds(duration);
 

@@ -3987,6 +3987,8 @@ MonoBehaviour:
   center: {fileID: 3900853164923883528}
   groundMask: {fileID: 8505454253151963457}
   healColor: {r: 0.6509804, g: 0.8980392, b: 0.21960784, a: 1}
+  mobList: {fileID: 11400000, guid: 45ab7916de72c41af89af0693e4d97a8, type: 2}
+  timeDisplay: {fileID: 6974406547932979368}
 --- !u!114 &1045587445051442415
 MonoBehaviour:
   m_ObjectHideFlags: 0

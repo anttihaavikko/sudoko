@@ -146,7 +146,7 @@ namespace Map
         {
             nodes.SelectMany(s => s).ToList().ForEach(node => node.DisablePick());
             Tweener.MoveToQuad(currentMarker, pickedNode.transform.position, 2f);
-            player.WalkTo(10, false);
+            player.WalkTo(10, 0, false);
         }
     }
 }
