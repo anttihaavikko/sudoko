@@ -1,4 +1,5 @@
 using System;
+using AnttiStarterKit.Extensions;
 using AnttiStarterKit.Managers;
 using Equipment;
 using TMPro;
@@ -12,6 +13,7 @@ public class ItemTooltip : Manager<ItemTooltip>
     [SerializeField] private GameObject slotContainer;
     [SerializeField] private RectTransform rectTransform;
     [SerializeField] private SlotDisplay slotDisplay;
+    [SerializeField] private Transform mirrorContainer;
 
     private void Start()
     {
@@ -34,6 +36,9 @@ public class ItemTooltip : Manager<ItemTooltip>
         node.SetActive(true);
         
         LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
+        
+        var mirrored = transform.position.x > Screen.width * 0.6f ? -1 : 1;
+        transform.localScale = node.transform.localScale = mirrorContainer.localScale = Vector3.one.WhereX(mirrored); 
     }
 
     public void Hide()

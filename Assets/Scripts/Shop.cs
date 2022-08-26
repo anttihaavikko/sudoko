@@ -1,6 +1,7 @@
 using System;
 using AnttiStarterKit.Animations;
 using AnttiStarterKit.Extensions;
+using Equipment;
 using UnityEngine;
 
 public class Shop : MonoBehaviour
@@ -22,7 +23,7 @@ public class Shop : MonoBehaviour
     {
         return new[]
         {
-            "Care to give up some (coin) for fine goods?",
+            "Care to give up some (coin) for fine (goods)?",
             "Would you like to (buy) something?",
             "What're ya (buyin)?",
             "What're ya (sellin')?",
@@ -39,5 +40,21 @@ public class Shop : MonoBehaviour
     {
         keeper.SkillEffect();
         speechBubble.Show("Bye!");
+    }
+
+    public void IndicateLowGold()
+    {
+        speechBubble.Show("Looks like you (don't) have enough (coin)!");
+    }
+
+    public void Thank()
+    {
+        keeper.SkillEffect();
+        speechBubble.Show("Thanks!");
+    }
+
+    public void ShowPriceFor(Equip equip)
+    {
+        speechBubble.Show($"I'll give you ({equip.GetPrice().AsScore()}) coin for that!", true);
     }
 }

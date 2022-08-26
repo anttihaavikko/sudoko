@@ -22,3 +22,4 @@ MonoBehaviour:
     speed: 0
   hp: 0
   interrupts: 0
+  price: 199

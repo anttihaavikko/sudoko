@@ -11,7 +11,7 @@ public class Seller : MonoBehaviour
     {
         player.Remove(e);
         player.RecalculateStats();
-        goldDisplay.Add(100);
+        goldDisplay.Add(e.GetPrice());
         StateManager.Instance.Gold = goldDisplay.Total;
     }
 }

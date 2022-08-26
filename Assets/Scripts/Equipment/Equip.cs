@@ -108,6 +108,13 @@ namespace Equipment
             return sb.ToString();
         }
 
+        public int GetPrice()
+        {
+            var normal = skills.Sum(s => s.Price);
+            var souls = slots.SelectMany(s => s.skills).Sum(s => s.Price);
+            return normal + souls + slotCount * 50;
+        }
+
         public IEnumerable<Skill> GetSkills()
         {
             return skills.Concat(slots.SelectMany(s => s.skills));

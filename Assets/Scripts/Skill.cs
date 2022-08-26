@@ -11,8 +11,11 @@ public class Skill : ScriptableObject
     [SerializeField] private Stats stats;
     [SerializeField] private int hp;
     [SerializeField] private bool interrupts;
+    [SerializeField] private int price = 50;
 
     private int first, second;
+
+    public int Price => price;
 
     public void Debug()
     {

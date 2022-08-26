@@ -18,6 +18,7 @@ public class Inventory : Manager<Inventory>
     [SerializeField] private EquipmentList equipmentList;
     [SerializeField] private SkillSet soulSkills;
     [SerializeField] private ScoreDisplay goldDisplay;
+    [SerializeField] private Shop shop;
 
     public Transform Container => container;
 
@@ -38,6 +39,14 @@ public class Inventory : Manager<Inventory>
             var soul = equipmentList.Random(EquipmentSlot.Hat);
             soul.AddSkill(soulSkills.Random().Copy());
             Add(soul);
+        }
+    }
+    
+    public void ShowPriceFor(Equip e)
+    {
+        if (shop)
+        {
+            shop.ShowPriceFor(e);
         }
     }
 

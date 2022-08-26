@@ -12,6 +12,7 @@ public class InventoryIcon : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] private Image image, trim;
     [SerializeField] private GameObject newIndicator;
     [SerializeField] private SlotDisplay slotDisplay;
+    [SerializeField] private bool locked;
 
     private bool dragging;
     private Transform parent;
@@ -56,6 +57,11 @@ public class InventoryIcon : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         Inventory.Instance.MarkSlot(equip);
         newIndicator.SetActive(false);
         ItemTooltip.Instance.Show(transform.position, equip);
+
+        if (!locked)
+        {
+            Inventory.Instance.ShowPriceFor(equip);
+        }
     }
 
     public void HoverOut()
