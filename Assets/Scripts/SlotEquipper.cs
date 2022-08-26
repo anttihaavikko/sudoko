@@ -8,6 +8,7 @@ public class SlotEquipper : MonoBehaviour
     [SerializeField] private Character player;
     [SerializeField] private Inventory inventory;
     [SerializeField] private Image rim;
+    [SerializeField] private Image icon;
 
     public bool CanSlot(Equip e)
     {
@@ -47,8 +48,8 @@ public class SlotEquipper : MonoBehaviour
 
     public void Mark(bool state)
     {
-        rim.color = state ? 
-            new Color(1f, 1f, 1f, 0.75f) :
-            new Color(1f, 1f, 1f, 0.25f);
+        rim.color = icon.color = state ? 
+            new Color(1f, 1f, 1f, 1f) :
+            new Color(1f, 1f, 1f, 0.6f);
     }
 }
