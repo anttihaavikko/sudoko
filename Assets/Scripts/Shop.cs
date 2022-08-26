@@ -6,6 +6,7 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     [SerializeField] private SpeechBubble speechBubble;
+    [SerializeField] private Character keeper;
 
     private void Start()
     {
@@ -27,5 +28,16 @@ public class Shop : MonoBehaviour
             "What're ya (sellin')?",
             "Got some (coin), stranger?"
         }.Random();
+    }
+
+    public void OnLeave()
+    {
+        Invoke(nameof(ShowLeaveMessage), 0.75f);
+    }
+
+    private void ShowLeaveMessage()
+    {
+        keeper.SkillEffect();
+        speechBubble.Show("Bye!");
     }
 }

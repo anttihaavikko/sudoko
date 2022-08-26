@@ -942,10 +942,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8922167069858933825, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8922167069858933825, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922167069858933825, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8922167069858933825, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
@@ -953,7 +957,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1756731412}
     - target: {fileID: 8922167069858933825, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 898451923}
+    - target: {fileID: 8922167069858933825, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922167069858933825, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8922167069858933825, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
@@ -961,11 +973,23 @@ PrefabInstance:
       value: Continue
       objectReference: {fileID: 0}
     - target: {fileID: 8922167069858933825, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnLeave
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922167069858933825, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Looter, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8922167069858933825, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Shop, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922167069858933825, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922167069858933825, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1498,7 +1522,7 @@ GameObject:
   - component: {fileID: 500594515}
   - component: {fileID: 500594516}
   m_Layer: 0
-  m_Name: Shop
+  m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1616,6 +1640,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &552444166 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6702135768918915395, guid: 34c99e0ed494e4130b1ba0bba51d9223, type: 3}
+  m_PrefabInstance: {fileID: 2574807219556238203}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8880a20d1740e8961cedce5f159057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &556274159
 GameObject:
   m_ObjectHideFlags: 0
@@ -2423,9 +2458,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898451919}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.59, y: 5.44, z: 0}
-  m_LocalScale: {x: 2.2905, y: 2.2905, z: 2.2905}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5899887, y: 5.4400024, z: 0}
+  m_LocalScale: {x: 2.2904997, y: 2.2904997, z: 2.2904997}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2458,6 +2493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speechBubble: {fileID: 2085465028}
+  keeper: {fileID: 552444166}
 --- !u!1001 &910075561
 PrefabInstance:
   m_ObjectHideFlags: 0
