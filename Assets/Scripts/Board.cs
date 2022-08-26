@@ -32,6 +32,8 @@ public class Board : MonoBehaviour
     [SerializeField] private Looter looter;
     [SerializeField] private GameObject gameOverStuff;
     [SerializeField] private GameObject bossCam;
+    [SerializeField] private Transform gridContainer;
+    [SerializeField] private GameObject numberPanel;
 
     private Character enemy;
     private readonly TileGrid<Tile> grid = new(9, 9);
@@ -131,7 +133,7 @@ public class Board : MonoBehaviour
         {
             for (var y = 0; y < 9; y++)
             {
-                var tile = Instantiate(tilePrefab, transform);
+                var tile = Instantiate(tilePrefab, gridContainer);
                 tile.Clear();
                 tile.transform.position = new Vector3(x - 4.1f + GetGap(x), -y + 4.1f - GetGap(y), 0);
                 grid.Set(tile, x, y);
@@ -325,6 +327,8 @@ public class Board : MonoBehaviour
             yield return new WaitForSeconds(0.7f);
         }
         
+        numberPanel.SetActive(false);
+        gridContainer.gameObject.SetActive(false);
         inventoryPanel.SetActive(true);
         // uiHider.HideWithDelay();
 

@@ -282,7 +282,7 @@ MonoBehaviour:
   - {fileID: 8922167071240640696}
   doColors: 1
   backColors:
-  - {r: 0.41451585, g: 0.764151, b: 0.6992437, a: 1}
+  - {r: 0.9843137, g: 0.38039216, b: 0.02745098, a: 1}
   frontColors:
   - {r: 0, g: 0, b: 0, a: 1}
   clickSound: -1

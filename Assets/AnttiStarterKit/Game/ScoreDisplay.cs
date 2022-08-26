@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using AnttiStarterKit.Animations;
 using AnttiStarterKit.Extensions;
 using TMPro;
@@ -8,7 +10,7 @@ namespace AnttiStarterKit.Game
 {
     public class ScoreDisplay : MonoBehaviour
     {
-        [SerializeField] private TMP_Text valueField, additionField, multiField;
+        [SerializeField] private List<TMP_Text> valueFields, additionFields, multiFields;
         [SerializeField] private Appearer additionAppearer;
 
         [SerializeField] private float minSpeed = 0.3f;
@@ -17,7 +19,7 @@ namespace AnttiStarterKit.Game
 
         [SerializeField] private bool separateThousands = true;
 
-        private Pulsater multiPulsate;
+        private List<Pulsater> multiPulsates = new();
 
         private int value;
         private float shownValue;
@@ -29,9 +31,10 @@ namespace AnttiStarterKit.Game
 
         private void Start()
         {
-            if (multiField)
+            
+            if (multiFields.Any())
             {
-                multiPulsate = multiField.GetComponent<Pulsater>();   
+                multiPulsates = multiFields.Select(f => f.GetComponent<Pulsater>()).ToList();   
             }
         }
 
@@ -40,7 +43,7 @@ namespace AnttiStarterKit.Game
             value = amount;
             multiplier = multi;
             shownValue = amount;
-            valueField.text = Format(value);
+            valueFields.ForEach(f => f.text = Format(value));
             ShowMulti();
         }
 
@@ -51,13 +54,13 @@ namespace AnttiStarterKit.Game
 
         private void ShowMulti()
         {
-            if (!multiField) return;
+            if (!multiFields.Any()) return;
             
-            multiField.text = $"x{multiplier}";
+            multiFields.ForEach(f => f.text = $"x{multiplier}");
 
-            if (multiPulsate)
+            if (multiPulsates.Any())
             {
-                multiPulsate.Pulsate();
+                multiPulsates.ForEach(p => p.Pulsate());
             }
         }
 
@@ -66,7 +69,7 @@ namespace AnttiStarterKit.Game
             if (Mathf.Abs(shownValue - value) < 0.1f) return;
             var speed = Mathf.Max(Mathf.Abs(value - shownValue) * Time.deltaTime * maxSpeed, minSpeed);
             shownValue = Mathf.MoveTowards(shownValue, value, speed);
-            valueField.text = Format(Mathf.RoundToInt(shownValue));
+            valueFields.ForEach(f => f.text = Format(Mathf.RoundToInt(shownValue)));
         }
 
         private string GetAdditionAsText()
@@ -82,7 +85,7 @@ namespace AnttiStarterKit.Game
             value += amt;
             addition += amt;
 
-            additionField.text = GetAdditionAsText();
+            additionFields.ForEach(f => f.text = GetAdditionAsText());
             additionAppearer.Show();
             
             CancelInvoke(nameof(ClearAddition));
