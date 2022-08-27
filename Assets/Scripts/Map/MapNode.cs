@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using AnttiStarterKit.Animations;
 using AnttiStarterKit.Extensions;
+using AnttiStarterKit.Managers;
+using AnttiStarterKit.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Random = UnityEngine.Random;
@@ -19,6 +21,8 @@ namespace Map
         [SerializeField] private GameObject outline;
         [SerializeField] private SpriteRenderer icon;
         [SerializeField] private List<Sprite> icons;
+        [SerializeField] private int pickSound = -1;
+        [SerializeField] private float pickSoundVolume = 1f;
 
         private readonly List<MapNode> connections = new();
         private readonly List<MapNode> backConnections = new();
@@ -97,6 +101,11 @@ namespace Map
             if (!canPick) return;
             MapState.Instance.x = x;
             MapState.Instance.y = y;
+
+            if (pickSound >= 0)
+            {
+                AudioManager.Instance.PlayEffectAt(pickSound, transform.position, pickSoundVolume);
+            }
             
             WorldMap.OnPick(this);
             this.StartCoroutine(() => SceneChanger.Instance.ChangeScene(GetScene()), 1.5f);
