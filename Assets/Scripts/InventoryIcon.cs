@@ -72,6 +72,8 @@ public class InventoryIcon : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void MouseDown()
     {
+        if (locked) return;
+        
         ItemTooltip.Instance.Hide();
         
         var t = transform;
@@ -90,6 +92,8 @@ public class InventoryIcon : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void MouseUp()
     {
+        if (locked) return;
+        
         var t = transform;
         dragging = false;
 
