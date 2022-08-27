@@ -3005,7 +3005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894eaa5182eb64ca5afcfef91441454f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundCollection: {fileID: 0}
+  soundCollection: {fileID: 11400000, guid: ba17dfde15fe54cb2afa0fb7c238aedc, type: 2}
   appearAfter: 1.6
   hideDelay: 0
   silent: 0
@@ -3059,7 +3059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894eaa5182eb64ca5afcfef91441454f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundCollection: {fileID: 0}
+  soundCollection: {fileID: 11400000, guid: ba17dfde15fe54cb2afa0fb7c238aedc, type: 2}
   appearAfter: 2.1
   hideDelay: 0
   silent: 0
@@ -3490,7 +3490,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7790369, y: 1}
+    m_SensorSize: {x: 1.7761194, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4027,7 +4027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894eaa5182eb64ca5afcfef91441454f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundCollection: {fileID: 0}
+  soundCollection: {fileID: 11400000, guid: ba17dfde15fe54cb2afa0fb7c238aedc, type: 2}
   appearAfter: 1.4
   hideDelay: 0
   silent: 0
@@ -4319,7 +4319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894eaa5182eb64ca5afcfef91441454f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundCollection: {fileID: 0}
+  soundCollection: {fileID: 11400000, guid: ba17dfde15fe54cb2afa0fb7c238aedc, type: 2}
   appearAfter: 1.8
   hideDelay: 0
   silent: 0
@@ -4498,7 +4498,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7790369, y: 1}
+    m_SensorSize: {x: 1.7761194, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5163,7 +5163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894eaa5182eb64ca5afcfef91441454f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundCollection: {fileID: 0}
+  soundCollection: {fileID: 11400000, guid: ba17dfde15fe54cb2afa0fb7c238aedc, type: 2}
   appearAfter: 2
   hideDelay: 0
   silent: 0
