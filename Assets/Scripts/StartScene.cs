@@ -38,4 +38,10 @@ public class StartScene : MonoBehaviour
         direction = -direction;
         t.localScale = t.localScale.WhereX(direction * scale);
     }
+
+    public void NameOrMap()
+    {
+        var scene = PlayerPrefs.HasKey("PlayerName") ? "Map" : "Name";
+        SceneChanger.Instance.ChangeScene(scene);
+    }
 }

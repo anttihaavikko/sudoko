@@ -8,6 +8,7 @@ using AnttiStarterKit.Extensions;
 using AnttiStarterKit.Game;
 using AnttiStarterKit.Utils;
 using Equipment;
+using Leaderboards;
 using Map;
 using Sudoku;
 using Sudoku.Model;
@@ -36,6 +37,7 @@ public class Board : MonoBehaviour
     [SerializeField] private Transform gridContainer;
     [SerializeField] private GameObject numberPanel;
     [SerializeField] private List<Character> enemyList;
+    [SerializeField] private ScoreManager scoreManager;
 
     private Character enemy;
     private readonly TileGrid<Tile> grid = new(9, 9);
@@ -369,6 +371,7 @@ public class Board : MonoBehaviour
 
     private void Lose()
     {
+        scoreManager.SubmitScore(PlayerPrefs.GetString("PlayerName"), scoreDisplay.Total, StateManager.Instance.Level, PlayerPrefs.GetString("PlayerId"));
         gameOverStuff.SetActive(true);
     }
 
