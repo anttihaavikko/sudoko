@@ -983,7 +983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1963528620512139712, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
       propertyPath: ShapeModule.m_Position.y
-      value: 1.99
+      value: 1.12
       objectReference: {fileID: 0}
     - target: {fileID: 2491547235521510978, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
       propertyPath: m_LocalScale.x

@@ -23,3 +23,4 @@ MonoBehaviour:
   hp: 0
   interrupts: 0
   price: 199
+  color: {r: 0.19842473, g: 0.8584906, b: 0.5464599, a: 1}
