@@ -179,7 +179,7 @@ public class Character : Lootable
         stats.Add(adds);
 
         var balanceAdds = GetSkillCount(SkillType.BalancedStats);
-        if (balanceAdds > 0)
+        if (balanceAdds > 0 && stats.attack == stats.defence)
         {
             stats.Add(new List<Stats>{ new() { attack = balanceAdds * 5, defence = balanceAdds * 5 }});
         }
