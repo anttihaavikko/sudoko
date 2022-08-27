@@ -10,11 +10,11 @@ public class Stats
     public int defence;
     public int speed;
 
-    public void Add(List<Stats> adds)
+    public void Add(List<Stats> adds, int multiplier = 1)
     {
-        attack += adds.Sum(a => a.attack);
-        defence += adds.Sum(a => a.defence);
-        speed += adds.Sum(a => a.speed);
+        attack += adds.Sum(a => a.attack) * multiplier;
+        defence += adds.Sum(a => a.defence) * multiplier;
+        speed += adds.Sum(a => a.speed) * multiplier;
     }
 
     public Stats Copy()

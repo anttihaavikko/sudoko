@@ -117,6 +117,11 @@ public class Character : Lootable
             RedoSkills();
         }
 
+        if (!isPlayer)
+        {
+            stats.Add(new List<Stats>{ stats }, MapState.Instance.World + 1);
+        }
+
         baseStats = stats.Copy();
         baseHealth = health.Max;
 
