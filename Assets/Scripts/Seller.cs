@@ -11,9 +11,11 @@ public class Seller : MonoBehaviour
     public void Sell(Equip e)
     {
         player.Remove(e);
-        player.RecalculateStats();
         goldDisplay.Add(e.GetPrice());
         StateManager.Instance.Gold = goldDisplay.Total;
+        
+        player.RecalculateStats();
+        player.UpdateState();
 
         var p = player.transform.position;
         AudioManager.Instance.PlayEffectFromCollection(9, p, 1f);

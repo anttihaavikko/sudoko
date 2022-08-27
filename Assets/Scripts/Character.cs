@@ -325,6 +325,8 @@ public class Character : Lootable
         {
             Remove(equippedSlot);
         }
+        
+        inventory.Remove(e);
     }
 
     public Equip Remove(int slotIndex)
@@ -379,7 +381,7 @@ public class Character : Lootable
         return -1;
     }
 
-    private void UpdateState()
+    public void UpdateState()
     {
         var equips = equipmentVisuals.Select(v => v.GetEquip()).Where(e => e != default);
         StateManager.Instance.UpdateEquips(equips, inventory);
