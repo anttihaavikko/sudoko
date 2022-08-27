@@ -102,6 +102,8 @@ namespace AnttiStarterKit.Animations
                 return;
             }
 
+            if (!showing) return;
+
             Hide();
             PlaySound();
         }
