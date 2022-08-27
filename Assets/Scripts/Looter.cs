@@ -121,7 +121,7 @@ public class Looter : MonoBehaviour
                 AudioManager.Instance.PlayEffectFromCollection(8, pos, 1.5f);
                 AudioManager.Instance.PlayEffectFromCollection(6, pos, 1.5f);
                 yield return new WaitForSeconds(0.2f);
-                player.Heal(20);
+                player.Heal(20 * (1 + player.GetSkillCount(SkillType.BetterPots)));
                 yield return new WaitForSeconds(0.5f);
             }
 
@@ -129,8 +129,10 @@ public class Looter : MonoBehaviour
             {
                 AudioManager.Instance.PlayEffectFromCollection(1, pos);
                 AudioManager.Instance.PlayEffectFromCollection(6, pos, 1.5f);
-                player.Shout($"+{d.Equipment.Gold} GOLD");
-                inventory.AddGold(d.Equipment.Gold);
+                var mod = Mathf.Pow(1.5f, player.GetSkillCount(SkillType.MoreCoin));
+                var amount = Mathf.RoundToInt(d.Equipment.Gold * mod);
+                player.Shout($"+{amount} GOLD");
+                inventory.AddGold(amount);
             }
             
             player.RecalculateStats();

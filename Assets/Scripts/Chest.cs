@@ -41,7 +41,7 @@ public class Chest : Lootable
             drops.Add(equipmentList.Random(type));
         }
 
-        if (Random.value < 0.5f)
+        if (Random.value < player.GetPotionChance() * 2)
         {
             drops.Add(equipmentList.Random(EquipmentSlot.Potion));
         }

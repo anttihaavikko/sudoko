@@ -178,6 +178,12 @@ public class Character : Lootable
         var adds = skills.Select(s => s.GetStats()).ToList();
         stats.Add(adds);
 
+        var balanceAdds = GetSkillCount(SkillType.BalancedStats);
+        if (balanceAdds > 0)
+        {
+            stats.Add(new List<Stats>{ new() { attack = balanceAdds * 5, defence = balanceAdds * 5 }});
+        }
+
         health.SetMax(baseHealth);
         var hpAddition = skills.Sum(s => s.GetHp());
         health.AddMax(hpAddition, !isPlayer);
@@ -278,7 +284,7 @@ public class Character : Lootable
             drops.Add(equipmentList.Random(EquipmentSlot.Gold));
         }
         
-        if (drops.Count < 5 && Random.value < 0.2f)
+        if (drops.Count < 5 && Random.value < GetPotionChance())
         {
             drops.Add(equipmentList.Random(EquipmentSlot.Potion));
         }
@@ -750,5 +756,10 @@ public class Character : Lootable
         });
         
         ghostParticles.SetActive(true);
+    }
+
+    public float GetPotionChance()
+    {
+        return 0.2f * (1 + GetSkillCount(SkillType.MorePots));
     }
 }

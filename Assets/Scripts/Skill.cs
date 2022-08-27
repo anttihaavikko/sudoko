@@ -108,5 +108,9 @@ public enum SkillType
     StartWithFill,
     MultiGuard,
     BiggerMultiOnLowDef,
-    AutoFillOnTimer
+    AutoFillOnTimer,
+    MoreCoin,
+    BetterPots,
+    MorePots,
+    BalancedStats
 }
