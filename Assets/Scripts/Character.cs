@@ -47,8 +47,10 @@ public class Character : Lootable
     [SerializeField] private Material ghostMaterial;
     [SerializeField] private List<LineRenderer> limbs;
     [SerializeField] private GameObject ghostParticles;
+    [SerializeField] private SpriteRenderer ghostFlattener;
 
     [SerializeField] private List<SpriteRenderer> transparentOnGhost;
+    [SerializeField] private List<SpriteRenderer> keepVisibleOnGhost;
 
     private readonly List<Character> ghosts = new();
 
@@ -639,13 +641,13 @@ public class Character : Lootable
         {
             if (s.GhostIndex < 0) return;
             var ghost = Instantiate(mobList.Get(s.GhostIndex), transform.position + Vector3.left * offset * ghostDistance, Quaternion.identity);
-            ghost.Ghostify(s.GhostEquips);
+            ghost.Ghostify(s.GhostEquips, new Color(s.color.r, s.color.g, s.color.b, 0.9f));
             ghosts.Add(ghost);
             offset++;
         });
     }
 
-    private void Ghostify(List<Equip> equips)
+    private void Ghostify(List<Equip> equips, Color color)
     {
         equipmentVisuals.ForEach(v => v.Hide());
         isGhost = true;
@@ -654,14 +656,36 @@ public class Character : Lootable
         shadow.SetActive(false);
         
         equips.ForEach(ShowEquip);
+
+        // flasher.Colorize(color, true);
+        // flasher.ChangeMaterialForAll(ghostMaterial);
+        // transparentOnGhost.ForEach(s => s.color = Color.clear);
+
+        flasher.AllSprites.ForEach(s =>
+        {
+            s.enabled = false;
+            if (s.GetComponent<SpriteMask>()) return;
+            var mask = s.AddComponent<SpriteMask>();
+            mask.sprite = s.sprite;
+        });
         
-        flasher.Colorize(new Color(1, 1, 1, 0.4f), true);
-        flasher.ChangeMaterialForAll(ghostMaterial);
-        transparentOnGhost.ForEach(s => s.color = Color.clear);
+        keepVisibleOnGhost.ForEach(s =>
+        {
+            s.enabled = true;
+            s.color = Color.white;
+        });
+        
+        ghostFlattener.gameObject.SetActive(true);
+        ghostFlattener.color = color;
 
         Scale(0.5f);
         
-        limbs.ForEach(l => l.widthMultiplier = 0.5f);
+        limbs.ForEach(l =>
+        {
+            l.widthMultiplier = 0.5f;
+            l.startColor = l.endColor = color;
+            l.material = ghostMaterial;
+        });
         
         ghostParticles.SetActive(true);
     }

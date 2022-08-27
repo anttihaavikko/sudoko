@@ -82,6 +82,11 @@ namespace Equipment
         public void AddSkill(Skill s)
         {
             if (IsConsumable()) return;
+            if (!skills.Any() && slot == EquipmentSlot.Soul)
+            {
+                color = s.Color;
+                trimColor = s.Color;
+            } 
             skills.Add(s.Copy());
         }
 

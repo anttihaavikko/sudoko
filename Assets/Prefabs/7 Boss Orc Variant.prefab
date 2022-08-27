@@ -1064,7 +1064,7 @@ PrefabInstance:
       objectReference: {fileID: 3301128704987089033}
     - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: spritesNeedingShader.Array.size
-      value: 15
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: spritesNeedingShader.Array.data[11]
@@ -1082,6 +1082,30 @@ PrefabInstance:
       propertyPath: spritesNeedingShader.Array.data[14]
       value: 
       objectReference: {fileID: 5935110346836461128}
+    - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: spritesNeedingShader.Array.data[15]
+      value: 
+      objectReference: {fileID: 961831617001483290}
+    - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: spritesNeedingShader.Array.data[16]
+      value: 
+      objectReference: {fileID: 8994379129674229608}
+    - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: spritesNeedingShader.Array.data[17]
+      value: 
+      objectReference: {fileID: 396847974730399462}
+    - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: spritesNeedingShader.Array.data[18]
+      value: 
+      objectReference: {fileID: 4157199986175540944}
+    - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: spritesNeedingShader.Array.data[19]
+      value: 
+      objectReference: {fileID: 7303500756986642088}
+    - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: spritesNeedingShader.Array.data[20]
+      value: 
+      objectReference: {fileID: 6068897122951776242}
     - target: {fileID: 1131941160878101220, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Color.b
       value: 0.27999288

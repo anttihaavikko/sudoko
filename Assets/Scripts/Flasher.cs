@@ -16,6 +16,8 @@ public class Flasher : MonoBehaviour
     private List<Color> spriteColors, lineColors;
     private List<Material> defaultMaterials;
 
+    public List<SpriteRenderer> AllSprites => sprites.Concat(spritesNeedingShader).ToList();
+
     private void Start()
     {
         spriteColors = sprites.Select(s => s.color).ToList();

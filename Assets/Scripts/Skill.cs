@@ -12,10 +12,12 @@ public class Skill : ScriptableObject
     [SerializeField] private int hp;
     [SerializeField] private bool interrupts;
     [SerializeField] private int price = 50;
+    [SerializeField] private Color color = Color.white;
 
     private int first, second;
 
     public int Price => price;
+    public Color Color => color;
 
     public void Debug()
     {
