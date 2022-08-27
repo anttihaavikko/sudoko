@@ -49,6 +49,7 @@ public class StateManager : Manager<StateManager>
         Score = 0;
         Multiplier = 1;
         Gold = 100;
+        Health = 20;
         gear.Clear();
         inventory.Clear();
     }
