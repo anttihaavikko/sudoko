@@ -247,7 +247,7 @@ public class Character : Lootable
         GearEnemy();
     }
 
-    private void GearEnemy()
+    public void GearEnemy()
     {
         var indexList = new List<int>();
         
