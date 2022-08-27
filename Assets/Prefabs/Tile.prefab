@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7054881884180661462
 Transform:
   m_ObjectHideFlags: 0
@@ -705,6 +705,8 @@ MonoBehaviour:
   shaker: {fileID: 5380619560652195081}
   disabler: {fileID: 3003466176894366611}
   disableMark: {fileID: 9197620433993028257}
+  filling: {fileID: 9011402773033395795}
+  hoverColor: {r: 1, g: 0.9372549, b: 0.8392157, a: 1}
 --- !u!61 &5999015640931403748
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -751,6 +753,38 @@ MonoBehaviour:
         - m_Target: {fileID: 9011402773242248664}
           m_TargetAssemblyTypeName: Tile, Assembly-CSharp
           m_MethodName: Fill
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 9011402773242248664}
+          m_TargetAssemblyTypeName: Tile, Assembly-CSharp
+          m_MethodName: HoverIn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 9011402773242248664}
+          m_TargetAssemblyTypeName: Tile, Assembly-CSharp
+          m_MethodName: HoverOut
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
