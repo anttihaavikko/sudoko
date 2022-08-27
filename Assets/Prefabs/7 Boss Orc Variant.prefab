@@ -1212,7 +1212,9 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 3d40d51f29f834e62bb15199caa0cd45, type: 2}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: description
-      value: Lorem ipsum dolor sit amet.
+      value: One of the few surviving legends of the orcish tribe who has survived
+        thousands of battles. Carries his scars as a tryphy and would probably do
+        the same with your head.
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: stats.speed
