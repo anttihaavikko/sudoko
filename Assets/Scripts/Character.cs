@@ -469,11 +469,6 @@ public class Character : Lootable
         AudioManager.Instance.PlayEffectFromCollection(4, p, 0.5f);
         AudioManager.Instance.PlayEffectFromCollection(6, p, 2.5f);
 
-        if (hurtSounds)
-        {
-            AudioManager.Instance.PlayEffectFromCollection(hurtSounds, p);
-        }
-
         anim.SetTrigger(Hurt);
         flasher.Flash();
 
@@ -481,7 +476,13 @@ public class Character : Lootable
         {
             cam.BaseEffect(0.1f);
             EffectManager.AddTextPopup("MISS", p.RandomOffset(0.2f));
+            AudioManager.Instance.PlayEffectAt(2, p, 0.4f);   
             return;
+        }
+        
+        if (hurtSounds)
+        {
+            AudioManager.Instance.PlayEffectFromCollection(hurtSounds, p);
         }
         
         cam.BaseEffect(0.2f);
