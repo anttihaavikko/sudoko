@@ -1828,6 +1828,22 @@ PrefabInstance:
       propertyPath: appearAfter
       value: 2.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7160633061307200163, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160633061307200163, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160633061307200163, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160633061307200163, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8922167069858933825, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1

@@ -439,7 +439,7 @@ public class Character : Lootable
         AudioManager.Instance.PlayEffectAt(6, cp, 1.5f);
         AudioManager.Instance.PlayEffectAt(7, cp, 1.5f);
         
-        AudioManager.Instance.PlayEffectFromCollection(7, cp, 3f);
+        AudioManager.Instance.PlayEffectFromCollection(7, cp, 1.5f);
         
         EffectManager.AddEffects(new []{ 1, 2, 4, 5 }, cp.WhereZ(0));
         
