@@ -685,7 +685,7 @@ public class Character : Lootable
         {
             var index = s.GhostIndex < 0 ? 10 : s.GhostIndex;
             var ghost = Instantiate(mobList.Get(index), transform.position + Vector3.left * (offset * ghostDistance + ghostGap), Quaternion.identity);
-            ghost.Ghostify(s.GhostEquips, new Color(s.color.r, s.color.g, s.color.b, 0.75f));
+            ghost.Ghostify(s.GhostEquips, new Color(s.color.r, s.color.g, s.color.b, 0.6f));
             ghosts.Add(ghost);
             offset++;
         });
