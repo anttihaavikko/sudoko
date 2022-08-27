@@ -64,7 +64,7 @@ namespace AnttiStarterKit.Managers
 
 		public void Lowpass(bool state = true)
 		{
-			if (!lowpass) lowpass = Camera.main.GetComponent<AudioLowPassFilter>();
+			if (!lowpass) lowpass = curMusic.GetComponent<AudioLowPassFilter>();
 
 			doingLowpass = state;
 			doingHighpass = false;

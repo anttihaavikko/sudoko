@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AnttiStarterKit.Animations;
 using AnttiStarterKit.Extensions;
+using AnttiStarterKit.Managers;
 using AnttiStarterKit.Utils;
 using UnityEngine;
 using Random = UnityEngine.Random;

@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using AnttiStarterKit.Animations;
 using AnttiStarterKit.Extensions;
 using AnttiStarterKit.Game;
+using AnttiStarterKit.Managers;
 using AnttiStarterKit.Utils;
 using Equipment;
 using Leaderboards;
@@ -308,6 +309,8 @@ public class Board : MonoBehaviour
 
     private IEnumerator EndWalk()
     {
+        // AudioManager.Instance.Highpass();
+        
         scoreDisplay.Add(enemy.Score * (StateManager.Instance.Level + 1));
 
         looter.GenerateDrops();
@@ -359,6 +362,7 @@ public class Board : MonoBehaviour
     private IEnumerator ChangeScene()
     {
         player.WalkTo(20, 0, false);
+        // AudioManager.Instance.Highpass(false);
         yield return new WaitForSeconds(1.5f);
         Win();
     }
@@ -371,6 +375,8 @@ public class Board : MonoBehaviour
 
     private void Lose()
     {
+        this.StartCoroutine(() => AudioManager.Instance.PlayEffectAt(10, Vector3.zero), 0.2f);
+        AudioManager.Instance.TargetPitch = 0f;
         scoreManager.SubmitScore(PlayerPrefs.GetString("PlayerName"), scoreDisplay.Total, StateManager.Instance.Level, PlayerPrefs.GetString("PlayerId"));
         gameOverStuff.SetActive(true);
     }

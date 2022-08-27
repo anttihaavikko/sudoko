@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using AnttiStarterKit.Animations;
+using AnttiStarterKit.Extensions;
 using AnttiStarterKit.Managers;
 using Equipment;
 using UnityEngine;
@@ -75,6 +76,13 @@ public class Looter : MonoBehaviour
             var rot = Quaternion.Euler(0, 0, Random.Range(0, 360f));
             lastPos = targetPos.x;
             offset++;
+
+            this.StartCoroutine(() =>
+            {
+                AudioManager.Instance.PlayEffectFromCollection(4, targetPos, 0.3f);
+                AudioManager.Instance.PlayEffectFromCollection(6, targetPos, 1.2f);
+                AudioManager.Instance.PlayEffectFromCollection(7, targetPos, 0.1f);
+            }, 0.5f * speed - 0.1f);
         });
     }
     

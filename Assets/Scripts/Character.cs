@@ -419,7 +419,16 @@ public class Character : Lootable
 
     public void Die()
     {
-        EffectManager.AddEffects(new []{ 1, 2 }, center.position);
+        var cp = center.position;
+        
+        AudioManager.Instance.PlayEffectAt(4, cp, 1.5f);
+        AudioManager.Instance.PlayEffectAt(5, cp, 2f);
+        AudioManager.Instance.PlayEffectAt(6, cp, 1.5f);
+        AudioManager.Instance.PlayEffectAt(7, cp, 1.5f);
+        
+        AudioManager.Instance.PlayEffectFromCollection(7, cp, 3f);
+        
+        EffectManager.AddEffects(new []{ 1, 2 }, cp);
         
         cam.BaseEffect(0.4f);
         root.SetActive(false);
@@ -451,7 +460,9 @@ public class Character : Lootable
 
     public void Heal(int amount)
     {
-        EffectManager.AddEffect(3, center.position);
+        var cp = center.position;
+        AudioManager.Instance.PlayEffectAt(8, cp, 0.8f);
+        EffectManager.AddEffect(3, cp);
         SkillEffect();
         health.Heal(amount);
         var pop = EffectManager.AddTextPopup(amount.ToString(), hitPos.position.RandomOffset(0.2f));

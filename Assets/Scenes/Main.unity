@@ -707,6 +707,46 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3640834428470190209, guid: c745523685a0a4e91876a4b6aa2bb94e, type: 3}
   m_PrefabInstance: {fileID: 3640834428391472561}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &259348727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5221145772217547603, guid: 902788c77635a4697a019f6c18848070, type: 3}
+  m_PrefabInstance: {fileID: 5221145772955226238}
+  m_PrefabAsset: {fileID: 0}
+--- !u!169 &259348730
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259348727}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!165 &259348731
+AudioHighPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259348727}
+  m_Enabled: 1
+  m_CutoffFrequency: 10
+  m_HighpassResonanceQ: 1
 --- !u!1 &275533422
 GameObject:
   m_ObjectHideFlags: 0
@@ -6012,14 +6052,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 5221145772345018491, guid: 902788c77635a4697a019f6c18848070, type: 3}
-      propertyPath: effects.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5221145772345018491, guid: 902788c77635a4697a019f6c18848070, type: 3}
-      propertyPath: effects.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: ba82f453a1aae4f959bfa21a635e6613, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 902788c77635a4697a019f6c18848070, type: 3}
 --- !u!1001 &6734564064110494804

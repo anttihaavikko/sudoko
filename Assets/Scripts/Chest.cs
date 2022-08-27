@@ -70,7 +70,7 @@ public class Chest : Lootable
     {
         yield return new WaitForSeconds(2f);
         player.AttackAnimation();
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.15f);
         var position = transform.position;
         AudioManager.Instance.PlayEffectFromCollection(6, position, 2f);
         AudioManager.Instance.PlayEffectFromCollection(0, position);
