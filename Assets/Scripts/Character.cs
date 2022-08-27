@@ -683,8 +683,8 @@ public class Character : Lootable
         var offset = 1;
         souls.ForEach(s =>
         {
-            if (s.GhostIndex < 0) return;
-            var ghost = Instantiate(mobList.Get(s.GhostIndex), transform.position + Vector3.left * (offset * ghostDistance + ghostGap), Quaternion.identity);
+            var index = s.GhostIndex < 0 ? 10 : s.GhostIndex;
+            var ghost = Instantiate(mobList.Get(index), transform.position + Vector3.left * (offset * ghostDistance + ghostGap), Quaternion.identity);
             ghost.Ghostify(s.GhostEquips, new Color(s.color.r, s.color.g, s.color.b, 0.75f));
             ghosts.Add(ghost);
             offset++;

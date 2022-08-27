@@ -29,7 +29,7 @@ namespace Equipment
         private List<Equip> slots = new();
 
         private int ghostIndex = -1;
-        private List<Equip> ghostEquips;
+        private List<Equip> ghostEquips = new();
 
         public int SlotCount => slotCount;
 
