@@ -55,10 +55,10 @@ public class Skill : ScriptableObject
     public string GetDescription()
     {
         return description
-            .Replace("(", "<color=red>")
+            .Replace("(", "<color=#FB6107>")
             .Replace(")", "</color>")
-            .Replace("[1]", TextUtils.TextWith(first.ToString(), Color.red))
-            .Replace("[2]", TextUtils.TextWith(second.ToString(), Color.red));
+            .Replace("[1]", TextUtils.TextWith(first.ToString(), new Color(0.9843137f, 0.3803922f, 0.02745098f)))
+            .Replace("[2]", TextUtils.TextWith(second.ToString(), new Color(0.9843137f, 0.3803922f, 0.02745098f)));
     }
 
     public Stats GetStats()
