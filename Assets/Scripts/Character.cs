@@ -441,7 +441,7 @@ public class Character : Lootable
         
         AudioManager.Instance.PlayEffectFromCollection(7, cp, 3f);
         
-        EffectManager.AddEffects(new []{ 1, 2 }, cp);
+        EffectManager.AddEffects(new []{ 1, 2, 4, 5 }, cp.WhereZ(0));
         
         cam.BaseEffect(0.4f);
         root.SetActive(false);
