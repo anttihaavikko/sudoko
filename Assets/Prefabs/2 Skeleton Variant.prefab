@@ -528,6 +528,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: keepVisibleOnGhost.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: equipmentVisuals.Array.data[2]
       value: 
       objectReference: {fileID: 7476367429927162721}

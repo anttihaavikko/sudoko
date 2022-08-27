@@ -51,6 +51,7 @@ public class Character : Lootable
 
     [SerializeField] private List<SpriteRenderer> transparentOnGhost;
     [SerializeField] private List<SpriteRenderer> keepVisibleOnGhost;
+    [SerializeField] private Material defaultSpriteMaterial;
 
     private readonly List<Character> ghosts = new();
 
@@ -63,7 +64,8 @@ public class Character : Lootable
     private float moveTimer;
     private bool fightStarted;
     private int guards;
-    private float ghostDistance = 1.2f;
+    private float ghostDistance = 0.9f;
+    private float ghostGap = 0.9f;
     private bool isGhost;
 
     public int CurrentHealth => health.Current;
@@ -122,6 +124,19 @@ public class Character : Lootable
         
         if (isPlayer)
         {
+            flasher.AllSprites.ForEach(s =>
+            {
+                s.gameObject.layer = 9;
+                if (s.GetComponent<SpriteMask>()) return;
+                var mask = s.AddComponent<SpriteMask>();
+                mask.sprite = s.sprite;
+            });
+
+            ghostFlattener.material = defaultSpriteMaterial;
+            var go = ghostFlattener.gameObject;
+            go.SetActive(true);
+            go.layer = 8;
+            
             transform.position += Vector3.left * 7;
             SpawnGhosts();
             Invoke(nameof(StartWalk), 0.1f);
@@ -373,7 +388,7 @@ public class Character : Lootable
         ghosts.ForEach(g =>
         {
             var i = index;
-            g.StartCoroutine(() => g.WalkTo(pos - i * ghostDistance, 0, false), 0.1f * index);
+            g.StartCoroutine(() => g.WalkTo(pos - i * (ghostDistance + ghostGap), 0, false), 0.1f * index);
             index++;
         });
         
@@ -640,8 +655,8 @@ public class Character : Lootable
         souls.ForEach(s =>
         {
             if (s.GhostIndex < 0) return;
-            var ghost = Instantiate(mobList.Get(s.GhostIndex), transform.position + Vector3.left * offset * ghostDistance, Quaternion.identity);
-            ghost.Ghostify(s.GhostEquips, new Color(s.color.r, s.color.g, s.color.b, 0.9f));
+            var ghost = Instantiate(mobList.Get(s.GhostIndex), transform.position + Vector3.left * (offset * ghostDistance + ghostGap), Quaternion.identity);
+            ghost.Ghostify(s.GhostEquips, new Color(s.color.r, s.color.g, s.color.b, 0.5f));
             ghosts.Add(ghost);
             offset++;
         });
@@ -672,7 +687,7 @@ public class Character : Lootable
         keepVisibleOnGhost.ForEach(s =>
         {
             s.enabled = true;
-            s.color = Color.white;
+            s.color = new Color(1, 1, 1, 0.75f);
         });
         
         ghostFlattener.gameObject.SetActive(true);

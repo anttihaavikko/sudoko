@@ -845,6 +845,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: keepVisibleOnGhost.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: equipmentVisuals.Array.data[1]
       value: 
       objectReference: {fileID: 7476367429927162721}
@@ -975,6 +979,18 @@ PrefabInstance:
     - target: {fileID: 6764983838236610905, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -207.795
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057961883804925052, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057961883804925052, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 2.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057961883804925052, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: ShapeModule.m_Position.y
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 7296922935165563704, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_LocalRotation.w

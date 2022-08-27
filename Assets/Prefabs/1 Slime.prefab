@@ -2307,6 +2307,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2124485493727196006, guid: eb69a77ea7aa94a7793de51ced1bd074, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 1.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124485493727196006, guid: eb69a77ea7aa94a7793de51ced1bd074, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124485493727196006, guid: eb69a77ea7aa94a7793de51ced1bd074, type: 3}
+      propertyPath: ShapeModule.m_Position.y
+      value: 0.32
+      objectReference: {fileID: 0}
     - target: {fileID: 3337926981267689001, guid: eb69a77ea7aa94a7793de51ced1bd074, type: 3}
       propertyPath: ShapeModule.m_Scale.x
       value: 1.285

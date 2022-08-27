@@ -2578,7 +2578,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 200
   m_Sprite: {fileID: 21300000, guid: 95d3625293ffa48b0b49242f526d9fb8, type: 3}
-  m_Color: {r: 0.9843137, g: 0.38039216, b: 0.02745098, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4090,6 +4090,7 @@ MonoBehaviour:
   - {fileID: 3421301954140381447}
   - {fileID: 1131941160878101220}
   - {fileID: 8606574210910002274}
+  defaultSpriteMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &1045587445051442415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4868,6 +4869,14 @@ PrefabInstance:
     - target: {fileID: 1713548375643236398, guid: eb69a77ea7aa94a7793de51ced1bd074, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124485493727196006, guid: eb69a77ea7aa94a7793de51ced1bd074, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124485493727196006, guid: eb69a77ea7aa94a7793de51ced1bd074, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 1.47
       objectReference: {fileID: 0}
     - target: {fileID: 3337926981267689001, guid: eb69a77ea7aa94a7793de51ced1bd074, type: 3}
       propertyPath: ShapeModule.m_Scale.x
