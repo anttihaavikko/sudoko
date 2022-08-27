@@ -1539,6 +1539,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPos: {fileID: 0}
   title: Slime
+  description: A weak little slime ball with no special abilities. Just a mere hurdle
+    in your way, nothing to write home about.
   isBoss: 0
   score: 75
   stats:

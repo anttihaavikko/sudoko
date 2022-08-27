@@ -14,7 +14,7 @@ public class NumberPicker : MonoBehaviour
 
     private void Start()
     {
-        SelectNumber(1);
+        SelectNumber(StateManager.Instance.SelectedNumber);
     }
 
     private void Update()
@@ -75,5 +75,6 @@ public class NumberPicker : MonoBehaviour
         current = buttons[number - 1];
         current.Select();
         Number = number;
+        StateManager.Instance.SelectedNumber = Number;
     }
 }

@@ -21,6 +21,7 @@ using Random = UnityEngine.Random;
 public class Character : Lootable
 {
     [SerializeField] private string title;
+    [TextArea][SerializeField] private string description;
     [SerializeField] private bool isBoss;
     [SerializeField] private int score = 100;
     [SerializeField] private Stats stats;
@@ -203,8 +204,7 @@ public class Character : Lootable
         sb.Append(TextUtils.TextWith(title, 30));
         sb.Append(TextUtils.TextWith("\n", 13));
         
-        const string text = "Lorem ipsum dolor sit amet etc something something maybe description?";
-        sb.Append(TextUtils.TextWith(text, Color.gray, 15));
+        sb.Append(TextUtils.TextWith(description, Color.gray, 15));
         
         // sb.Append($"Attack: {stats.attack}\n");
         // sb.Append($"Speed: 1 / {stats.speed} s\n");

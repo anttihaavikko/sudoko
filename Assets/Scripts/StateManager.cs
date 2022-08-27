@@ -22,6 +22,7 @@ public class StateManager : Manager<StateManager>
     public int Score { get; set; }
     public int Multiplier { get; set; } = 1;
     public bool ExtraBoss { get; set; }
+    public int SelectedNumber { get; set; } = 1;
 
     private void Start()
     {
