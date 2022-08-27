@@ -19,6 +19,7 @@ namespace Equipment
         public float groundAngle;
         public bool masked;
         public float groundOffset;
+        public bool isSword;
 
         private List<Skill> skills = new();
         private int slotCount;
@@ -57,6 +58,7 @@ namespace Equipment
             flipped = blueprint.canFlip && Random.value < 0.5f;
             masked = blueprint.masked;
             groundOffset = blueprint.groundOffset;
+            isSword = blueprint.isSword;
 
             slotCount = GetRandomSlotCount();
 

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ed6741a13249ff91a11647becccdea, type: 3}
+  m_Name: _Swords
+  m_EditorClassIdentifier: 
+  volume: 1
+  clips:
+  - {fileID: 8300000, guid: 751e5dc045e224e2d99ea4c5876c326d, type: 3}
+  - {fileID: 8300000, guid: f8e9bfd7f3b214d2187e91b247a9e92c, type: 3}
+  - {fileID: 8300000, guid: 1b39b1aab3150410a826cc374323746a, type: 3}
+  - {fileID: 8300000, guid: 6cd15a00141eb4924a7b9e8775710b9c, type: 3}
+  - {fileID: 8300000, guid: 91931efeb592146a0b2a5b6c5468afa6, type: 3}

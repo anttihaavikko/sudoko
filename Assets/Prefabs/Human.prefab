@@ -3937,6 +3937,7 @@ GameObject:
   - component: {fileID: 4576660106929105836}
   - component: {fileID: 1045587445051442415}
   - component: {fileID: 8646306808466274670}
+  - component: {fileID: 5353817144044948951}
   m_Layer: 0
   m_Name: Human
   m_TagString: Untagged
@@ -4028,6 +4029,7 @@ MonoBehaviour:
     speed: 0
   skillPicks: 0
   startsWith: {fileID: 0}
+  hurtSounds: {fileID: 11400000, guid: 8b91625a063e140ee8874405bfcc2463, type: 2}
   flasher: {fileID: 1045587445051442415}
   statsDisplay: {fileID: 7672847521810055198}
   health:
@@ -4143,6 +4145,21 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5353817144044948951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8973993410123798356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e288b794a54f699b4b3699b8b19255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 11400000, guid: 569555ac68ee5410db5e9a13705caa45, type: 2}
+  composition: {fileID: 0}
+  volume: 1.5
 --- !u!1 &8973993410285326932
 GameObject:
   m_ObjectHideFlags: 0

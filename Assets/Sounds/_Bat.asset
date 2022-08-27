@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ed6741a13249ff91a11647becccdea, type: 3}
+  m_Name: _Bat
+  m_EditorClassIdentifier: 
+  volume: 2
+  clips:
+  - {fileID: 8300000, guid: d7517b2e7df34430a920e24b14e47d9e, type: 3}
+  - {fileID: 8300000, guid: ad142a9e298e341129ccacdad72b7f87, type: 3}
+  - {fileID: 8300000, guid: 4b82d847dc8944b1ab9112d391e62bbd, type: 3}
+  - {fileID: 8300000, guid: 2313c7a4d40114f89a877df785a55505, type: 3}
+  - {fileID: 8300000, guid: 4b98ffd56fd644a67b47e0353a7002b1, type: 3}
+  - {fileID: 8300000, guid: b2057eabd891343eaaae9b1cc7ee5663, type: 3}
+  - {fileID: 8300000, guid: 9bdf447e105fb4c2da0021ace0e671e5, type: 3}
+  - {fileID: 8300000, guid: 76dafb2f18ba64a36b4d39b91348ffd4, type: 3}
+  - {fileID: 8300000, guid: 31843f623a0f74964968eaea92ba925d, type: 3}

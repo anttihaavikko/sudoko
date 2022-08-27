@@ -3,6 +3,7 @@ using System.Collections;
 using System.Linq;
 using AnttiStarterKit.Animations;
 using AnttiStarterKit.Extensions;
+using AnttiStarterKit.Managers;
 using AnttiStarterKit.Utils;
 using Equipment;
 using UnityEngine;
@@ -70,6 +71,9 @@ public class Chest : Lootable
         yield return new WaitForSeconds(2f);
         player.AttackAnimation();
         yield return new WaitForSeconds(0.1f);
+        var position = transform.position;
+        AudioManager.Instance.PlayEffectFromCollection(6, position, 2f);
+        AudioManager.Instance.PlayEffectFromCollection(0, position);
         anim.SetTrigger(Open);
         yield return new WaitForSeconds(0.2f);
         looter.GenerateDrops();

@@ -90,6 +90,11 @@ public class Inventory : Manager<Inventory>
     {
         player.Remove(e);
         RecalculateStats();
+        
+        var pos = player.transform.position;
+        AudioManager.Instance.PlayEffectFromCollection(7, pos, 0.4f);
+        AudioManager.Instance.PlayEffectFromCollection(4, pos, 0.3f);
+        AudioManager.Instance.PlayEffectFromCollection(6, pos, 1.5f);
     }
 
     public void RecalculateStats()

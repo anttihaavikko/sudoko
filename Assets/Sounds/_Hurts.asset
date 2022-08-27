@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ed6741a13249ff91a11647becccdea, type: 3}
+  m_Name: _Hurts
+  m_EditorClassIdentifier: 
+  volume: 2
+  clips:
+  - {fileID: 8300000, guid: f47e21db44f954ceda8c618b6e81bf96, type: 3}
+  - {fileID: 8300000, guid: c279825137c8e4862886c26cf033b1b9, type: 3}
+  - {fileID: 8300000, guid: fd30f6a7faa3b4887ab51d1b23c3201b, type: 3}
+  - {fileID: 8300000, guid: ad5da3036fb6c41349770c9b48934632, type: 3}
+  - {fileID: 8300000, guid: f2121f39b6388467dad19c3db1d2f370, type: 3}
+  - {fileID: 8300000, guid: 297c5f758b00c4801906ef9ac8476609, type: 3}
+  - {fileID: 8300000, guid: 3a98fcf54856b48699a419716130cef2, type: 3}
+  - {fileID: 8300000, guid: 9901fbd7d6c7844aba38822474a18bc2, type: 3}

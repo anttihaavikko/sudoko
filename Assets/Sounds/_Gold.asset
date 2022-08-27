@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ed6741a13249ff91a11647becccdea, type: 3}
+  m_Name: _Gold
+  m_EditorClassIdentifier: 
+  volume: 1
+  clips:
+  - {fileID: 8300000, guid: 0405e5fe8fce34fa8b27bb42eb719a45, type: 3}
+  - {fileID: 8300000, guid: 245124fb9f2c04be5b66384df507cd65, type: 3}
+  - {fileID: 8300000, guid: e11a44057d5e540a98eaa6ef570b63b9, type: 3}
+  - {fileID: 8300000, guid: 77de5f201fabf41919e52401aef02afc, type: 3}
+  - {fileID: 8300000, guid: 378afad3796754e3eac033327dfda25c, type: 3}
+  - {fileID: 8300000, guid: 1c5bd0b3120e14731818e70c6be570bf, type: 3}
+  - {fileID: 8300000, guid: 8112c543e23124a8bbc79ac372cad2f0, type: 3}
+  - {fileID: 8300000, guid: e2598879deffe48909a3fd3dd2ab7c65, type: 3}
+  - {fileID: 8300000, guid: bd7d6ca70c8f14fd9b66a7a3f738e0cb, type: 3}

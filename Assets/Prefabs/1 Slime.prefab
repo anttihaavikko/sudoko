@@ -1547,6 +1547,7 @@ MonoBehaviour:
     speed: 15
   skillPicks: 0
   startsWith: {fileID: 11400000, guid: 3d40d51f29f834e62bb15199caa0cd45, type: 2}
+  hurtSounds: {fileID: 11400000, guid: 8d90cdf071af6439885435eb2ad8e49b, type: 2}
   flasher: {fileID: 2491547236678160808}
   statsDisplay: {fileID: 5813015162769065252}
   health:
@@ -1601,6 +1602,7 @@ MonoBehaviour:
   - {fileID: 2491547236079320048}
   - {fileID: 2491547236268891011}
   - {fileID: 2491547237426326700}
+  defaultSpriteMaterial: {fileID: 0}
 --- !u!114 &2491547236678160808
 MonoBehaviour:
   m_ObjectHideFlags: 0

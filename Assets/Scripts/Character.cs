@@ -8,6 +8,7 @@ using UnityEngine;
 using AnttiStarterKit.Extensions;
 using AnttiStarterKit.Game;
 using AnttiStarterKit.Managers;
+using AnttiStarterKit.ScriptableObjects;
 using AnttiStarterKit.Utils;
 using AnttiStarterKit.Visuals;
 using Equipment;
@@ -25,7 +26,9 @@ public class Character : Lootable
     [SerializeField] private Stats stats;
     [SerializeField] private int skillPicks;
     [SerializeField] private SkillSet startsWith;
-    
+
+    [SerializeField] private SoundCollection hurtSounds;
+
     [SerializeField] private Flasher flasher;
     [SerializeField] private StatsDisplay statsDisplay;
     [SerializeField] private Health health;
@@ -124,18 +127,18 @@ public class Character : Lootable
         
         if (isPlayer)
         {
-            flasher.AllSprites.ForEach(s =>
-            {
-                s.gameObject.layer = 9;
-                if (s.GetComponent<SpriteMask>()) return;
-                var mask = s.AddComponent<SpriteMask>();
-                mask.sprite = s.sprite;
-            });
-
-            ghostFlattener.material = defaultSpriteMaterial;
-            var go = ghostFlattener.gameObject;
-            go.SetActive(true);
-            go.layer = 8;
+            // flasher.AllSprites.ForEach(s =>
+            // {
+            //     s.gameObject.layer = 9;
+            //     if (s.GetComponent<SpriteMask>()) return;
+            //     var mask = s.AddComponent<SpriteMask>();
+            //     mask.sprite = s.sprite;
+            // });
+            //
+            // ghostFlattener.material = defaultSpriteMaterial;
+            // var go = ghostFlattener.gameObject;
+            // go.SetActive(true);
+            // go.layer = 8;
             
             transform.position += Vector3.left * 7;
             SpawnGhosts();
@@ -459,8 +462,18 @@ public class Character : Lootable
     public void Damage(int amount, int madeWith, bool critical = false)
     {
         var reduced = critical ? amount : Mathf.Max(0, amount - stats.defence);
-        
+
         var p = hitPos.position;
+        
+        // AudioManager.Instance.PlayEffectAt(0, p);
+        AudioManager.Instance.PlayEffectFromCollection(4, p, 0.5f);
+        AudioManager.Instance.PlayEffectFromCollection(6, p, 2.5f);
+
+        if (hurtSounds)
+        {
+            AudioManager.Instance.PlayEffectFromCollection(hurtSounds, p);
+        }
+
         anim.SetTrigger(Hurt);
         flasher.Flash();
 
@@ -506,8 +519,23 @@ public class Character : Lootable
         AttackAnimation();
         var distanceMod = isBoss ? 0.25f : 1f; 
         Tweener.MoveToBounceOut(t, origin + Vector3.right * 1.5f * t.localScale.x * distanceMod, 0.2f);
+
+        var hasSword = GetEquips().Any(e => e.isSword);
+
+        if (hasSword)
+        {
+            AudioManager.Instance.PlayEffectAt(1, t.position);   
+        }
+        
+        AudioManager.Instance.PlayEffectFromCollection(9, t.position, 1.2f);
+
         this.StartCoroutine(() =>
         {
+            if (hasSword)
+            {
+                AudioManager.Instance.PlayEffectFromCollection(5, hitPos.position, 0.5f);
+            }
+            
             target.Damage(boosted ? amount + stats.attack : amount, amount, critical);
             AttackTriggers();
         }, 0.15f);
@@ -656,7 +684,7 @@ public class Character : Lootable
         {
             if (s.GhostIndex < 0) return;
             var ghost = Instantiate(mobList.Get(s.GhostIndex), transform.position + Vector3.left * (offset * ghostDistance + ghostGap), Quaternion.identity);
-            ghost.Ghostify(s.GhostEquips, new Color(s.color.r, s.color.g, s.color.b, 0.5f));
+            ghost.Ghostify(s.GhostEquips, new Color(s.color.r, s.color.g, s.color.b, 0.75f));
             ghosts.Add(ghost);
             offset++;
         });

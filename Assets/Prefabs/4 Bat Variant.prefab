@@ -1246,6 +1246,10 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2491547236678160809, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
+      propertyPath: hurtSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 92a565ba013784456bff4d2c23d6c607, type: 2}
+    - target: {fileID: 2491547236678160809, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
       propertyPath: skillPicks
       value: 1
       objectReference: {fileID: 0}

@@ -15,5 +15,6 @@ namespace Equipment
         public float groundAngle;
         public bool masked;
         public float groundOffset;
+        public bool isSword;
     }
 }

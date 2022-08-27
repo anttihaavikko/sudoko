@@ -1,4 +1,5 @@
 using System;
+using AnttiStarterKit.Managers;
 using Equipment;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,6 +34,11 @@ public class SlotEquipper : MonoBehaviour
     public bool Add(Equip e)
     {
         if (!CanSlot(e)) return false;
+        
+        var pos = Vector3.zero;
+        AudioManager.Instance.PlayEffectFromCollection(7, pos, 0.4f);
+        AudioManager.Instance.PlayEffectFromCollection(4, pos, 0.3f);
+        AudioManager.Instance.PlayEffectFromCollection(6, pos, 1.5f);
 
         if (e.IsSoul)
         {

@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using AnttiStarterKit.Extensions;
 using AnttiStarterKit.Game;
+using AnttiStarterKit.Managers;
 using AnttiStarterKit.Utils;
 using Equipment;
 using Map;
@@ -56,6 +57,11 @@ public class Sale : MonoBehaviour
             shop.IndicateLowGold();
             return;
         }
+        
+        var p = shop.transform.position;
+        AudioManager.Instance.PlayEffectFromCollection(9, p, 1f);
+        AudioManager.Instance.PlayEffectFromCollection(10, p, 1f);
+        AudioManager.Instance.PlayEffectFromCollection(1, p, 0.5f);
 
         shop.Thank();
         contents.SetActive(false);

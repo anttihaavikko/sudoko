@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ed6741a13249ff91a11647becccdea, type: 3}
+  m_Name: _Pots
+  m_EditorClassIdentifier: 
+  volume: 1
+  clips:
+  - {fileID: 8300000, guid: d4356d77ed65f4dbaaab8aac97a15d08, type: 3}
+  - {fileID: 8300000, guid: a4af26b3d895a4580b431774a21b81d3, type: 3}
+  - {fileID: 8300000, guid: bdf37ac200f4f482fa4a9f79acf755fb, type: 3}
+  - {fileID: 8300000, guid: f73a3573a96a44297b4ca3b8047b1f97, type: 3}
+  - {fileID: 8300000, guid: a5906e03c9cab4ec7a8ae4d27d78b113, type: 3}
+  - {fileID: 8300000, guid: d867e5af173b947dab81685cd0baf968, type: 3}

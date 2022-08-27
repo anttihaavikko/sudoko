@@ -24,6 +24,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Bowler Hat
     sprite: {fileID: 21300000, guid: 17673ecf34303466b8518b9f75913c2d, type: 3}
     trim: {fileID: 21300000, guid: e92144637966f4ae79dac06532fa52ec, type: 3}
@@ -35,6 +36,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Beanie
     sprite: {fileID: 21300000, guid: 73fccb0e97dba44c99ae97d2eb187888, type: 3}
     trim: {fileID: 0}
@@ -46,6 +48,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Tiny Crown
     sprite: {fileID: 21300000, guid: 99134c29778fb4c7995c7fded552063b, type: 3}
     trim: {fileID: 0}
@@ -57,6 +60,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: -0.2
+    isSword: 0
   - title: Crown
     sprite: {fileID: 21300000, guid: be1a28588627d4bbb9c4dceee2fa9706, type: 3}
     trim: {fileID: 0}
@@ -68,6 +72,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Beanie
     sprite: {fileID: 21300000, guid: 73fccb0e97dba44c99ae97d2eb187888, type: 3}
     trim: {fileID: 21300000, guid: 420d847b521a24668bb17eb8e3a0ff27, type: 3}
@@ -79,6 +84,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Cone Hat
     sprite: {fileID: 21300000, guid: 7d5713d7c485b4bd58d78daeeb3b6df7, type: 3}
     trim: {fileID: 0}
@@ -90,6 +96,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Cone Hat
     sprite: {fileID: 21300000, guid: 7d5713d7c485b4bd58d78daeeb3b6df7, type: 3}
     trim: {fileID: 21300000, guid: d5b73a45c0588461495c23d8bc32923c, type: 3}
@@ -101,6 +108,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Cone Hat
     sprite: {fileID: 21300000, guid: 7d5713d7c485b4bd58d78daeeb3b6df7, type: 3}
     trim: {fileID: 21300000, guid: 34abf79c67ce04642a68e412ae19dfcf, type: 3}
@@ -112,6 +120,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Bycocket
     sprite: {fileID: 21300000, guid: 9ca6c9fe5a5a44bee8b7f7761fe9106f, type: 3}
     trim: {fileID: 0}
@@ -123,6 +132,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Cap
     sprite: {fileID: 21300000, guid: dd64e803286724e94962f79f0bee551a, type: 3}
     trim: {fileID: 21300000, guid: 5c7549578ccb2452a8161ee909c7fbe9, type: 3}
@@ -134,6 +144,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Cap
     sprite: {fileID: 21300000, guid: dd64e803286724e94962f79f0bee551a, type: 3}
     trim: {fileID: 21300000, guid: d10ebad63dec146a9b5489541eee2f3e, type: 3}
@@ -145,6 +156,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Elf Hat
     sprite: {fileID: 21300000, guid: ab69498897bac44ceba09c8e7833347a, type: 3}
     trim: {fileID: 0}
@@ -156,6 +168,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Cap
     sprite: {fileID: 21300000, guid: bccfefc8aa6924576bc8eb9c51498ca7, type: 3}
     trim: {fileID: 0}
@@ -167,6 +180,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Cap
     sprite: {fileID: 21300000, guid: bccfefc8aa6924576bc8eb9c51498ca7, type: 3}
     trim: {fileID: 21300000, guid: b2b7998f144c54767ac4d9caa72c2264, type: 3}
@@ -178,6 +192,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Jacket
     sprite: {fileID: 21300000, guid: 278a61b71ad254ac2b3de2f53c255540, type: 3}
     trim: {fileID: 21300000, guid: 8071e3fa41059491db59a1fb176f2d9b, type: 3}
@@ -189,6 +204,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0.2
+    isSword: 0
   - title: Vest
     sprite: {fileID: 21300000, guid: 278a61b71ad254ac2b3de2f53c255540, type: 3}
     trim: {fileID: 0}
@@ -200,6 +216,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0.2
+    isSword: 0
   - title: Eyepatch
     sprite: {fileID: 21300000, guid: 4e440516d45804ebbb3aacd7055eb16d, type: 3}
     trim: {fileID: 0}
@@ -211,6 +228,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 1
     groundOffset: 0
+    isSword: 0
   - title: Dagger
     sprite: {fileID: 21300000, guid: e67ab5ce45205444ba64ed638a2a04c6, type: 3}
     trim: {fileID: 0}
@@ -222,6 +240,7 @@ MonoBehaviour:
     groundAngle: 90
     masked: 0
     groundOffset: 0
+    isSword: 1
   - title: Bo Staff
     sprite: {fileID: 21300000, guid: a43ff8adf95a146efaffbba63a130a9c, type: 3}
     trim: {fileID: 0}
@@ -233,6 +252,7 @@ MonoBehaviour:
     groundAngle: 90
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Longsword
     sprite: {fileID: 21300000, guid: 976a53266e1694530b001b44f5427303, type: 3}
     trim: {fileID: 0}
@@ -244,6 +264,7 @@ MonoBehaviour:
     groundAngle: 90
     masked: 0
     groundOffset: 0
+    isSword: 1
   - title: Claymore
     sprite: {fileID: 21300000, guid: 0d237343fb32a4fb2a1ce266273a34aa, type: 3}
     trim: {fileID: 0}
@@ -255,6 +276,7 @@ MonoBehaviour:
     groundAngle: -90
     masked: 0
     groundOffset: 0
+    isSword: 1
   - title: Soul
     sprite: {fileID: 21300000, guid: 169b46ee7979b4238a3956eb09e49a99, type: 3}
     trim: {fileID: 0}
@@ -266,6 +288,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Scarf
     sprite: {fileID: 21300000, guid: d18f7250c9186457b985814a9538de89, type: 3}
     trim: {fileID: 21300000, guid: bc477deb7f19d4a6d80894d2d8896452, type: 3}
@@ -277,6 +300,7 @@ MonoBehaviour:
     groundAngle: -90
     masked: 0
     groundOffset: 0.2
+    isSword: 0
   - title: Glasses
     sprite: {fileID: 21300000, guid: 1be48581ed2fb47f29c8375ae03bddb6, type: 3}
     trim: {fileID: 0}
@@ -288,6 +312,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0.1
+    isSword: 0
   - title: Mark
     sprite: {fileID: 21300000, guid: e3239184730264239bdfb5bdbcf27809, type: 3}
     trim: {fileID: 0}
@@ -299,6 +324,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: -0.1
+    isSword: 0
   - title: Shades
     sprite: {fileID: 21300000, guid: 488d2601438774782a5ce71e3a6980da, type: 3}
     trim: {fileID: 0}
@@ -310,6 +336,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0.1
+    isSword: 0
   - title: Halberd
     sprite: {fileID: 21300000, guid: bcdc582df58694295b55390b3c76df16, type: 3}
     trim: {fileID: 0}
@@ -321,6 +348,7 @@ MonoBehaviour:
     groundAngle: 90
     masked: 0
     groundOffset: 0
+    isSword: 1
   - title: Mace
     sprite: {fileID: 21300000, guid: c35539f6d7f00448a9e83689c900074f, type: 3}
     trim: {fileID: 0}
@@ -332,6 +360,7 @@ MonoBehaviour:
     groundAngle: -90
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Sickle
     sprite: {fileID: 21300000, guid: ceb488f424e9b4cc4b4f239e2add3f07, type: 3}
     trim: {fileID: 0}
@@ -343,6 +372,7 @@ MonoBehaviour:
     groundAngle: -90
     masked: 0
     groundOffset: 0
+    isSword: 1
   - title: Scythe
     sprite: {fileID: 21300000, guid: 27b7f88a3dd8d4ab1b44f551398ffb86, type: 3}
     trim: {fileID: 0}
@@ -354,6 +384,7 @@ MonoBehaviour:
     groundAngle: 90
     masked: 0
     groundOffset: 0
+    isSword: 1
   - title: Katana
     sprite: {fileID: 21300000, guid: c69797eb5702c4d3b8441693a9ff78e9, type: 3}
     trim: {fileID: 0}
@@ -365,6 +396,7 @@ MonoBehaviour:
     groundAngle: 90
     masked: 0
     groundOffset: 0
+    isSword: 1
   - title: Staff
     sprite: {fileID: 21300000, guid: 25f64f1f89f7746619899be109aeebf8, type: 3}
     trim: {fileID: 0}
@@ -376,6 +408,7 @@ MonoBehaviour:
     groundAngle: -90
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Staff
     sprite: {fileID: 21300000, guid: 5a28494a10603454097d0bfe877d6938, type: 3}
     trim: {fileID: 0}
@@ -387,6 +420,7 @@ MonoBehaviour:
     groundAngle: 90
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Wand
     sprite: {fileID: 21300000, guid: e6d09a102052941809939f2f46b99455, type: 3}
     trim: {fileID: 21300000, guid: b26f2423acec54757aab6e6f3717811e, type: 3}
@@ -398,6 +432,7 @@ MonoBehaviour:
     groundAngle: -90
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Gold
     sprite: {fileID: 21300000, guid: 3309bf14317944bb79e1896fe231b337, type: 3}
     trim: {fileID: 0}
@@ -409,6 +444,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Potion
     sprite: {fileID: 21300000, guid: f3eb3ed562b52439681dec3ebed86db7, type: 3}
     trim: {fileID: 0}
@@ -420,6 +456,7 @@ MonoBehaviour:
     groundAngle: 0
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: War Hammer
     sprite: {fileID: 21300000, guid: 4a1fc8fd0ecf74ec4b0fa858651e3157, type: 3}
     trim: {fileID: 0}
@@ -431,6 +468,7 @@ MonoBehaviour:
     groundAngle: -90
     masked: 0
     groundOffset: 0
+    isSword: 0
   - title: Hammer
     sprite: {fileID: 21300000, guid: 63865ca3b28a64f3ab49ae2e2cdd42c6, type: 3}
     trim: {fileID: 0}
@@ -442,3 +480,4 @@ MonoBehaviour:
     groundAngle: 90
     masked: 0
     groundOffset: 0
+    isSword: 0

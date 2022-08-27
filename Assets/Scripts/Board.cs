@@ -122,8 +122,13 @@ public class Board : MonoBehaviour
 
         if (enemy.IsBoss)
         {
-            bossCam.SetActive(true);
+            Invoke(nameof(ActivateBossCam), 0.1f);
         }
+    }
+
+    private void ActivateBossCam()
+    {
+        bossCam.SetActive(true);
     }
 
     private void ShowDescription(string desc)
