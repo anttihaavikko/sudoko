@@ -119,7 +119,7 @@ public class Character : Lootable
 
         if (!isPlayer)
         {
-            stats.Add(new List<Stats>{ stats }, MapState.Instance.World + 1);
+            stats.Add(new List<Stats>{ stats }, MapState.Instance.World);
         }
 
         baseStats = stats.Copy();
