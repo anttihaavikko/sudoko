@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 3640834428470190211}
   - component: {fileID: 3640834428470190208}
   - component: {fileID: 8330735895437123277}
+  - component: {fileID: 2510992335771447110}
   m_Layer: 5
   m_Name: Number Button
   m_TagString: Untagged
@@ -359,10 +360,25 @@ MonoBehaviour:
   - {fileID: 3640834427625870457}
   doColors: 1
   backColors:
-  - {r: 0.41451585, g: 0.764151, b: 0.6992437, a: 1}
+  - {r: 0.9843137, g: 0.38039216, b: 0.02745098, a: 1}
   frontColors:
   - {r: 0, g: 0, b: 0, a: 1}
   clickSound: -1
   hoverSound: -1
   clickVolume: 1
   hoverVolume: 1
+--- !u!114 &2510992335771447110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3640834428470190238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a26da936a88b465ea82111673f537f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filling: {fileID: 1651903695757794169}
+  activeColor: {r: 0.9843137, g: 0.6901961, b: 0.1764706, a: 1}
+  buttonStyle: {fileID: 8330735895437123277}

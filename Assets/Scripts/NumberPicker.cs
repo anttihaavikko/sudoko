@@ -1,18 +1,20 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using AnttiStarterKit.Animations;
 using UnityEngine;
 
 public class NumberPicker : MonoBehaviour
 {
-    [SerializeField] private List<Transform> buttons;
-    [SerializeField] private Transform marker;
+    [SerializeField] private List<NumberButton> buttons;
 
     public int Number { get; private set; }
 
+    private NumberButton current;
+
     private void Start()
     {
-        Number = 1;
+        SelectNumber(1);
     }
 
     private void Update()
@@ -65,7 +67,13 @@ public class NumberPicker : MonoBehaviour
 
     public void SelectNumber(int number)
     {
-        Tweener.MoveToBounceOut(marker, buttons[number - 1].position, 0.2f);
+        if (current)
+        {
+            current.DeSelect();
+        }
+        
+        current = buttons[number - 1];
+        current.Select();
         Number = number;
     }
 }
