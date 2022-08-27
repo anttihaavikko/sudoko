@@ -663,6 +663,10 @@ PrefabInstance:
       propertyPath: m_Solver.m_SolverPoses.Array.data[1].solverRotation.z
       value: -0.6199311
       objectReference: {fileID: 0}
+    - target: {fileID: 7732370049122281268, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7801021291164589952, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Positions.Array.data[0].x
       value: 2.066944

@@ -47,15 +47,27 @@ public class Flasher : MonoBehaviour
         spritesNeedingShader.ForEach(s => s.material = material);
     }
 
-    private void Colorize(Color color)
+    public void Colorize(Color color, bool includeShaderOnes = false)
     {
         sprites.ForEach(s => s.color = color);
         lines.ForEach(l => l.startColor = l.endColor = color);
+
+        if (includeShaderOnes)
+        {
+            spritesNeedingShader.ForEach(s => s.color = color);
+        }
     }
 
     private void Colorize()
     {
         sprites.ForEach(s => s.color = spriteColors[sprites.IndexOf(s)]);
         lines.ForEach(l => l.startColor = l.endColor = lineColors[lines.IndexOf(l)]);
+    }
+
+    public void ChangeMaterialForAll(Material material)
+    {
+        spritesNeedingShader.ForEach(s => s.material = material);
+        sprites.ForEach(s => s.material = material);
+        lines.ForEach(s => s.material = material);
     }
 }

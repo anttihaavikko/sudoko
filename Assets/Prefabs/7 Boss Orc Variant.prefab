@@ -1064,7 +1064,7 @@ PrefabInstance:
       objectReference: {fileID: 3301128704987089033}
     - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: spritesNeedingShader.Array.size
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: spritesNeedingShader.Array.data[11]
@@ -1078,6 +1078,10 @@ PrefabInstance:
       propertyPath: spritesNeedingShader.Array.data[13]
       value: 
       objectReference: {fileID: 4009556294003938713}
+    - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: spritesNeedingShader.Array.data[14]
+      value: 
+      objectReference: {fileID: 5935110346836461128}
     - target: {fileID: 1131941160878101220, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Color.b
       value: 0.27999288
@@ -1210,6 +1214,14 @@ PrefabInstance:
       propertyPath: startsWith.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 9180ac6075f0b4132897f30e05c24122, type: 2}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: transparentOnGhost.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: transparentOnGhost.Array.data[0]
+      value: 
+      objectReference: {fileID: 3301128704987089033}
     - target: {fileID: 4673761829348773026, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.9434612
@@ -1249,6 +1261,18 @@ PrefabInstance:
     - target: {fileID: 5096219929665178563, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Solver.m_SolverPoses.Array.data[1].solverRotation.z
       value: 0.48524815
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970621209602359603, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970621209602359603, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 2.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970621209602359603, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: ShapeModule.m_Position.y
+      value: 1.385
       objectReference: {fileID: 0}
     - target: {fileID: 6330063952600784115, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Length

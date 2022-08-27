@@ -44,6 +44,12 @@ public class Character : Lootable
     [SerializeField] private MobList mobList;
     [SerializeField] private GameObject timeDisplay;
 
+    [SerializeField] private Material ghostMaterial;
+    [SerializeField] private List<LineRenderer> limbs;
+    [SerializeField] private GameObject ghostParticles;
+
+    [SerializeField] private List<SpriteRenderer> transparentOnGhost;
+
     private readonly List<Character> ghosts = new();
 
     private Animator anim;
@@ -55,7 +61,7 @@ public class Character : Lootable
     private float moveTimer;
     private bool fightStarted;
     private int guards;
-    private float ghostDistance = 2f;
+    private float ghostDistance = 1.2f;
     private bool isGhost;
 
     public int CurrentHealth => health.Current;
@@ -90,7 +96,7 @@ public class Character : Lootable
         moveDisplay.SetParent(null, true);
 
         Stagger();
-        Scale();
+        Scale(scale);
         Gear();
 
         if (startsWith)
@@ -156,14 +162,14 @@ public class Character : Lootable
         statsDisplay.Set(stats);
     }
 
-    private void Scale()
+    private void Scale(float mod)
     {
         if (!isPlayer)
         {
             groundMask.SetParent(null, true);
         }
 
-        transform.localScale *= scale;
+        transform.localScale *= mod;
         
         if (!isPlayer)
         {
@@ -633,18 +639,30 @@ public class Character : Lootable
         {
             if (s.GhostIndex < 0) return;
             var ghost = Instantiate(mobList.Get(s.GhostIndex), transform.position + Vector3.left * offset * ghostDistance, Quaternion.identity);
-            ghost.Ghostify();
-            s.GhostEquips.ForEach(e => ghost.ShowEquip(e));
+            ghost.Ghostify(s.GhostEquips);
             ghosts.Add(ghost);
             offset++;
         });
     }
 
-    private void Ghostify()
+    private void Ghostify(List<Equip> equips)
     {
         equipmentVisuals.ForEach(v => v.Hide());
         isGhost = true;
         healthDisplay.gameObject.SetActive(false);
         timeDisplay.SetActive(false);
+        shadow.SetActive(false);
+        
+        equips.ForEach(ShowEquip);
+        
+        flasher.Colorize(new Color(1, 1, 1, 0.4f), true);
+        flasher.ChangeMaterialForAll(ghostMaterial);
+        transparentOnGhost.ForEach(s => s.color = Color.clear);
+
+        Scale(0.5f);
+        
+        limbs.ForEach(l => l.widthMultiplier = 0.5f);
+        
+        ghostParticles.SetActive(true);
     }
 }

@@ -664,6 +664,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: transparentOnGhost.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: equipmentVisuals.Array.data[1]
       value: 
       objectReference: {fileID: 5098534616217569806}
@@ -675,6 +679,10 @@ PrefabInstance:
       propertyPath: equipmentVisuals.Array.data[3]
       value: 
       objectReference: {fileID: 603062737709691894}
+    - target: {fileID: 4576660106929105836, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: transparentOnGhost.Array.data[0]
+      value: 
+      objectReference: {fileID: 3301128704987089033}
     - target: {fileID: 4862016167994420695, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.14804292

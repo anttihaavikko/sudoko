@@ -582,7 +582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: spritesNeedingShader.Array.size
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: spritesNeedingShader.Array.data[10]
@@ -600,6 +600,10 @@ PrefabInstance:
       propertyPath: spritesNeedingShader.Array.data[13]
       value: 
       objectReference: {fileID: 275721929957541889}
+    - target: {fileID: 1045587445051442415, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: spritesNeedingShader.Array.data[14]
+      value: 
+      objectReference: {fileID: 7655078204278470275}
     - target: {fileID: 1312000112456503138, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -915,6 +919,18 @@ PrefabInstance:
     - target: {fileID: 5656960374493262871, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970621209602359603, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970621209602359603, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 2.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970621209602359603, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
+      propertyPath: ShapeModule.m_Position.y
+      value: 1.43
       objectReference: {fileID: 0}
     - target: {fileID: 6330063952600784115, guid: a707dcb54e8d84c5fb8f70523f5545b1, type: 3}
       propertyPath: m_Length
