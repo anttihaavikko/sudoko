@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ed6741a13249ff91a11647becccdea, type: 3}
+  m_Name: _Flower
+  m_EditorClassIdentifier: 
+  volume: 0.1
+  clips:
+  - {fileID: 8300000, guid: 5adc42d6cb70d4f10bc63dbde9226aa3, type: 3}
+  - {fileID: 8300000, guid: c58509dadd61745009a1533de2062044, type: 3}
+  - {fileID: 8300000, guid: 5bf7c4ea0663d415ea7ab8948e1c3c2f, type: 3}
+  - {fileID: 8300000, guid: 0b9162b807f6542ecaf5aff0dbbbc49b, type: 3}
+  - {fileID: 8300000, guid: 4520cd350d6bc491bb236ab0448b3336, type: 3}
+  - {fileID: 8300000, guid: 6d78463ea7a9945a58b2187bea848544, type: 3}
+  - {fileID: 8300000, guid: 2444b3a73b1324a5b8e6e8e5dc2d9485, type: 3}

@@ -201,7 +201,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0b11bf53a3e764b7eb80f5d1513f4ba1, type: 3}
   - {fileID: 21300000, guid: 03a5562d2626b4090a0364b8f813a7bf, type: 3}
   pickSound: 9
-  pickSoundVolume: 0.8
+  pickSoundVolume: 1.2
 --- !u!58 &6905128453822264334
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -5060,6 +5060,7 @@ MonoBehaviour:
   duration: 0.4
   moveAmount: 0.075
   particles: {fileID: 4700629417627183378}
+  sound: {fileID: 11400000, guid: 945e0b7b988fc42eab4f415277290c9f, type: 2}
 --- !u!1 &7177174087134804503
 GameObject:
   m_ObjectHideFlags: 0
