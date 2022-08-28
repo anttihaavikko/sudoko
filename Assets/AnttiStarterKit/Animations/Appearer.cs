@@ -19,12 +19,14 @@ namespace AnttiStarterKit.Animations
         
         public TMP_Text text;
         private Vector3 size;
+        private bool visible;
 
         private void Awake()
         {
             var t = transform;
             size = t.localScale;
             t.localScale = Vector3.zero;
+            
             if(visuals) visuals.SetActive(false);
 
             if (appearAfter >= 0)
@@ -43,6 +45,7 @@ namespace AnttiStarterKit.Animations
 
         public void Show()
         {
+            visible = true;
             CancelInvoke(nameof(Hide));
             CancelInvoke(nameof(MakeInactive));
             DoSound();
@@ -53,6 +56,7 @@ namespace AnttiStarterKit.Animations
 
         public void Hide()
         {
+            visible = false;
             CancelInvoke(nameof(Show));
             DoSound();
 
@@ -95,6 +99,17 @@ namespace AnttiStarterKit.Animations
                 text.text = t;
 
             Invoke(nameof(Show), delay);
+        }
+
+        public void Toggle()
+        {
+            if (visible)
+            {
+                Hide();
+                return;
+            }
+
+            Show();
         }
     }
 }

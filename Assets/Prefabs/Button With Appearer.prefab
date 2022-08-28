@@ -131,7 +131,7 @@ MonoBehaviour:
   hideDelay: 0
   silent: 0
   visuals: {fileID: 8922167069858933855}
-  inScreenSpace: 0
+  inScreenSpace: 1
   cam: {fileID: 0}
   text: {fileID: 0}
 --- !u!1 &8922167069858933855

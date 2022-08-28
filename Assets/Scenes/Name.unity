@@ -1928,6 +1928,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6734564064547346751, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1298488929}
+    - target: {fileID: 6734564064547346751, guid: 89a18cb410dd640f9864d1fc3e18d879, type: 3}
       propertyPath: visuals
       value: 
       objectReference: {fileID: 1976456821}
