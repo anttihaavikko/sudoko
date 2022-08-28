@@ -8,6 +8,7 @@ public class NumberPicker : MonoBehaviour
 {
     [SerializeField] private List<NumberButton> buttons;
     [SerializeField] private Appearer tutorial;
+    [SerializeField] private Board board;
 
     public int Number { get; private set; }
 
@@ -81,7 +82,7 @@ public class NumberPicker : MonoBehaviour
     {
         Select(number);
 
-        if (!StateManager.Instance.KeyboardUsed)
+        if (!board.ShowingTutorial && !StateManager.Instance.KeyboardUsed)
         {
             tutorial.ShowAfter(1f);
             tutorialVisible = true;

@@ -4109,6 +4109,7 @@ MonoBehaviour:
   - {fileID: 1210727998}
   - {fileID: 704170342}
   tutorial: {fileID: 264301375}
+  board: {fileID: 688767330}
 --- !u!114 &688767332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6395,8 +6396,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b846f9dabd0c549548c39a8cfe1e1bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
-  offset: 0.2
+  speed: 2.75
+  offset: 0.4
   noNegatives: 1
   direction: {x: 0, y: 5, z: 0}
   randomizeOffset: 0

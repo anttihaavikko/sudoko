@@ -52,6 +52,8 @@ public class Board : MonoBehaviour
 
     private Camera cam;
 
+    public bool ShowingTutorial => tutorialVisible;
+
     private void Start()
     {
         CreateGrid();
