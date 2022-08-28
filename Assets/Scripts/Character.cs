@@ -14,8 +14,6 @@ using AnttiStarterKit.Visuals;
 using Equipment;
 using Map;
 using Unity.VisualScripting;
-using UnityEditor.ShaderGraph;
-using UnityEngine.Rendering.UI;
 using Random = UnityEngine.Random;
 
 public class Character : Lootable

@@ -8,10 +8,11 @@ namespace AnttiStarterKit.Utils
     {
         [SerializeField] private KeyCode key;
         [SerializeField] private UnityEvent action;
+        [SerializeField] private bool buildAlso;
 
         private void Update()
         {
-            if (DevKey.Down(key))
+            if (DevKey.Down(key) || buildAlso)
             {
                 action?.Invoke();
             }

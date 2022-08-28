@@ -3356,6 +3356,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buildAlso: 1
 --- !u!1 &500594510
 GameObject:
   m_ObjectHideFlags: 0

@@ -210,6 +210,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buildAlso: 1
 --- !u!1001 &16817010
 PrefabInstance:
   m_ObjectHideFlags: 0
