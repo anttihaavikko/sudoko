@@ -12,7 +12,7 @@ namespace AnttiStarterKit.Utils
 
         private void Update()
         {
-            if (DevKey.Down(key) || buildAlso)
+            if (DevKey.Down(key, buildAlso))
             {
                 action?.Invoke();
             }
