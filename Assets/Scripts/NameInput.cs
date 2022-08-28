@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using AnttiStarterKit.Animations;
 using AnttiStarterKit.Visuals;
 using UnityEngine;
 using TMPro;
@@ -10,6 +11,10 @@ public class NameInput : MonoBehaviour
 {
     public TMP_InputField field;
     public EffectCamera cam;
+    [SerializeField] private Character player;
+    [SerializeField] private List<Appearer> appearers;
+
+    private bool done;
 
     private void Start()
     {
@@ -38,9 +43,17 @@ public class NameInput : MonoBehaviour
 
     public void Save()
     {
-        if (string.IsNullOrEmpty(field.text)) return;
+        if (done || string.IsNullOrEmpty(field.text)) return;
+        player.WalkTo(10f, 0, false);
         PlayerPrefs.SetString("PlayerName", field.text);
         PlayerPrefs.SetString("PlayerId", Guid.NewGuid().ToString());
+        Invoke(nameof(ChangeScene), 1.5f);
+        appearers.ForEach(a => a.HideWithDelay());
+        done = true;
+    }
+
+    private void ChangeScene()
+    {
         SceneChanger.Instance.ChangeScene("Map");
     }
 }

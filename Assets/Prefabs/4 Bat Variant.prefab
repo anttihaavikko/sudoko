@@ -1399,6 +1399,10 @@ PrefabInstance:
       propertyPath: ShapeModule.m_Position.y
       value: 1.16
       objectReference: {fileID: 0}
+    - target: {fileID: 4151503677732633597, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
+      propertyPath: m_Radius
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4599547736379414435, guid: cd9feb06643ea43f88f3af1a35259414, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
