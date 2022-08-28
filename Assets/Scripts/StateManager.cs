@@ -23,6 +23,8 @@ public class StateManager : Manager<StateManager>
     public int Multiplier { get; set; } = 1;
     public bool ExtraBoss { get; set; }
     public int SelectedNumber { get; set; } = 1;
+    public bool TutorialShown { get; set; }
+    public bool KeyboardUsed { get; set; }
 
     private void Start()
     {

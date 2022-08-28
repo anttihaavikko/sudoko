@@ -7,65 +7,89 @@ using UnityEngine;
 public class NumberPicker : MonoBehaviour
 {
     [SerializeField] private List<NumberButton> buttons;
+    [SerializeField] private Appearer tutorial;
 
     public int Number { get; private set; }
 
     private NumberButton current;
+    private bool tutorialVisible;
 
     private void Start()
     {
-        SelectNumber(StateManager.Instance.SelectedNumber);
+        Select(StateManager.Instance.SelectedNumber);
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Z))
         {
-            SelectNumber(1);
+            SelectNumberFromKeyBoard(1);
         }
         
         if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.X))
         {
-            SelectNumber(2);
+            SelectNumberFromKeyBoard(2);
         }
         
         if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.C))
         {
-            SelectNumber(3);
+            SelectNumberFromKeyBoard(3);
         }
         
         if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.A))
         {
-            SelectNumber(4);
+            SelectNumberFromKeyBoard(4);
         }
         
         if (Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.S))
         {
-            SelectNumber(5);
+            SelectNumberFromKeyBoard(5);
         }
         
         if (Input.GetKeyDown(KeyCode.Alpha6) || Input.GetKeyDown(KeyCode.D))
         {
-            SelectNumber(6);
+            SelectNumberFromKeyBoard(6);
         }
         
         if (Input.GetKeyDown(KeyCode.Alpha7) || Input.GetKeyDown(KeyCode.Q))
         {
-            SelectNumber(7);
+            SelectNumberFromKeyBoard(7);
         }
         
         if (Input.GetKeyDown(KeyCode.Alpha8) || Input.GetKeyDown(KeyCode.W))
         {
-            SelectNumber(8);
+            SelectNumberFromKeyBoard(8);
         }
         
         if (Input.GetKeyDown(KeyCode.Alpha9) || Input.GetKeyDown(KeyCode.E))
         {
-            SelectNumber(9);
+            SelectNumberFromKeyBoard(9);
+        }
+    }
+
+    private void SelectNumberFromKeyBoard(int number)
+    {
+        Select(number);
+
+        if (tutorialVisible)
+        {
+            tutorial.HideWithDelay(0.5f);
         }
     }
 
     public void SelectNumber(int number)
+    {
+        Select(number);
+
+        if (!StateManager.Instance.KeyboardUsed)
+        {
+            tutorial.ShowAfter(1f);
+            tutorialVisible = true;
+            StateManager.Instance.KeyboardUsed = true;
+        }
+    }
+    
+    private void Select(int number)
     {
         if (current)
         {

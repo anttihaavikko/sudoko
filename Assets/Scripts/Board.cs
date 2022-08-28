@@ -14,6 +14,7 @@ using Map;
 using Sudoku;
 using Sudoku.Model;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -39,6 +40,7 @@ public class Board : MonoBehaviour
     [SerializeField] private GameObject numberPanel;
     [SerializeField] private List<Character> enemyList;
     [SerializeField] private ScoreManager scoreManager;
+    [SerializeField] private Appearer tutorial;
 
     private Character enemy;
     private readonly TileGrid<Tile> grid = new(9, 9);
@@ -46,6 +48,7 @@ public class Board : MonoBehaviour
     private SudokuBoard sudoku;
     private bool ending;
     private bool fightStarted;
+    private bool tutorialVisible;
 
     private Camera cam;
 
@@ -55,11 +58,25 @@ public class Board : MonoBehaviour
         SpawnEnemy();
 
         player.Board = this;
+        
+        Invoke(nameof(ShowTutorial), 3f);
     }
 
+    private void ShowTutorial()
+    {
+        if (!StateManager.Instance.TutorialShown)
+        {
+            tutorialVisible = true;
+            tutorial.Show();
+            StateManager.Instance.TutorialShown = true;
+        }
+    }
+    
     public void StartFight()
     {
         if (fightStarted) return;
+
+        ShowTutorial();
         
         startButton.Hide();
         fightStarted = true;
@@ -210,6 +227,12 @@ public class Board : MonoBehaviour
         
         if (sudoku.Solver.IsValidValueForTheCell(value, cell))
         {
+            if (tutorialVisible)
+            {
+                tutorialVisible = false;
+                tutorial.HideWithDelay(0.5f);
+            }
+            
             tile.Reveal(value);
 
             scoreDisplay.Add(value * GetDefScoreMulti());
